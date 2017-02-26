@@ -50,7 +50,7 @@ FROM node
 RUN npm install -g envsubst
 ```
 
-Now you can use envsubst in your Dockerfile ```RUN envsubst templateFile outputFile``` for templating at build time
+Now you can use envsubst in your Dockerfile with ```RUN envsubst templateFile outputFile``` for templating at build time
 
 ```docker
 docker build --build-arg MY_NAME=daniel -t imagename .
