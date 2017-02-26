@@ -25,6 +25,7 @@ export MY_NAME=daniel
 template.html
 > <div>Hello my name is {{ MY_NAME }}</div>
 
+<br>
 - [x]  Execute envsub
 ```bash
 envsub template.html output.html
