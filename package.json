@@ -1,6 +1,6 @@
 {
   "name": "envsub",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "envsub is envsubst for NodeJS",
   "main": "index.js",
   "author": "Daniel Lewis BSc(Hons)",
@@ -36,5 +36,8 @@
   },
   "devDependencies": {
     "eslint": "^3.16.1"
+  },
+  "bin": {
+    "envsub": "envsub.js"
   }
 }
