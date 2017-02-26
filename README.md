@@ -43,14 +43,14 @@ envsubst is officially recognised by [NGINX](https://hub.docker.com/_/nginx) as 
 
 This module seeks to make envsubst freely available to the Node community for Docker templating.
 
-In your Dockerfile simply
+In your Dockerfile
 
 ```dockerfile
 FROM node
 RUN npm install -g envsubst
 ```
 
-Now you can freely use envsubst for templating either at build time
+Now you can use envsubst in your Dockerfile ```RUN envsubst templateFile outputFile``` for templating at build time
 
 ```docker
 docker build --build-arg MY_NAME=daniel -t imagename .
