@@ -1,7 +1,7 @@
 {
-  "name": "envsubst",
+  "name": "envsub",
   "version": "1.0.0",
-  "description": "envsubst for node",
+  "description": "envsub is envsubst for NodeJS",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -10,6 +10,7 @@
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",
   "keywords": [
+    "envsub",
     "envsubst",
     "env",
     "env template",
@@ -17,7 +18,9 @@
     "env templating",
     "environment variable templating",
     "handlebars env",
-    "handlebars environment variables"
+    "handlebars environment variables",
+    "docker template",
+    "docker templating"
   ],
   "dependencies": {
     "bluebird": "^3.4.7",
