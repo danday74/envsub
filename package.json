@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "envsub is envsubst for NodeJS",
   "main": "index.js",
+  "author": "Daniel Lewis BSc(Hons)",
+  "license": "ISC",
   "scripts": {
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel Lewis BSc(Hons)",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danday74/envsub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danday74/envsub/issues"
+  },
+  "homepage": "https://github.com/danday74/envsub#readme",
   "keywords": [
     "envsub",
     "envsubst",
