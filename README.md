@@ -11,7 +11,7 @@ npm install -g envsubst
 envsubst templateFile outputFile
 ```
 
-<br><br>
+<br>
 
 # Example
 
@@ -35,7 +35,7 @@ envsubst template.html output.html
 output.html
 > <div>Hello my name is daniel</div>
 
-<br><br>
+<br>
 
 # Docker
 
