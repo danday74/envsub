@@ -1,0 +1,29 @@
+{
+  "name": "envsubst",
+  "version": "1.0.0",
+  "description": "envsubst for node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Lewis BSc(Hons)",
+  "license": "ISC",
+  "keywords": [
+    "envsubst",
+    "env",
+    "env template",
+    "environment variable template",
+    "env templating",
+    "environment variable templating",
+    "handlebars env",
+    "handlebars environment variables"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "handlebars": "^4.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1"
+  }
+}
