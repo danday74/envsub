@@ -1,3 +1,4 @@
+// noinspection NpmUsedModulesInstalled
 let express = require('express');
 let app = express();
 
@@ -11,4 +12,3 @@ app.use(express.static('public'));
 let listener = app.listen(8080, function () {
   console.log('Server listening on port', listener.address().port);
 });
-
