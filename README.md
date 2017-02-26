@@ -26,6 +26,7 @@ template.html
 > <div>Hello my name is {{ MY_NAME }}</div>
 
 <br>
+
 - [x]  Execute envsub
 ```bash
 envsub template.html output.html
@@ -62,3 +63,11 @@ Or at run time typically using an ENTRYPOINT script
 ```docker
 docker run -dit --env MY_NAME=daniel imagename
 ```
+
+<br>
+
+# View Source
+
+The codebase is intentionally simple and does exactly what you would expect.
+
+View source [HERE](https://github.com/danday74/envsub/blob/master/index.js)
