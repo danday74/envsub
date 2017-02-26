@@ -13,7 +13,4 @@ WORKDIR /usr/src/app
 COPY files /usr/src/app
 RUN npm install
 
-ARG MY_NAME=fred # LOOK HERE
-RUN envsub ./public/index.html ./public/index.html # LOOK HERE
-
-CMD [ "npm", "start" ]
+ENTRYPOINT ["entrypoint.sh"] # LOOK HERE
