@@ -1,7 +1,7 @@
 envsubst for NodeJS
 ===================
 
-**Command line module providing environment variable substitution via Handlebars**
+**NodeJS command line module providing environment variable substitution via Handlebars**
 
 ```bash
 npm install -g envsubst
