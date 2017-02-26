@@ -15,22 +15,22 @@ envsubst templateFile outputFile
 
 # Example
 
-* Ensure environment variables exist
+- [x]  Ensure environment variables exist
 ```bash
 export MY_NAME=daniel
 ```
 
-* Create an environment variable template
+- [x]  Create an environment variable template
 
 template.html
 > <div>Hello my name is {{ MY_NAME }}</div>
 
-* Execute envsubst
+- [x]  Execute envsubst
 ```bash
 envsubst template.html output.html
 ```
 
-* And the result is
+- [x]  And the result is
 
 output.html
 > <div>Hello my name is daniel</div>
