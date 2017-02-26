@@ -30,7 +30,7 @@ template.html
 envsubst template.html output.html
 ```
 
-- [x]  And the result is
+- [x]  And the result
 
 output.html
 > <div>Hello my name is daniel</div>
