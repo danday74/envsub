@@ -1,0 +1,16 @@
+{
+  "name": "envsub-build-example",
+  "version": "1.0.0",
+  "description": "Demo envsub at docker build time",
+  "author": "Daniel Lewis BSc(Hons)",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {}
+}
+
