@@ -1,7 +1,7 @@
 {
-  "name": "envsub-build-example",
+  "name": "envsub-run-example",
   "version": "1.0.0",
-  "description": "Demo envsub at docker build time",
+  "description": "Demo envsub at docker run time",
   "author": "Daniel Lewis BSc(Hons)",
   "main": "server.js",
   "private": true,
