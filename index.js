@@ -4,12 +4,12 @@ let writeFile = Promise.promisify(require('fs').writeFile);
 let Handlebars = require('handlebars');
 
 // Ensure required args are given
-if (process.argv.length < 4) {
+if (process.argv.length < 3) {
   console.error('input and output file args required');
   process.exit(1);
 }
 let inFile = process.argv[2];
-let outFile = process.argv[3];
+let outFile = (process.argv.length > 3) ? process.argv[3] : process.argv[2];
 
 readFile(inFile, 'utf8').then((inContents) => {
   // Read the inFile and create a Handlebars template from its contents
