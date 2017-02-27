@@ -45,7 +45,9 @@ envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templatin
 
 This module seeks to make envsubst freely available to the NodeJS community for Docker templating.
 
-## Build time substitution
+In both examples below the file **./files/public/index.html** is a template file.
+
+## Build time templating / env substitution
 
 Sample build time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dockerfiles/build)
 
@@ -54,7 +56,7 @@ docker build --build-arg MY_NAME=daniel -t danday74/envsub-build-example .
 docker run --name envbuild -d -p "8080:8080" danday74/envsub-build-example
 ```
 
-## Run time substitution
+## Run time templating / env substitution
 
 Sample run time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dockerfiles/run)
 
