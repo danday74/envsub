@@ -39,29 +39,29 @@ output.html
 
 <br>
 
-# Docker
+# Docker Integration (optional)
 
-envsubst is officially recognised by [NGINX](https://hub.docker.com/_/nginx) as a suitable NGINX config templating solution.
+envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
 
-This module seeks to make envsubst freely available to the Node community for Docker templating.
+This module seeks to make envsubst freely available to the NodeJS community for Docker templating.
 
-In your Dockerfile
+## Build time substitution
 
-```dockerfile
-FROM node
-RUN npm install -g envsub
-```
-
-Now you can use envsub in your Dockerfile with ```RUN envsub templateFile outputFile``` for templating at build time
+Sample build time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dockerfiles/build)
 
 ```docker
-docker build --build-arg MY_NAME=daniel -t imagename .
+docker build --build-arg MY_NAME=daniel -t danday74/envsub-build-example .
+docker run --name envbuild -d -p "8080:8080" danday74/envsub-build-example
 ```
 
-Or at run time typically using an ENTRYPOINT script
+## Run time substitution
+
+Sample run time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dockerfiles/run)
 
 ```docker
-docker run -dit --env MY_NAME=daniel imagename
+docker build -t danday74/envsub-run-example .
+docker run --name envrun1 -d -e MY_NAME=daniel -p "8081:8080" danday74/envsub-run-example
+docker run --name envrun2 -d -e MY_NAME=jimbob -p "8082:8080" danday74/envsub-run-example
 ```
 
 <br>
