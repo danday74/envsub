@@ -45,7 +45,7 @@ envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templatin
 
 This module seeks to make envsubst freely available to the NodeJS community for Docker templating.
 
-In both examples below the file *./files/public/index.html* is a template file.
+In both examples below the file ```./files/public/index.html``` is a template file.
 
 ## Build time templating / env substitution
 
