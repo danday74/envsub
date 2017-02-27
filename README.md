@@ -73,3 +73,23 @@ docker run --name envrun2 -d -e MY_NAME=jimbob -p "8082:8080" danday74/envsub-ru
 The codebase is intentionally simple and does exactly what you would expect.
 
 View source [HERE](https://github.com/danday74/envsub/blob/master/index.js)
+
+<br>
+
+# Tips
+
+Inside a docker container, it can be useful to overwrite a template file with its substituted equivalent.
+
+To do this one would write
+
+```bash
+envsub file1 file1
+```
+
+The shorthand for which is
+
+```bash
+envsub file1
+```
+
+Hope this module proves useful out there. God bless :)
