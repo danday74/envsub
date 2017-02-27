@@ -78,6 +78,8 @@ View source [HERE](https://github.com/danday74/envsub/blob/master/index.js)
 
 # Tips
 
+## Shorthand
+
 Inside a docker container, it can be useful to overwrite a template file with its substituted equivalent.
 
 To do this one would write
@@ -91,5 +93,19 @@ The shorthand for which is
 ```bash
 envsub file1
 ```
+
+## Advanced templating
+
+All Handlebars templating is valid so you can do
+
+```handlebars
+{{#if MY_NAME}}
+  My name is {{ MY_NAME }}
+{{else}}
+  I forgot my name
+{{/if}}
+```
+
+For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 Hope this module proves useful out there. God bless :)
