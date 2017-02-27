@@ -1,12 +1,12 @@
 {
   "name": "envsub",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "envsub is envsubst for NodeJS",
   "main": "index.js",
+  "bin": "envsub.js",
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",
   "scripts": {
-    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,8 +36,5 @@
   },
   "devDependencies": {
     "eslint": "^3.16.1"
-  },
-  "bin": {
-    "envsub": "envsub.js"
   }
 }
