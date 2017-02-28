@@ -8,7 +8,7 @@ let handleError = (err, cli) => {
     console.error(err.message);
     process.exit(1);
   } else {
-    throw err;
+    return Promise.reject(err);
   }
 };
 
@@ -17,7 +17,7 @@ let envsub = (templateFile, outputFile = null, cli = false) => {
   let templateContents, outputContents;
 
   if (templateFile == null) {
-    handleError(Error('envsub templateFile outputFile - missing args'), cli);
+    return handleError(Error('envsub templateFile outputFile - missing args'), cli);
   }
 
   outputFile = outputFile || templateFile;
@@ -41,7 +41,7 @@ let envsub = (templateFile, outputFile = null, cli = false) => {
     return Promise.resolve({templateFile, templateContents, outputFile, outputContents});
 
   }).catch((err) => {
-    handleError(err, cli);
+    return handleError(err, cli);
   });
 
 };
