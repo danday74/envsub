@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const envsub = require('../index');
 const appRoot = require('app-root-path');
 const p = appRoot + '/test/';
