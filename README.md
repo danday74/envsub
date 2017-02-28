@@ -124,7 +124,7 @@ process.env.MY_NAME = 'daniel';
 envsub('templateFile', 'outputFile').then((envobj) => {
   console.log(`wrote ${envobj.outputContents} to ${envobj.outputFile}`);
 }).catch((err) => {
-  console.log(err.message);
+  console.error(err.message);
 });
 ```
 
