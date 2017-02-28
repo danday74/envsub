@@ -3,7 +3,7 @@ envsub is envsubst for NodeJS
 
 **NodeJS global CLI module providing environment variable substitution via Handlebars**
 
-(Also supports [non-global usage](#view-source))
+(Also supports [non-global usage](#non-global-usage))
 
 ```bash
 npm install -g envsub
