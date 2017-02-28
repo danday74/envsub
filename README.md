@@ -3,6 +3,8 @@ envsub is envsubst for NodeJS
 
 **NodeJS global CLI module providing environment variable substitution via Handlebars**
 
+(Also supports non-global usage - see below)
+
 ```bash
 npm install -g envsub
 ```
@@ -107,5 +109,17 @@ All Handlebars templating is valid so you can do
 ```
 
 For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
+
+<br>
+
+# Non-global usage
+
+```bash
+npm install -S envsub
+```
+
+```javascript
+process.env.MY_NAME = 'daniel';
+```
 
 Hope this module proves useful out there. God bless :)
