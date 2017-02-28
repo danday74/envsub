@@ -1,7 +1,7 @@
 envsub is envsubst for NodeJS
 =============================
 
-**NodeJS global CLI module providing environment variable substitution via Handlebars**
+**NodeJS global CLI module providing file-level environment variable substitution via Handlebars**
 
 (Also supports [non-global usage](#non-global-usage))
 
