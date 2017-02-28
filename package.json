@@ -1,13 +1,13 @@
 {
   "name": "envsub",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "envsub is envsubst for NodeJS",
   "main": "index.js",
   "bin": "envsub.js",
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "handlebars": "^4.0.6"
   },
   "devDependencies": {
+    "app-root-path": "^2.0.1",
     "eslint": "^3.16.1"
   }
 }

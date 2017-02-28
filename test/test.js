@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 
 const envsub = require('../index');
+const appRoot = require('app-root-path');
+const p = appRoot + '/test/';
 
-console.log('writing to outputFile1 with', process.env.COMPUTERNAME);
-envsub('testTemplateFile', 'testOutputFile1').then(() => {
+// use existing env
+envsub(p + 'testTemplateFile', p + 'testOutputFile1').then((envobj) => {
 
+  console.log(`wrote ${envobj.outputContents} to ${envobj.outputFile}`);
+  // use created env
   process.env.COMPUTERNAME = 'COOLIO';
-  console.log('writing to outputFile2 with', process.env.COMPUTERNAME);
-  return envsub('testTemplateFile', 'testOutputFile2');
-}).then(() => {
+  return envsub(p + 'testTemplateFile', p + 'testOutputFile2');
+}).then((envobj) => {
 
-  console.log('testing missing args');
+  console.log(`wrote ${envobj.outputContents} to ${envobj.outputFile}`);
+  // missing args
   return envsub();
 }).then(() => {
 
@@ -18,8 +22,8 @@ envsub('testTemplateFile', 'testOutputFile1').then(() => {
 }).catch((err) => {
 
   console.log(err.message);
-  console.log('testing non existent template');
-  return envsub('waalaalaa');
+  // non existent template
+  return envsub(p + 'waalaalaa');
 }).then(() => {
 
   console.log('SOMETHING IS WRONG IF THIS LINE OF CODE IS EXECUTED');

@@ -14,25 +14,32 @@ let handleError = (err, cli) => {
 
 let envsub = (templateFile, outputFile = null, cli = false) => {
 
+  let templateContents, outputContents;
+
   if (templateFile == null) {
     handleError(Error('envsub templateFile outputFile - missing args'), cli);
   }
 
   outputFile = outputFile || templateFile;
 
-  return readFile(templateFile, 'utf8').then((templateContents) => {
+  return readFile(templateFile, 'utf8').then((contents) => {
+
+    templateContents = contents;
 
     // Read the templateFile and create a Handlebars template from its contents
     let template = Handlebars.compile(templateContents);
 
     // Use env vars as the template data
-    let outputContents = template(process.env);
+    outputContents = template(process.env);
 
     // Write the result of the templating operation to the outputFile
     return writeFile(outputFile, outputContents);
 
   }).then(() => {
+
     if (cli) process.exit(0);
+    return Promise.resolve({templateFile, templateContents, outputFile, outputContents});
+
   }).catch((err) => {
     handleError(err, cli);
   });

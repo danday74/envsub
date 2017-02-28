@@ -13,7 +13,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY files /usr/src/app
-RUN npm install
+RUN npm install --production
 
 RUN chmod 755 entrypoint.sh # LOOK HERE
 ENTRYPOINT ["./entrypoint.sh"] # LOOK HERE
