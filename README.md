@@ -115,11 +115,17 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 # Non-global usage
 
 ```bash
-npm install -S envsub
+npm install --save envsub
 ```
 
 ```javascript
+const envsub = require('envsub');
 process.env.MY_NAME = 'daniel';
+envsub('templateFile', 'outputFile').then((envobj) => {
+  console.log(`wrote ${envobj.outputContents} to ${envobj.outputFile}`);
+}).catch((err) => {
+  console.log(err.message);
+});
 ```
 
 Hope this module proves useful out there. God bless :)
