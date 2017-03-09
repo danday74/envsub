@@ -1,7 +1,7 @@
+let Handlebars = require('handlebars');
 let Promise = require('bluebird');
 let readFile = Promise.promisify(require('fs').readFile);
 let writeFile = Promise.promisify(require('fs').writeFile);
-let Handlebars = require('handlebars');
 
 let handleError = (err, cli) => {
   if (cli) {

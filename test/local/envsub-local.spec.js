@@ -64,7 +64,7 @@ describe('envsub local', () => {
       verifyEnvObj(envobj, templateFile, templateFile);
 
 
-      
+
       done();
     }).catch((err) => {
       done(err);
