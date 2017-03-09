@@ -45,6 +45,7 @@ describe('envsub global', () => {
     Imp.envsub(templateFile, outputFile, true).then((envobj) => {
       verifyEnvObj(envobj, templateFile, outputFile);
       Imp.expect(process.exit).to.have.been.calledWith(0);
+      // noinspection BadExpressionStatementJS
       Imp.expect(console.error).not.to.have.been.called;
       done();
     }).catch((err) => {
@@ -62,6 +63,7 @@ describe('envsub global', () => {
     Imp.envsub(templateFile, null, true).then((envobj) => {
       verifyEnvObj(envobj, templateFile, templateFile);
       Imp.expect(process.exit).to.have.been.calledWith(0);
+      // noinspection BadExpressionStatementJS
       Imp.expect(console.error).not.to.have.been.called;
       done();
     }).catch((err) => {
