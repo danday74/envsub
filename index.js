@@ -7,9 +7,8 @@ let handleError = (err, cli) => {
   if (cli) {
     console.error(err.message);
     process.exit(1);
-  } else {
-    return Promise.reject(err);
   }
+  return Promise.reject(err);
 };
 
 let envsub = (templateFile, outputFile = null, cli = false) => {

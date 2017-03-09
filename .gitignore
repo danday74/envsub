@@ -1,5 +1,5 @@
 /.idea/
+/coverage/
 node_modules/
 npm-debug.log
-testOutputFile*
 yarn-error.log
