@@ -4,7 +4,7 @@
 # docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-run-example
 # docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 
-FROM node:boron
+FROM node:6.10.0
 EXPOSE 8080
 
 RUN npm install -g envsub # LOOK HERE
@@ -16,4 +16,4 @@ COPY files /usr/src/app
 RUN npm install --production
 
 RUN chmod +x entrypoint.sh # LOOK HERE
-ENTRYPOINT ["./entrypoint.sh"] # LOOK HERE
+ENTRYPOINT ["./entrypoint.sh"] # LOOK HERE .. see entrypoint.sh in the files folder

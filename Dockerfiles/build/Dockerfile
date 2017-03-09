@@ -4,7 +4,7 @@
 # docker run --name envbuild -d -p "8080:8080" danday74/envsub-build-example
 
 
-FROM node:boron
+FROM node:6.10.0
 EXPOSE 8080
 
 RUN npm install -g envsub # LOOK HERE
@@ -17,6 +17,6 @@ RUN npm install --production
 
 # LOOK AT ARG HERE
 ARG MY_NAME=fred
-RUN envsub ./public/index.html ./public/index.html # LOOK HERE
+RUN envsub ./public/index.html ./public/index.html # LOOK HERE .. shorthand is simply .. envsub ./public/index.html
 
 CMD [ "npm", "start" ]
