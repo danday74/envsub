@@ -1,6 +1,6 @@
 # based on https://nodejs.org/en/docs/guides/nodejs-docker-webapp
 
-# docker build --build-arg MY_NAME=daniel -t danday74/envsub-build-example .
+# docker build --build-arg MY_NAME=Daniel -t danday74/envsub-build-example .
 # docker run --name envbuild -d -p "8080:8080" danday74/envsub-build-example
 
 

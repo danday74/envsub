@@ -1,8 +1,8 @@
 # based on https://nodejs.org/en/docs/guides/nodejs-docker-webapp
 
 # docker build -t danday74/envsub-run-example .
-# docker run --name envrun1 -d -e MY_NAME=daniel -p "8081:8080" danday74/envsub-run-example
-# docker run --name envrun2 -d -e MY_NAME=jimbob -p "8082:8080" danday74/envsub-run-example
+# docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-run-example
+# docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 
 FROM node:boron
 EXPOSE 8080

@@ -1,6 +1,8 @@
 envsub is envsubst for NodeJS
 =============================
 
+[![Build Status](https://travis-ci.org/danday74/envsub.svg?branch=master)](https://travis-ci.org/danday74/envsub)
+
 **NodeJS global CLI module providing file-level environment variable substitution via Handlebars**
 
 (Also supports [non-global usage](#non-global-usage))
@@ -19,7 +21,7 @@ envsub templateFile outputFile
 
 - [x]  Ensure environment variables exist
 ```bash
-export MY_NAME=daniel
+export MY_NAME=Daniel
 ```
 
 - [x]  Create an environment variable template
@@ -37,7 +39,7 @@ envsub template.html output.html
 - [x]  And the result
 
 output.html
-> <div>Hello my name is daniel</div>
+> <div>Hello my name is Daniel</div>
 
 <br>
 
@@ -54,7 +56,7 @@ In both examples below the file ```./files/public/index.html``` is a template fi
 Sample build time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dockerfiles/build)
 
 ```docker
-docker build --build-arg MY_NAME=daniel -t danday74/envsub-build-example .
+docker build --build-arg MY_NAME=Daniel -t danday74/envsub-build-example .
 docker run --name envbuild -d -p "8080:8080" danday74/envsub-build-example
 ```
 
@@ -64,8 +66,8 @@ Sample run time [Dockerfile](https://github.com/danday74/envsub/tree/master/Dock
 
 ```docker
 docker build -t danday74/envsub-run-example .
-docker run --name envrun1 -d -e MY_NAME=daniel -p "8081:8080" danday74/envsub-run-example
-docker run --name envrun2 -d -e MY_NAME=jimbob -p "8082:8080" danday74/envsub-run-example
+docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-run-example
+docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 ```
 
 <br>
@@ -120,8 +122,8 @@ npm install --save envsub
 
 ```javascript
 const envsub = require('envsub');
-process.env.MY_NAME = 'daniel';
-envsub('templateFile', 'outputFile').then((envobj) => {
+process.env.MY_NAME = 'Daniel';
+envsub(`${__dirname}/templateFile`, `${__dirname}/outputFile`).then((envobj) => {
   console.log(`wrote ${envobj.outputContents} to ${envobj.outputFile}`);
 }).catch((err) => {
   console.error(err.message);
