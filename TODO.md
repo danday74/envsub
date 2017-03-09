@@ -1,4 +1,4 @@
-* Lock down dockerfiles
+* Lock down Dockerfiles
 
 * Use yarn
 
