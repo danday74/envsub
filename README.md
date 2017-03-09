@@ -3,6 +3,9 @@ envsub is envsubst for NodeJS
 
 [![Build Status](https://travis-ci.org/danday74/envsub.svg?branch=master)](https://travis-ci.org/danday74/envsub)
 [![Coverage Status](https://coveralls.io/repos/github/danday74/envsub/badge.svg?branch=master)](https://coveralls.io/github/danday74/envsub?branch=master)
+[![dependencies Status](https://david-dm.org/danday74/envsub/status.svg)](https://david-dm.org/danday74/envsub)
+[![npm](https://img.shields.io/npm/v/envsub.svg)](https://www.npmjs.com/package/envsub)
+[![npm](https://img.shields.io/npm/dm/envsub.svg)](https://www.npmjs.com/package/envsub)
 
 **NodeJS global CLI module providing file-level environment variable substitution via Handlebars**
 
