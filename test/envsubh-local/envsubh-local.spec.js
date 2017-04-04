@@ -2,8 +2,7 @@ const Imp = require('../_classes/TestImports');
 const MY_TEMPLATE_FILE = `${__dirname}/templateFile`;
 const MY_OUTPUT_FILE = `${__dirname}/outputFile`;
 
-describe('envsub local', () => {
-
+describe('envsubh local', () => {
 
 
   before(() => {
@@ -11,19 +10,8 @@ describe('envsub local', () => {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
   after((done) => {
-    Imp.del([`${__dirname}/outputFile*`, `${__dirname}/templateFile*`, `!${__dirname}/templateFile`]).then(() => {
+    Imp.del([`${__dirname}/outputFile*`, `${__dirname}/tempTemplateFile*`]).then(() => {
       done();
     }).catch((err) => {
       done(err);
@@ -42,9 +30,8 @@ describe('envsub local', () => {
     let templateFile = MY_TEMPLATE_FILE;
     let outputFile = MY_OUTPUT_FILE;
 
-    Imp.envsub(templateFile, outputFile).then((envobj) => {
+    Imp.envsubh({templateFile, outputFile}).then((envobj) => {
       verifyEnvObj(envobj, templateFile, outputFile);
-
 
 
       done();
@@ -55,14 +42,13 @@ describe('envsub local', () => {
 
   it('should substitute env vars in template file and overwrite template file where one arg is given', (done) => {
 
-    let templateFile = `${__dirname}/templateFile2`;
+    let templateFile = `${__dirname}/tempTemplateFile`;
 
     // Create template file
     Imp.fs.writeFileSync(templateFile, Imp.fs.readFileSync(MY_TEMPLATE_FILE));
 
-    Imp.envsub(templateFile).then((envobj) => {
+    Imp.envsubh({templateFile}).then((envobj) => {
       verifyEnvObj(envobj, templateFile, templateFile);
-
 
 
       done();
@@ -71,31 +57,37 @@ describe('envsub local', () => {
     });
   });
 
-  it('should reject where no args are given', (done) => {
+  describe('Failure', () => {
 
-    Imp.envsub().then(() => {
-      done(Error('Did not reject'));
-    }).catch((err) => {
-      Imp.expect(err.message).to.contain('missing args');
+    it('should reject where no args are given', (done) => {
+
+      let options = {};
+
+      Imp.envsubh({options}).then(() => {
+        done(Error('Did not reject'));
+      }).catch((err) => {
+        Imp.expect(err.message).to.contain('missing args');
 
 
-      done();
+        done();
+      });
     });
-  });
 
-  it('should reject where template file does not exist', (done) => {
+    it('should reject where template file does not exist', (done) => {
 
-    let templateFile = `${__dirname}/noTemplateFile`;
-    let outputFile = MY_OUTPUT_FILE;
+      let templateFile = `${__dirname}/noTemplateFile`;
+      let outputFile = MY_OUTPUT_FILE;
+      let options = Imp.DEFAULT_ENVSUBH_OPTIONS;
 
-    Imp.envsub(templateFile, outputFile).then(() => {
-      done(Error('Did not reject'));
-    }).catch((err) => {
-      Imp.expect(err.code).to.eql('ENOENT');
-      Imp.expect(err.path).to.match(/noTemplateFile$/);
+      Imp.envsubh({templateFile, outputFile, options}).then(() => {
+        done(Error('Did not reject'));
+      }).catch((err) => {
+        Imp.expect(err.code).to.eql('ENOENT');
+        Imp.expect(err.path).to.match(/noTemplateFile$/);
 
 
-      done();
+        done();
+      });
     });
   });
 });

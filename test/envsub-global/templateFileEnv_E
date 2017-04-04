@@ -1,0 +1,4 @@
+aaa${  EXISTA  }aaa bbbBBBENVbbb cccCCCEQLccc
+xxx${ NOEXISTX }xxx yyyyyy zzzZZZEQLzzz
+aaa${  EXISTA  }aaa bbbBBBENVbbb cccCCCEQLccc
+xxx${ NOEXISTX }xxx yyyyyy zzzZZZEQLzzz

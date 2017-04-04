@@ -1,0 +1,5 @@
+{{#if MY_NAME}}
+ooo{{ MY_NAME }}ooo
+{{else}}
+Should never be hit
+{{/if}}

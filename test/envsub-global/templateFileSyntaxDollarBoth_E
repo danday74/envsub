@@ -1,0 +1,8 @@
+aaa Daniel aaa bbb Daniel bbb
+ccc ddd $ MY_NAME ddd
+
+eeeDanieleee fffDanielfff
+gggDanielggg hhhDanielhhh
+
+www{{ MY_NAME }}www xxx{{ MY_NAME }}xxx
+yyy{{MY_NAME}}yyy zzz{{   MY_NAME   }}zzz

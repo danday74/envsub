@@ -9,6 +9,6 @@ app.use((req, res, next) => {
 
 app.use(express.static('public'));
 
-let listener = app.listen(8080, function () {
+let listener = app.listen(8080, () => {
   console.log('Server listening on port', listener.address().port);
 });

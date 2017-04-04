@@ -7,15 +7,25 @@ chai.use(sinonChai);
 
 // others
 const del = require('del');
-const envsub = require(appRoot + '/index');
 const fs = require('fs');
+const using = require('data-driven');
+
+// custom
+const cfg = require(appRoot + '/main.config');
+const envsub = require(appRoot + '/lib/index').envsub;
+const envsubh = require(appRoot + '/lib/index').envsubh;
+const LogDiff = require(appRoot + '/LogDiff');
 
 let TestImports = {
   expect,
   sinon,
   del,
+  fs,
+  using,
+  cfg,
   envsub,
-  fs
+  envsubh,
+  LogDiff
 };
 
 module.exports = TestImports;
