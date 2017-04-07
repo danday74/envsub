@@ -19,13 +19,6 @@ program
   .option('-p, --protect', 'protect non-existent environment variables (that would otherwise be substituted) .. do not substitute them with an empty string')
   .option('-s, --syntax <syntax>', 'substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
 
-
-
-
-
-
-
-
 /* istanbul ignore next */
 program.on('--help', () => {
   console.log('  Examples:');
@@ -33,13 +26,13 @@ program.on('--help', () => {
   console.log('    Typical usage');
   console.log('    -------------');
   console.log('    $ envsub templateFile outputFile');
-  console.log('    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax handlebars templateFile outputFile');
+  console.log('    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax dollar-both templateFile outputFile');
   console.log('');
-  console.log('    Overwrite your templateFile');
-  console.log('    ---------------------------');
-  console.log('    Useful inside a docker container after you have copied your templateFile into the container');
+  console.log('    Overwrite your template file');
+  console.log('    ----------------------------');
+  console.log('    Useful inside a docker container after you have copied your template file into the container');
   console.log('    $ envsub templateFile');
-  console.log('    $ envsub --env MYVAR1 --env MYVAR2=foo templateFile');
+  console.log('    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile');
   console.log('');
 });
 

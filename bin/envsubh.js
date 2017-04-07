@@ -17,19 +17,6 @@ program
   .option('-d, --diff', 'show diff between template file and output file');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 program.parse(ArgV.get());
 
 let templateFile = (program.args.length > 0) ? program.args[0] : null;

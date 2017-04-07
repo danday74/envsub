@@ -4,8 +4,8 @@
   "description": "envsub is envsubst for NodeJS",
   "main": "envsub.js",
   "bin": {
-    "envsub": "bin/envsub-global.js",
-    "envsubh": "bin/envsubh-global.js"
+    "envsub": "bin/envsub.js",
+    "envsubh": "bin/envsubh.js"
   },
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",

@@ -5,7 +5,7 @@ const CLI_DELAY = 100;
 
 let cacheClearAndGo = (command) => {
   delete require.cache[require.resolve('commander')];
-  let commandPath = `${appRoot}/bin/${command}-global`;
+  let commandPath = `${appRoot}/bin/${command}`;
   delete require.cache[require.resolve(commandPath)];
   return require(commandPath);
 };

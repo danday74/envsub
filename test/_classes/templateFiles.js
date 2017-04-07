@@ -1,6 +1,6 @@
 const readFileSync = require('fs').readFileSync;
-const envsubDir = `${__dirname}/../envsub-global`;
-const envsubhDir = `${__dirname}/../envsubh-global`;
+const envsubDir = appRoot + '/test/envsub-global';
+const envsubhDir = appRoot + '/test/envsubh-global';
 
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
