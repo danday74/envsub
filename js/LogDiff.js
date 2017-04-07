@@ -1,4 +1,3 @@
-let _ = require('lodash');
 let chalk = require('chalk');
 let jsDiff = require('diff');
 

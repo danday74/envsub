@@ -1,8 +1,8 @@
 // const
+let _ = require('lodash');
 let Promise = require('bluebird');
 let readFile = Promise.promisify(require('fs').readFile);
 let writeFile = Promise.promisify(require('fs').writeFile);
-let _ = require('lodash');
 let config = require('./main.config');
 let LogDiff = require('./js/LogDiff');
 
