@@ -1,7 +1,7 @@
 const Imp = require('./TestImports');
 const readFileSync = require('fs').readFileSync;
 
-const CLI_DELAY = 50;
+const CLI_DELAY = 100;
 
 let cacheClearAndGo = (command) => {
   delete require.cache[require.resolve('commander')];

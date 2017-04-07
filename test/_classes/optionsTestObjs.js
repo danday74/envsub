@@ -54,16 +54,7 @@ let envsub = [
       ]
     },
     cli: {
-      flags: [
-        '--env',
-        'EXISTB',
-        '--env',
-        'EXISTC=CCCEQL',
-        '--env',
-        'NOEXISTY',
-        '--env',
-        'NOEXISTZ=ZZZEQL',
-      ]
+      flags: '--env EXISTB --env EXISTC=CCCEQL --env NOEXISTY --env NOEXISTZ=ZZZEQL'.split(' '),
     }
   },
   {
@@ -80,12 +71,7 @@ let envsub = [
       Imp.expect(console.warn).to.have.been.calledWithMatch(/Skipping environment variable '9INVALID'/);
     },
     cli: {
-      flags: [
-        '--env',
-        'VALID=SUB',
-        '--env',
-        '9INVALID=NOSUB'
-      ]
+      flags: '--env VALID=SUB --env 9INVALID=NOSUB'.split(' ')
     }
   },
   {
@@ -112,10 +98,7 @@ let envsub = [
     outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DEFAULT_EXPECTED,
     options: {syntax: 'default'},
     cli: {
-      flags: [
-        '--syntax',
-        'default'
-      ]
+      flags: '--syntax default'.split(' ')
     }
   },
   {
@@ -124,10 +107,7 @@ let envsub = [
     outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_BASIC_EXPECTED,
     options: {syntax: 'dollar-basic'},
     cli: {
-      flags: [
-        '--syntax',
-        'dollar-basic'
-      ]
+      flags: '--syntax dollar-basic'.split(' ')
     }
   },
   {
@@ -136,10 +116,7 @@ let envsub = [
     outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_BOTH_EXPECTED,
     options: {syntax: 'dollar-both'},
     cli: {
-      flags: [
-        '--syntax',
-        'dollar-both'
-      ]
+      flags: '--syntax dollar-both'.split(' ')
     }
   },
   {
@@ -148,10 +125,7 @@ let envsub = [
     outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_CURLY_EXPECTED,
     options: {syntax: 'dollar-curly'},
     cli: {
-      flags: [
-        '--syntax',
-        'dollar-curly'
-      ]
+      flags: '--syntax dollar-curly'.split(' ')
     }
   },
   {
@@ -160,10 +134,33 @@ let envsub = [
     outputContents: Tmp.SYNTAX_TEMPLATE_FILE_HANDLEBARS_EXPECTED,
     options: {syntax: 'handlebars'},
     cli: {
-      flags: [
-        '--syntax',
-        'handlebars'
-      ]
+      flags: '--syntax handlebars'.split(' ')
+    }
+  },
+  {
+    testName: 'should support a combination of options',
+    preFunc: () => {
+      process.env.MYVAR1 = 'MYVAL1';
+      process.env.EXIST_BUT_NO_SUB = 'WOW';
+    },
+    templateFile: Tmp.COMBINED_TEMPLATE_FILE,
+    outputContents: Tmp.COMBINED_TEMPLATE_FILE_EXPECTED,
+    options: {
+      diff: true,
+      envs: [
+        {name: 'MYVAR1'},
+        {name: 'MYVAR2', value: 'MYVAL2'},
+        {name: 'SUB_BUT_NO_EXIST'},
+      ],
+      protect: true,
+      syntax: 'dollar-both'
+    },
+    postFunc: () => {
+      // noinspection BadExpressionStatementJS
+      Imp.expect(Imp.LogDiff.logDiff).to.have.been.called;
+    },
+    cli: {
+      flags: '-d -e MYVAR1 -e MYVAR2=MYVAL2 -e SUB_BUT_NO_EXIST -p -s dollar-both'.split(' ')
     }
   }
 ];

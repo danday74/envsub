@@ -7,7 +7,7 @@ class LogDiff {
 
     let diff = jsDiff.diffLines(templateContents, outputContents);
 
-    let isDiff = diff.some(function (item) {
+    let isDiff = diff.some((item) => {
       return item.added || item.removed;
     });
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+
+const ArgV = require('./ArgV');
 const envsub = require('../envsub');
 const version = require('../package.json').version;
-const ArgV = require('./ArgV');
 
 let addEnvironmentVariable = (envVar, envVarList) => {
   envVarList.push(envVar);
@@ -13,10 +14,17 @@ let addEnvironmentVariable = (envVar, envVarList) => {
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
-  .option('-d, --diff', 'show diff between templateFile and outputFile')
-  .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all', addEnvironmentVariable, [])
-  .option('-p, --protect', 'protect non-existent environment variables .. do not substitute them with an empty string')
-  .option('-s, --syntax <syntax>', 'Substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
+  .option('-d, --diff', 'show diff between template file and output file')
+  .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all .. this flag can be repeated', addEnvironmentVariable, [])
+  .option('-p, --protect', 'protect non-existent environment variables (that would otherwise be substituted) .. do not substitute them with an empty string')
+  .option('-s, --syntax <syntax>', 'substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
+
+
+
+
+
+
+
 
 /* istanbul ignore next */
 program.on('--help', () => {
@@ -25,7 +33,7 @@ program.on('--help', () => {
   console.log('    Typical usage');
   console.log('    -------------');
   console.log('    $ envsub templateFile outputFile');
-  console.log('    $ envsub --env MYVAR1 --env MYVAR2=foo templateFile outputFile');
+  console.log('    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax handlebars templateFile outputFile');
   console.log('');
   console.log('    Overwrite your templateFile');
   console.log('    ---------------------------');

@@ -1,14 +1,34 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+
+const ArgV = require('./ArgV');
 const envsubh = require('../envsubh');
 const version = require('../package.json').version;
-const ArgV = require('./ArgV');
+
+
+
+
+
 
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
-  .option('-d, --diff', 'show diff between templateFile and outputFile');
+  .option('-d, --diff', 'show diff between template file and output file');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 program.parse(ArgV.get());
 

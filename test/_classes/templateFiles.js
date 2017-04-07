@@ -2,6 +2,8 @@ const readFileSync = require('fs').readFileSync;
 const envsubDir = `${__dirname}/../envsub-global`;
 const envsubhDir = `${__dirname}/../envsubh-global`;
 
+const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
+const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
 const ENV_TEMPLATE_FILE = `${envsubDir}/templateFileEnv`;
 const ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnv_E`, 'utf8');
 const ENV_INVALID_TEMPLATE_FILE = `${envsubDir}/templateFileEnvInvalid`;
@@ -26,6 +28,8 @@ const templateFiles = {
     NO_TEMPLATE_FILE: `${envsubDir}/noTemplateFile`,
     TEMP_TEMPLATE_FILE: `${envsubDir}/tempTemplateFile`,
     DIFF_TEMPLATE_FILE: `${envsubDir}/templateFileDiff`,
+    COMBINED_TEMPLATE_FILE,
+    COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
     ENV_TEMPLATE_FILE_EXPECTED,
     ENV_INVALID_TEMPLATE_FILE,
