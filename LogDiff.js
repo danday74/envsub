@@ -1,3 +1,4 @@
+let _ = require('lodash');
 let chalk = require('chalk');
 let jsDiff = require('diff');
 
@@ -7,13 +8,22 @@ class LogDiff {
 
     let diff = jsDiff.diffLines(templateContents, outputContents);
 
-    diff.forEach((part) => {
-      let color = part.added ? 'green' : part.removed ? 'red' : 'grey';
-      let prefix = part.added ? '+' : part.removed ? '-' : '';
-      part.diff = chalk[color](prefix + part.value);
-      /* istanbul ignore next */
-      if (!process.env.NODE_ENV) process.stdout.write(part.diff);
+    let isDiff = diff.some(function (item) {
+      return item.added || item.removed;
     });
+
+    if (isDiff) {
+      diff.forEach((part) => {
+        let color = part.added ? 'green' : part.removed ? 'red' : 'grey';
+        let prefix = part.added ? '+' : part.removed ? '-' : '';
+        part.diff = chalk[color](prefix + part.value);
+        /* istanbul ignore next */
+        if (!process.env.NODE_ENV) process.stdout.write(part.diff);
+      });
+    } else {
+      /* istanbul ignore next */
+      if (!process.env.NODE_ENV) process.stdout.write(chalk.grey('no difference'));
+    }
   }
 }
 

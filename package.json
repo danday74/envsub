@@ -1,6 +1,6 @@
 {
   "name": "envsub",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "envsub is envsubst for NodeJS",
   "main": "lib/index.js",
   "bin": {

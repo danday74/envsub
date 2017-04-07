@@ -3,10 +3,11 @@
 const program = require('commander');
 const envsub = require('../lib/index').envsub;
 const version = require('../package.json').version;
+const ArgV = require('./ArgV');
 
 let addEnvironmentVariable = (envVar, envVarList) => {
   envVarList.push(envVar);
-  return envVarList;
+  return [...new Set(envVarList)]; // unique
 };
 
 program
@@ -17,6 +18,7 @@ program
   .option('-p, --protect', 'protect non-existent environment variables .. do not substitute them with an empty string')
   .option('-s, --syntax <syntax>', 'Substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
 
+/* istanbul ignore next */
 program.on('--help', () => {
   console.log('  Examples:');
   console.log('');
@@ -33,7 +35,7 @@ program.on('--help', () => {
   console.log('');
 });
 
-program.parse(process.argv);
+program.parse(ArgV.get());
 
 let templateFile = (program.args.length > 0) ? program.args[0] : null;
 let outputFile = (program.args.length > 1) ? program.args[1] : null;
@@ -53,12 +55,16 @@ if (program.env.length > 0) {
       envs.push({name: nvp[0]});
     }
   });
-  program.envs = envs;
+  options.envs = envs;
 }
 
-envsub({
+let obj = {
   templateFile,
   outputFile,
   options,
   cli: true
-});
+};
+
+module.exports = obj;
+
+envsub(obj);

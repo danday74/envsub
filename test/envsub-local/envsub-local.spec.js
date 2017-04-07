@@ -1,4 +1,4 @@
-const command = 'envsubh';
+const command = 'envsub';
 const commonTests = require('../_classes/commonTests');
 const Imp = require('../_classes/TestImports');
 const optionsTestObjs = require('../_classes/optionsTestObjs')[command];
@@ -14,8 +14,8 @@ describe(`${command} local`, () => {
 
   beforeEach(() => {
     sandbox = Imp.sinon.sandbox.create();
-
-
+    sandbox.stub(console, 'warn', () => {
+    });
     sandbox.spy(Imp.LogDiff, 'logDiff');
   });
 
