@@ -14,7 +14,7 @@ describe(`${command} local`, () => {
 
   beforeEach(() => {
     sandbox = Imp.sinon.sandbox.create();
-    sandbox.stub(console, 'warn', () => {
+    sandbox.stub(console, 'warn').callsFake(() => {
     });
     sandbox.spy(Imp.LogDiff, 'logDiff');
   });

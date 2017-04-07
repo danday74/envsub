@@ -15,11 +15,11 @@ describe(`${command} global`, () => {
 
   beforeEach(() => {
     sandbox = Imp.sinon.sandbox.create();
-    sandbox.stub(console, 'error', () => {
+    sandbox.stub(console, 'error').callsFake(() => {
     });
-    sandbox.stub(console, 'warn', () => {
+    sandbox.stub(console, 'warn').callsFake(() => {
     });
-    sandbox.stub(process, 'exit', () => {
+    sandbox.stub(process, 'exit').callsFake(() => {
     });
     sandbox.spy(Imp.LogDiff, 'logDiff');
   });

@@ -38,7 +38,7 @@ let success = (command, Tmp) => {
       let templateFile = Tmp.MY_TEMPLATE_FILE;
       let outputFile = Tmp.OUTPUT_FILE;
 
-      e2eSandbox.stub(Imp.ArgV, 'get', () => {
+      e2eSandbox.stub(Imp.ArgV, 'get').callsFake(() => {
         return ['node', 'irrelevant', templateFile, outputFile];
       });
 
@@ -58,7 +58,7 @@ let success = (command, Tmp) => {
       // Create template file
       Imp.fs.writeFileSync(templateFile, Imp.fs.readFileSync(Tmp.MY_TEMPLATE_FILE));
 
-      e2eSandbox.stub(Imp.ArgV, 'get', () => {
+      e2eSandbox.stub(Imp.ArgV, 'get').callsFake(() => {
         return ['node', 'irrelevant', templateFile];
       });
 
@@ -86,7 +86,7 @@ let flags = (command, Tmp, optionsTestObjs) => {
         let templateFile = testObj.templateFile;
         let outputFile = Tmp.OUTPUT_FILE;
 
-        e2eSandbox.stub(Imp.ArgV, 'get', () => {
+        e2eSandbox.stub(Imp.ArgV, 'get').callsFake(() => {
           return ['node', 'irrelevant', ...testObj.cli.flags, templateFile, outputFile];
         });
 
@@ -115,7 +115,7 @@ let failure = (command, Tmp) => {
 
     it('should reject where template file is not given', (done) => {
 
-      e2eSandbox.stub(Imp.ArgV, 'get', () => {
+      e2eSandbox.stub(Imp.ArgV, 'get').callsFake(() => {
         return ['node', 'irrelevant'];
       });
 
@@ -134,7 +134,7 @@ let failure = (command, Tmp) => {
       let templateFile = Tmp.NO_TEMPLATE_FILE;
       let outputFile = Tmp.OUTPUT_FILE;
 
-      e2eSandbox.stub(Imp.ArgV, 'get', () => {
+      e2eSandbox.stub(Imp.ArgV, 'get').callsFake(() => {
         return ['node', 'irrelevant', templateFile, outputFile];
       });
 
