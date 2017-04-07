@@ -2,10 +2,10 @@
   "name": "envsub",
   "version": "3.0.0",
   "description": "envsub is envsubst for NodeJS",
-  "main": "lib/index.js",
+  "main": "envsub.js",
   "bin": {
-    "envsub": "bin/envsub.js",
-    "envsubh": "bin/envsubh.js"
+    "envsub": "bin/envsub-global.js",
+    "envsubh": "bin/envsubh-global.js"
   },
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",

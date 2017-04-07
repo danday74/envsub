@@ -1,6 +1,6 @@
-let command = require('../main');
+let command = require('./main');
 
 module.exports = (args = {}) => {
-  args.command = 'envsubh';
+  args.command = 'envsub';
   return command(args);
 };

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const envsub = require('../lib/index').envsub;
+const envsub = require('../envsub');
 const version = require('../package.json').version;
 const ArgV = require('./ArgV');
 

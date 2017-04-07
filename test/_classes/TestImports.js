@@ -13,8 +13,8 @@ const using = require('data-driven');
 // custom
 const ArgV = require(appRoot + '/bin/ArgV');
 const cfg = require(appRoot + '/main.config');
-const envsub = require(appRoot + '/lib/index').envsub;
-const envsubh = require(appRoot + '/lib/index').envsubh;
+const envsub = require(appRoot + '/envsub');
+const envsubh = require(appRoot + '/envsubh');
 const LogDiff = require(appRoot + '/js/LogDiff');
 
 let TestImports = {
