@@ -15,7 +15,7 @@ const ArgV = require(appRoot + '/bin/ArgV');
 const cfg = require(appRoot + '/main.config');
 const envsub = require(appRoot + '/lib/index').envsub;
 const envsubh = require(appRoot + '/lib/index').envsubh;
-const LogDiff = require(appRoot + '/LogDiff');
+const LogDiff = require(appRoot + '/js/LogDiff');
 
 let TestImports = {
   expect,

@@ -4,7 +4,7 @@ let readFile = Promise.promisify(require('fs').readFile);
 let writeFile = Promise.promisify(require('fs').writeFile);
 let _ = require('lodash');
 let config = require('./main.config');
-let LogDiff = require('./LogDiff');
+let LogDiff = require('./js/LogDiff');
 
 let handleError = (err, cli) => {
   if (cli) {
@@ -32,7 +32,7 @@ let envsub = (raw = {}) => {
   return readFile(args.templateFile, 'utf8').then((contents) => {
 
     templateContents = contents;
-    let parse = require(`./${args.command}-parser`);
+    let parse = require(`./js/${args.command}-parser`);
     outputContents = parse(templateContents, args);
     // TODO: Is diff global cli only?
     if (args.options.diff) LogDiff.logDiff(templateContents, outputContents);
