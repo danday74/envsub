@@ -1,4 +1,4 @@
-let Handlebars = require('handlebars');
+const Handlebars = require('handlebars');
 
 let envsubhParser = (contents) => {
 

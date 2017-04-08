@@ -1,5 +1,5 @@
-const ENV_REGEX = '[a-zA-Z_]+[a-zA-Z0-9_]*';
 const DEFAULT_SYNTAX = 'dollar-curly';
+const ENV_REGEX = '[a-zA-Z_]+[a-zA-Z0-9_]*';
 
 let dynamicRegexes = (opts) => {
 

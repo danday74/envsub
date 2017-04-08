@@ -1,5 +1,5 @@
-let chalk = require('chalk');
-let jsDiff = require('diff');
+const chalk = require('chalk');
+const jsDiff = require('diff');
 
 class LogDiff {
 
