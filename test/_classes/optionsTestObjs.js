@@ -19,7 +19,7 @@ let diffTests = (diffTemplateFile) => {
     },
     {
       testName: '--diff should log diff between template file and output file when flag set',
-      templateFile: Tmp.DIFF_TEMPLATE_FILE,
+      templateFile: diffTemplateFile,
       outputContents: null,
       options: {diff: true},
       postFunc: () => {

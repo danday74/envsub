@@ -12,19 +12,17 @@ const using = require('data-driven');
 
 // custom
 const ArgV = require(appRoot + '/bin/ArgV');
-const cfg = require(appRoot + '/main.config');
 const envsub = require(appRoot + '/envsub');
 const envsubh = require(appRoot + '/envsubh');
 const LogDiff = require(appRoot + '/js/LogDiff');
 
-let TestImports = {
+const TestImports = {
   expect,
   sinon,
   del,
   fs,
   using,
   ArgV,
-  cfg,
   envsub,
   envsubh,
   LogDiff
