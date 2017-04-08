@@ -1,3 +1,1 @@
-* yarn
-
 * Write README
