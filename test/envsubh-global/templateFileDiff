@@ -1,2 +1,2 @@
-xxx${ MY_NAME }xxx
+ooo{{ MY_NAME }}ooo
 No diff on this line
