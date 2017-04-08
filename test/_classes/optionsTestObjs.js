@@ -138,6 +138,21 @@ let envsub = [
     }
   },
   {
+    testName: '--env with --protect should ensure non-existent environment variables are not substituted',
+    templateFile: Tmp.ENV_PROTECT_TEMPLATE_FILE,
+    outputContents: Tmp.ENV_PROTECT_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'ENV_SELECTED_BUT_PROTECTED'},
+        {name: 'ENV_SELECTED_BUT_PROTECTED_WITH_DEFAULT', value: 'SUB'}
+      ],
+      protect: true
+    },
+    cli: {
+      flags: '--env ENV_SELECTED_BUT_PROTECTED --env ENV_SELECTED_BUT_PROTECTED_WITH_DEFAULT=SUB --protect'.split(' ')
+    }
+  },
+  {
     testName: 'should support a combination of options',
     preFunc: () => {
       process.env.MYVAR1 = 'MYVAL1';
