@@ -1,10 +1,10 @@
-// const
-let _ = require('lodash');
-let Promise = require('bluebird');
-let readFile = Promise.promisify(require('fs').readFile);
-let writeFile = Promise.promisify(require('fs').writeFile);
-let config = require('./main.config');
-let LogDiff = require('./js/LogDiff');
+const _ = require('lodash');
+const Promise = require('bluebird');
+const readFile = Promise.promisify(require('fs').readFile);
+const writeFile = Promise.promisify(require('fs').writeFile);
+
+const config = require('./main.config');
+const LogDiff = require('./js/LogDiff');
 
 let handleError = (err, cli) => {
   if (cli) {
@@ -22,7 +22,6 @@ let envsub = (raw = {}) => {
 
   let args = _.merge({}, {outputFile: null, options: config[raw.command].DEFAULT_OPTIONS, cli: false}, raw);
 
-  // noinspection EqualityComparisonWithCoercionJS
   if (args.templateFile == null) {
     return handleError(Error('envsub templateFile outputFile - missing args'), args.cli);
   }
@@ -34,7 +33,6 @@ let envsub = (raw = {}) => {
     templateContents = contents;
     let parse = require(`./js/${args.command}-parser`);
     outputContents = parse(templateContents, args);
-    // TODO: Is diff global cli only?
     if (args.options.diff) LogDiff.logDiff(templateContents, outputContents);
     return writeFile(args.outputFile, outputContents);
 
@@ -51,7 +49,6 @@ let envsub = (raw = {}) => {
   }).catch((err) => {
     return handleError(err, args.cli);
   });
-
 };
 
 module.exports = envsub;

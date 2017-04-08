@@ -1,5 +1,5 @@
-envsub is envsubst for NodeJS
-=============================
+envsub is envsubst for Node.js
+==============================
 
 [![Build Status](https://travis-ci.org/danday74/envsub.svg?branch=master)](https://travis-ci.org/danday74/envsub)
 [![Coverage Status](https://coveralls.io/repos/github/danday74/envsub/badge.svg?branch=master)](https://coveralls.io/github/danday74/envsub?branch=master)
@@ -7,7 +7,7 @@ envsub is envsubst for NodeJS
 [![npm](https://img.shields.io/npm/v/envsub.svg)](https://www.npmjs.com/package/envsub)
 [![npm](https://img.shields.io/npm/dm/envsub.svg)](https://www.npmjs.com/package/envsub)
 
-**NodeJS global CLI module providing file-level environment variable substitution via Handlebars**
+**Node.js global CLI module providing file-level environment variable substitution via Handlebars**
 
 (Also supports [non-global usage](#non-global-usage))
 
@@ -51,7 +51,7 @@ output.html
 
 envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
 
-This module seeks to make envsubst freely available to the NodeJS community for Docker templating.
+This module seeks to make envsubst freely available to the Node.js community for Docker templating.
 
 In both examples below the file ```./files/public/index.html``` is a template file.
 

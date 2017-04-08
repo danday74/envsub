@@ -1,14 +1,14 @@
 {
   "name": "envsub",
   "version": "3.0.0",
-  "description": "envsub is envsubst for NodeJS",
+  "description": "envsub is envsubst for Node.js",
+  "author": "Daniel Lewis BSc(Hons)",
+  "license": "ISC",
   "main": "envsub.js",
   "bin": {
     "envsub": "bin/envsub.js",
     "envsubh": "bin/envsubh.js"
   },
-  "author": "Daniel Lewis BSc(Hons)",
-  "license": "ISC",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover -x \"**/*.spec.js\" ./node_modules/mocha/bin/_mocha -- test",
     "enforcer": "./node_modules/.bin/istanbul check-coverage --statement 100 --branch 100 --function 100 --line 100",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/danday74/envsub#readme",
   "keywords": [
     "envsub",
+    "envsubh",
     "envsubst",
     "env",
     "env template",

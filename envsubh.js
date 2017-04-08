@@ -1,4 +1,4 @@
-let command = require('./main');
+const command = require('./main');
 
 module.exports = (args = {}) => {
   args.command = 'envsubh';
