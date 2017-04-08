@@ -44,6 +44,7 @@ let envsubParser = (contents, args) => {
 
   let opts = args.options;
   let dRegexes = dynamicRegexes(opts);
+  opts.syntax = opts.syntax.toLowerCase();
 
   dRegexes.forEach((dRegex) => {
 
