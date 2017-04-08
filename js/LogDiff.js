@@ -3,6 +3,12 @@ const jsDiff = require('diff');
 
 class LogDiff {
 
+  static replaceAllButLast(str, pOld, pNew) {
+    str = str.replace(new RegExp(pOld, 'g'), pNew);
+    str = str.replace(new RegExp(pNew + '$'), pOld);
+    return str;
+  }
+
   static logDiff(templateContents, outputContents) {
 
     let diff = jsDiff.diffLines(templateContents, outputContents);
@@ -13,8 +19,19 @@ class LogDiff {
 
     if (isDiff) {
       diff.forEach((part) => {
-        let color = part.added ? 'green' : part.removed ? 'red' : 'grey';
-        let prefix = part.added ? '+' : part.removed ? '-' : '';
+        let color, prefix;
+        if (part.added) {
+          color = 'green';
+          prefix = '+';
+          part.value = LogDiff.replaceAllButLast(part.value, '\n', '\n ');
+        } else if (part.removed) {
+          color = 'red';
+          prefix = '-';
+          part.value = LogDiff.replaceAllButLast(part.value, '\n', '\n ');
+        } else {
+          color = 'grey';
+          prefix = '';
+        }
         part.diff = chalk[color](prefix + part.value);
         /* istanbul ignore next */
         if (!process.env.NODE_ENV) process.stdout.write(part.diff);
