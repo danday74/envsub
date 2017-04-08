@@ -1,13 +1,12 @@
-const Imp = require('./TestImports');
 const readFileSync = require('fs').readFileSync;
-
+const Imp = require('./TestImports');
 const CLI_DELAY = 100;
 
 let cacheClearAndGo = (command) => {
   delete require.cache[require.resolve('commander')];
   let commandPath = `${appRoot}/bin/${command}`;
   delete require.cache[require.resolve(commandPath)];
-  return require(commandPath);
+  require(commandPath);
 };
 
 let e2eSandbox;
@@ -48,7 +47,6 @@ let success = (command, Tmp) => {
         verifyEnvObj(outputFile);
         done();
       }, CLI_DELAY);
-
     });
 
     it('should substitute env vars in template file and overwrite template file where no output file is given', (done) => {
@@ -70,7 +68,6 @@ let success = (command, Tmp) => {
       }, CLI_DELAY);
     });
   });
-
 };
 
 let flags = (command, Tmp, optionsTestObjs) => {
@@ -126,7 +123,6 @@ let failure = (command, Tmp) => {
         Imp.expect(console.error).to.have.been.calledWithMatch(/missing args/);
         done();
       }, CLI_DELAY);
-
     });
 
     it('should reject where template file does not exist', (done) => {
@@ -145,7 +141,6 @@ let failure = (command, Tmp) => {
         Imp.expect(console.error).to.have.been.calledWithMatch(/ENOENT/);
         done();
       }, CLI_DELAY);
-
     });
   });
 };

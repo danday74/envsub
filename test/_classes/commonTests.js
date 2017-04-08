@@ -6,8 +6,8 @@ let success = (command, Tmp, cli) => {
 
     let verifyEnvObj = (envobj, templateFile, outputFile, cli) => {
       Imp.expect(envobj.templateFile).to.eql(templateFile);
-      Imp.expect(envobj.outputContents).to.eql(Tmp.MY_TEMPLATE_FILE_EXPECTED);
       Imp.expect(envobj.outputFile).to.eql(outputFile);
+      Imp.expect(envobj.outputContents).to.eql(Tmp.MY_TEMPLATE_FILE_EXPECTED);
       if (cli) {
         Imp.expect(process.exit).to.have.been.calledWith(0);
         // noinspection BadExpressionStatementJS
@@ -19,9 +19,8 @@ let success = (command, Tmp, cli) => {
 
       let templateFile = Tmp.MY_TEMPLATE_FILE;
       let outputFile = Tmp.OUTPUT_FILE;
-      let options = {};
 
-      command({templateFile, outputFile, options, cli}).then((envobj) => {
+      command({templateFile, outputFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, outputFile, cli);
         done();
       }).catch((err) => {
@@ -32,12 +31,11 @@ let success = (command, Tmp, cli) => {
     it('should substitute env vars in template file and overwrite template file where no output file is given', (done) => {
 
       let templateFile = Tmp.TEMP_TEMPLATE_FILE;
-      let options = {};
 
       // Create template file
       Imp.fs.writeFileSync(templateFile, Imp.fs.readFileSync(Tmp.MY_TEMPLATE_FILE));
 
-      command({templateFile, options, cli}).then((envobj) => {
+      command({templateFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, templateFile, cli);
         done();
       }).catch((err) => {
@@ -86,9 +84,7 @@ let failure = (command, Tmp, cli) => {
 
     it('should reject where template file is not given', (done) => {
 
-      let options = {};
-
-      command({options, cli}).then(() => {
+      command({cli}).then(() => {
         done(Error('Did not reject'));
       }).catch((err) => {
         Imp.expect(err.message).to.contain('missing args');
@@ -104,9 +100,8 @@ let failure = (command, Tmp, cli) => {
 
       let templateFile = Tmp.NO_TEMPLATE_FILE;
       let outputFile = Tmp.OUTPUT_FILE;
-      let options = {};
 
-      command({templateFile, outputFile, options, cli}).then(() => {
+      command({templateFile, outputFile, cli}).then(() => {
         done(Error('Did not reject'));
       }).catch((err) => {
         Imp.expect(err.code).to.eql('ENOENT');
@@ -119,7 +114,6 @@ let failure = (command, Tmp, cli) => {
       });
     });
   });
-
 };
 
 module.exports = {
