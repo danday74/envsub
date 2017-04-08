@@ -7,18 +7,10 @@ const envsubh = require('../envsubh');
 const help = require('./help');
 const version = require('../package.json').version;
 
-
-
-
-
-
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
   .option('-d, --diff', 'show diff between template file and output file');
-
-
-
 
 let examples = [
   'envsubh templateFile outputFile',
@@ -35,21 +27,6 @@ let outputFile = (program.args.length > 1) ? program.args[1] : null;
 let options = {
   diff: !!program.diff
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 envsubh({
   templateFile,
