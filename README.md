@@ -21,13 +21,13 @@ Contents
 * [Intro](#intro)
 * **envsub**
   * [Global CLI Usage](#envsub--global-cli-usage)
-  * [Quick Reference / Help](#)
-  * [Docker Integration (optional)](#)
-  * [Local Promise-based Usage](#)
+  * [Quick Reference / Help](#envsub--quick-reference--help)
+  * [Docker Integration (optional)](#envsub--docker-integration-optional)
+  * [Local Promise-based Usage](#envsub--local-promise-based-usage)
 * **envsubh**
-  * [Global CLI Usage](#)
-  * [Quick Reference / Help](#)
-  * [Local Promise-based Usage](#)
+  * [Global CLI Usage](#envsubh--global-cli-usage)
+  * [Quick Reference / Help](#envsubh--quick-reference--help)
+  * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
 
 
 
