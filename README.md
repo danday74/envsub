@@ -63,7 +63,7 @@ envsubh means 'envsub handlebars'.
 
 As with envsub, this command wants a template file and spits out an output file.
 
-envsubh, however, instead of providing straight forward environment variable substitution, simply throws the template file at the handlebars library, using environment variables as the templating data.
+envsubh, however, instead of providing straight forward environment variable substitution, simply throws the template file at the [Handlebars](https://www.npmjs.com/package/handlebars) templating library, using environment variables as the templating data.
 
 This approach gives you the power of handlebars templating but removes a lot of the control / options provided by envsub.
 
