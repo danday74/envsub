@@ -156,7 +156,7 @@ envsub > Quick Reference / Help
 envsub --help
 ```
 
-<pre>
+```text
   Usage: envsub [options] <templateFile> [outputFile]
 
   Options:
@@ -180,7 +180,7 @@ envsub --help
     Useful inside a docker container after you have copied your template file into the container
     $ envsub templateFile
     $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
-</pre>
+```
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
