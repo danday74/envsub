@@ -11,6 +11,8 @@ envsub is envsubst for Node.js
 
 **envsub works with any file format - e.g. HTML, JSON, text, etc.**
 
+<br><br>
+
 
 
 
@@ -29,6 +31,8 @@ Contents
   * [Quick Reference / Help](#envsubh--quick-reference--help)
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
 
+<br><br>
+
 
 
 
@@ -36,7 +40,31 @@ Contents
 Intro
 =====
 
-Hello there.
+What is envsub?
+---------------
+
+envsub works at the file level.
+
+Given a template file, it looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
+
+envsub then spits out an output file with the result.
+
+envsub provides various options to allow you to restrict which environment variables are substituted and to define the preferred template substitution syntax.
+
+What is envsubh?
+----------------
+
+envsubh is available automatically when you install envsub.
+
+envsubh means 'envsub handlebars'.
+
+As with envsub, this command wants a template file and spits out an output file.
+
+envsubh, however, instead of providing straight forward environment variable substitution, simply throws the template file at the handlebars library, using environment variables as the templating data.
+
+This approach gives you the power of handlebars templating but removes a lot of the control / options provided by envsub.
+
+<br><br>
 
 
 
