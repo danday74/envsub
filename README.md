@@ -314,6 +314,7 @@ envsubh > Quick Reference / Help
 envsubh --help
 ```
 
+```text
   Usage: envsubh [options] <templateFile> [outputFile]
 
   Options:
@@ -334,6 +335,7 @@ envsubh --help
     Useful inside a docker container after you have copied your template file into the container
     $ envsubh templateFile
     $ envsubh -d templateFile
+```
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
