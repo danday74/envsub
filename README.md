@@ -23,13 +23,13 @@ Quick Reference - envsub
 * [Intro](#intro)
 * **envsub**
   * [Global CLI Usage](#envsub--global-cli-usage)
-  * Quick Start / Help
-  * Docker Integration (optional)
-  * Local Promise-based Usage  
+  * [Quick Start / Help](#)
+  * [Docker Integration (optional)](#)
+  * [Local Promise-based Usage](#)
 * **envsubh**
-  * Global CLI Usage
-  * Quick Start / Help
-  * Local Promise-based Usage
+  * [Global CLI Usage](#)
+  * [Quick Start / Help](#)
+  * [Local Promise-based Usage](#)
 
 
 
@@ -114,7 +114,7 @@ Logs the difference between the template file and the output file.
 
 
 
-envsub - Quick Start / Help
+envsub > Quick Start / Help
 ===========================
 
 ```bash
@@ -149,7 +149,7 @@ envsub --help
 
 
 
-envsub - Docker Integration (optional)
+envsub > Docker Integration (optional)
 ======================================
 
 envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
@@ -183,7 +183,7 @@ docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-ru
 
 
 
-envsub - Local Promise-based Usage
+envsub > Local Promise-based Usage
 ==================================
 
 ```bash
@@ -222,15 +222,11 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 
 
 
-envsubh - Global CLI Usage
+envsubh > Global CLI Usage
 ==========================
 
 ```bash
 npm install -g envsub # yes, this also globally installs envsubh
-```
-
-```bash
-envsubh --help
 ```
 
 Examples
@@ -258,7 +254,7 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 
 
-envsubh - Quick Start / Help
+envsubh > Quick Start / Help
 ============================
 
 ```bash
@@ -290,7 +286,7 @@ envsubh --help
 
 
 
-envsubh - Local Promise-based Usage
+envsubh > Local Promise-based Usage
 ===================================
 
 ```bash
