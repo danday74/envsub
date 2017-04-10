@@ -45,8 +45,6 @@ Intro
 What is envsub?
 ---------------
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
-
 Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
 
 envsub then spits out an output file with the result.
@@ -69,7 +67,7 @@ envsubh, however, instead of providing straight forward environment variable sub
 
 This approach gives you the power of handlebars templating but removes a lot of the control / options provided by envsub.
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -79,8 +77,6 @@ This approach gives you the power of handlebars templating but removes a lot of 
 
 envsub > Global CLI Usage
 =========================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install -g envsub
@@ -145,7 +141,7 @@ After copying a template file into a docker container, it can be useful to overw
 
 Logs the difference between the template file and the output file.
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -155,8 +151,6 @@ Logs the difference between the template file and the output file.
 
 envsub > Quick Reference / Help
 ===============================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 envsub --help
@@ -186,7 +180,7 @@ envsub --help
 >    $ envsub templateFile
 >    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -196,8 +190,6 @@ envsub --help
 
 envsub > Docker Integration (optional)
 ======================================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
 
@@ -226,7 +218,7 @@ docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-ru
 docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 ```
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -236,8 +228,6 @@ docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-ru
 
 envsub > Local Promise-based Usage
 ==================================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install --save envsub
@@ -271,7 +261,7 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -281,8 +271,6 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 
 envsubh > Global CLI Usage
 ==========================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install -g envsub # yes, this also globally installs envsubh
@@ -309,7 +297,7 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 **envsubh --diff flag** - see envsub for details TODO-LINK-HERE
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -319,8 +307,6 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 envsubh > Quick Reference / Help
 ================================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 envsubh --help
@@ -347,7 +333,7 @@ envsubh --help
     $ envsubh templateFile
     $ envsubh -d templateFile
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -357,8 +343,6 @@ envsubh --help
 
 envsubh > Local Promise-based Usage
 ===================================
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install --save envsub # yes, this is correct
@@ -385,7 +369,7 @@ envsubh({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
