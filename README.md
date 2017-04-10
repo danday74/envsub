@@ -13,6 +13,8 @@ envsub is envsubst for Node.js
 
 
 
+
+
 Contents
 ========
 
@@ -21,13 +23,24 @@ Quick Reference - envsub
 * Intro
 * envsub
   * Global CLI Usage
-  * Quick Reference
+  * Quick Start / Help
   * Docker Integration (optional)
   * Local Promise-based Usage  
 * envsubh
   * Global CLI Usage
-  * Quick Reference
+  * Quick Start / Help
   * Local Promise-based Usage
+
+
+
+
+
+Intro
+=====
+
+Hello there.
+
+
 
 
 
@@ -101,8 +114,8 @@ Logs the difference between the template file and the output file.
 
 
 
-envsub - Quick Reference
-========================
+envsub - Quick Start / Help
+===========================
 
 ```bash
 envsub --help
@@ -245,8 +258,8 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 
 
-envsubh - Quick Reference
-=========================
+envsubh - Quick Start / Help
+============================
 
 ```bash
 envsubh --help
