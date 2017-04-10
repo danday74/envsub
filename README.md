@@ -22,7 +22,7 @@ Quick Reference - envsub
 
 * [Intro](#intro)
 * **envsub**
-  * Global CLI Usage
+  * [Global CLI Usage](#envsub--global-cli-usage)
   * Quick Start / Help
   * Docker Integration (optional)
   * Local Promise-based Usage  
