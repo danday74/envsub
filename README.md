@@ -44,8 +44,8 @@ Hello there.
 
 
 
-envsub: Global CLI Usage
-========================
+envsub -> Global CLI Usage
+==========================
 
 ```bash
 npm install -g envsub
