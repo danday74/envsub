@@ -56,12 +56,8 @@ envsub provides various flags / options to allow you to:
 * restrict which environment variables are substituted and
 * define the preferred template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or ...
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
-
 What is envsubh?
 ----------------
-
-[Back to top](#envsub-is-envsubst-for-nodejs)
 
 envsubh is available automatically when you install envsub.
 
