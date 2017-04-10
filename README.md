@@ -21,6 +21,8 @@ Contents
 ========
 
 * [Intro](#intro)
+  * [What is envsub?](#what-is-envsub)
+  * [What is envsubh?](#what-is-envsubh)
 * **envsub**
   * [Global CLI Usage](#envsub--global-cli-usage)
   * [Quick Reference / Help](#envsub--quick-reference--help)
