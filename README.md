@@ -1,5 +1,3 @@
-<a name="top"></a>
-
 envsub is envsubst for Node.js
 ==============================
 
@@ -47,7 +45,7 @@ Intro
 What is envsub?
 ---------------
 
-[Back to top](#top)
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
 
@@ -58,8 +56,12 @@ envsub provides various flags / options to allow you to:
 * restrict which environment variables are substituted and
 * define the preferred template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or ...
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
 What is envsubh?
 ----------------
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 envsubh is available automatically when you install envsub.
 
@@ -71,6 +73,8 @@ envsubh, however, instead of providing straight forward environment variable sub
 
 This approach gives you the power of handlebars templating but removes a lot of the control / options provided by envsub.
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
 <br><br>
 
 
@@ -79,6 +83,8 @@ This approach gives you the power of handlebars templating but removes a lot of 
 
 envsub > Global CLI Usage
 =========================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install -g envsub
