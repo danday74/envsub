@@ -183,7 +183,7 @@ let envsub = [
     preFunc: () => {
       process.env.MYVAR1 = 'foo';
       process.env.MYVAR2 = 'bar';
-      process.env.MYVAR3 = '';
+      delete process.env.MYVAR3;
     },
     templateFile: Tmp.X_EXAMPLE_TEMPLATE_FILE,
     outputContents: Tmp.X_EXAMPLE_TEMPLATE_FILE_EXPECTED,
@@ -216,7 +216,7 @@ let envsub = [
     preFunc: () => {
       process.env.MYVAR1 = 'foo';
       process.env.MYVAR2 = 'bar';
-      process.env.MYVAR3 = '';
+      delete process.env.MYVAR3;
     },
     templateFile: Tmp.X_EXAMPLE_PROTECT_TEMPLATE_FILE,
     outputContents: Tmp.X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED,
@@ -230,7 +230,7 @@ let envsub = [
     preFunc: () => {
       process.env.MYVAR1 = 'foo';
       process.env.MYVAR2 = 'bar';
-      process.env.MYVAR3 = '';
+      delete process.env.MYVAR3;
     },
     templateFile: Tmp.X_EXAMPLE_SYNTAX_TEMPLATE_FILE,
     outputContents: Tmp.X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED,
@@ -248,7 +248,7 @@ let envsubh = [
     preFunc: () => {
       process.env.MYVAR1 = 'foo';
       process.env.MYVAR2 = 'bar';
-      process.env.MYVAR3 = '';
+      delete process.env.MYVAR3;
     },
     templateFile: TmpH.Y_EXAMPLE_TEMPLATE_FILE,
     outputContents: TmpH.Y_EXAMPLE_TEMPLATE_FILE_EXPECTED,
