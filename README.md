@@ -67,6 +67,8 @@ envsubh, however, instead of providing straight forward environment variable sub
 
 This approach gives you the full power of handlebars templating but removes a lot of the fine-grain control / options provided by envsub.
 
+envsubh is restricted to use of the {{MYVAR}} syntax only.
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
