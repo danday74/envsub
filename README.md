@@ -45,7 +45,7 @@ Intro
 What is envsub?
 ---------------
 
-[Back to top](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
 
