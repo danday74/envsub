@@ -156,29 +156,31 @@ envsub > Quick Reference / Help
 envsub --help
 ```
 
->  Usage: envsub [options] <templateFile> [outputFile]
->
->  Options:
->
->    -h, --help                output usage information
->    -V, --version             output the version number
->    -d, --diff                show diff between template file and output file
->    -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all .. this flag can be repeated
->    -p, --protect             protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string
->    -s, --syntax <syntax>     template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}
->
->  Examples:
->
->    Typical usage
->    -------------
->    $ envsub templateFile outputFile
->    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax dollar-both templateFile outputFile
->
->    Overwrite your template file
->    ----------------------------
->    Useful inside a docker container after you have copied your template file into the container
->    $ envsub templateFile
->    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
+<pre>
+  Usage: envsub [options] <templateFile> [outputFile]
+
+  Options:
+
+    -h, --help                output usage information
+    -V, --version             output the version number
+    -d, --diff                show diff between template file and output file
+    -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all .. this flag can be repeated
+    -p, --protect             protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string
+    -s, --syntax <syntax>     template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}
+
+  Examples:
+
+    Typical usage
+    -------------
+    $ envsub templateFile outputFile
+    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax dollar-both templateFile outputFile
+
+    Overwrite your template file
+    ----------------------------
+    Useful inside a docker container after you have copied your template file into the container
+    $ envsub templateFile
+    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
+</pre>
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 

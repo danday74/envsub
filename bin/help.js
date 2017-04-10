@@ -30,7 +30,7 @@ let help = (program, examples) => {
     console.log(`    $ ${examples[2]}`);
     console.log(`    $ ${examples[3]}`);
     console.log('');
-    console.log('  Author:');
+    console.log('  Author says:');
     console.log('');
     console.log('    This is a well tested module. Issues (bugs) raised on github will be fixed!');
     console.log('    A lot of loving effort has gone into making this module the best that it could be.');
