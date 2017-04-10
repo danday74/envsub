@@ -43,9 +43,7 @@ Intro
 What is envsub?
 ---------------
 
-envsub works at the file level.
-
-Given a template file, it looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
+Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
 
 envsub then spits out an output file with the result.
 
