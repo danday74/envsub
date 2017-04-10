@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 envsub is envsubst for Node.js
 ==============================
 
@@ -45,7 +47,7 @@ Intro
 What is envsub?
 ---------------
 
-[Back to top](#)
+[Back to top](#top)
 
 Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
 
