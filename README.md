@@ -49,7 +49,7 @@ Given a template file, it looks for environment variable placeholders in that fi
 
 envsub then spits out an output file with the result.
 
-envsub provides various options to allow you to:
+envsub provides various flags / options to allow you to:
  
 * restrict which environment variables are substituted and
 * define the preferred template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or ...
