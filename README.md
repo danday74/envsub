@@ -20,13 +20,13 @@ Contents
 
 Quick Reference - envsub
 
-* [Into](#intro)
-* envsub
+* [Intro](#intro)
+* **envsub**
   * Global CLI Usage
   * Quick Start / Help
   * Docker Integration (optional)
   * Local Promise-based Usage  
-* envsubh
+* **envsubh**
   * Global CLI Usage
   * Quick Start / Help
   * Local Promise-based Usage
@@ -44,8 +44,8 @@ Hello there.
 
 
 
-envsub - Global CLI Usage
-=========================
+envsub: Global CLI Usage
+========================
 
 ```bash
 npm install -g envsub
