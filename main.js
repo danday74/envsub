@@ -23,7 +23,7 @@ let envsub = (raw = {}) => {
   let args = _.merge({}, {outputFile: null, options: config[raw.command].DEFAULT_OPTIONS, cli: false}, raw);
 
   if (args.templateFile == null) {
-    return handleError(Error('envsub templateFile outputFile - missing args'), args.cli);
+    return handleError(Error(`${args.command} templateFile outputFile - missing args`), args.cli);
   }
 
   args.outputFile = args.outputFile || args.templateFile;

@@ -18,7 +18,7 @@ program
   .option('-d, --diff', 'show diff between template file and output file')
   .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all .. this flag can be repeated', addEnvironmentVariable, [])
   .option('-p, --protect', 'protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string')
-  .option('-s, --syntax <syntax>', 'substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
+  .option('-s, --syntax <syntax>', 'template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
 
 let examples = [
   'envsub templateFile outputFile',
@@ -30,15 +30,15 @@ let examples = [
 help(program, examples);
 program.parse(ArgV.get());
 
-let templateFile = (program.args.length > 0) ? program.args[0] : null;
-let outputFile = (program.args.length > 1) ? program.args[1] : null;
+let templateFile = (program.args && program.args.length > 0) ? program.args[0] : null;
+let outputFile = (program.args && program.args.length > 1) ? program.args[1] : null;
 let options = {
   diff: !!program.diff,
   protect: !!program.protect,
   syntax: program.syntax.toLowerCase()
 };
 
-if (program.env.length > 0) {
+if (program.env && program.env.length > 0) {
   let envs = [];
   program.env.forEach((env) => {
     let nvp = env.split(/=(.+)/);

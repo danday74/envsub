@@ -22,8 +22,8 @@ let examples = [
 help(program, examples);
 program.parse(ArgV.get());
 
-let templateFile = (program.args.length > 0) ? program.args[0] : null;
-let outputFile = (program.args.length > 1) ? program.args[1] : null;
+let templateFile = (program.args && program.args.length > 0) ? program.args[0] : null;
+let outputFile = (program.args && program.args.length > 1) ? program.args[1] : null;
 let options = {
   diff: !!program.diff
 };
