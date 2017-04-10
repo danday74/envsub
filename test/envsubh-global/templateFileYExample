@@ -1,0 +1,6 @@
+{{#if MYVAR1}}
+name is {{MYVAR1}}.
+{{else}}
+friend is {{MYVAR2}}.
+{{/if}}
+I like xx{{MYVAR3}}xx.

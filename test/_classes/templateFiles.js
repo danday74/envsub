@@ -24,6 +24,18 @@ const SYNTAX_DOLLAR_BOTH_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/tem
 const SYNTAX_DOLLAR_CURLY_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSyntaxDollarCurly_E`, 'utf8');
 const SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSyntaxHandlebars_E`, 'utf8');
 
+const X_EXAMPLE_TEMPLATE_FILE = `${envsubDir}/templateFileXExample`;
+const X_EXAMPLE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExample_E`, 'utf8');
+const X_EXAMPLE_ENV_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleEnv`;
+const X_EXAMPLE_ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleEnv_E`, 'utf8');
+const X_EXAMPLE_PROTECT_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleProtect`;
+const X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleProtect_E`, 'utf8');
+const X_EXAMPLE_SYNTAX_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleSyntax`;
+const X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleSyntax_E`, 'utf8');
+
+const Y_EXAMPLE_TEMPLATE_FILE = `${envsubhDir}/templateFileYExample`;
+const Y_EXAMPLE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubhDir}/templateFileYExample_E`, 'utf8');
+
 const templateFiles = {
   envsub: {
     OUTPUT_FILE: `${envsubDir}/outputFile`,
@@ -48,7 +60,15 @@ const templateFiles = {
     SYNTAX_DOLLAR_BASIC_TEMPLATE_FILE_EXPECTED,
     SYNTAX_DOLLAR_BOTH_TEMPLATE_FILE_EXPECTED,
     SYNTAX_DOLLAR_CURLY_TEMPLATE_FILE_EXPECTED,
-    SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED
+    SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_TEMPLATE_FILE,
+    X_EXAMPLE_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_ENV_TEMPLATE_FILE,
+    X_EXAMPLE_ENV_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_PROTECT_TEMPLATE_FILE,
+    X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_SYNTAX_TEMPLATE_FILE,
+    X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED
   },
   envsubh: {
     OUTPUT_FILE: `${envsubhDir}/outputFile`,
@@ -57,6 +77,8 @@ const templateFiles = {
     NO_TEMPLATE_FILE: `${envsubhDir}/noTemplateFile`,
     TEMP_TEMPLATE_FILE: `${envsubhDir}/tempTemplateFile`,
     DIFF_TEMPLATE_FILE: `${envsubhDir}/templateFileDiff`,
+    Y_EXAMPLE_TEMPLATE_FILE,
+    Y_EXAMPLE_TEMPLATE_FILE_EXPECTED
   }
 };
 

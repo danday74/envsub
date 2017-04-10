@@ -1,0 +1,2 @@
+I love to eat ${MYVAR1} at the ${MYVAR2}.
+I like xx${MYVAR3}xx.

@@ -177,11 +177,86 @@ let envsub = [
     cli: {
       flags: '-d -e MYVAR1 -e MYVAR2=MYVAL2 -e SUB_BUT_NO_EXIST -p -s dollar-both'.split(' ')
     }
+  },
+  {
+    testName: 'example: envsub basic usage',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = '';
+    },
+    templateFile: Tmp.X_EXAMPLE_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_TEMPLATE_FILE_EXPECTED,
+    options: {},
+    cli: {
+      flags: []
+    }
+  },
+  {
+    testName: 'example: envsub --env flag',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = 'bob';
+    },
+    templateFile: Tmp.X_EXAMPLE_ENV_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_ENV_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'MYVAR1'},
+        {name: 'MYVAR2', value: 'station'}
+      ]
+    },
+    cli: {
+      flags: '--env MYVAR1 --env MYVAR2=station'.split(' ')
+    }
+  },
+  {
+    testName: 'example: envsub --protect flag',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = '';
+    },
+    templateFile: Tmp.X_EXAMPLE_PROTECT_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED,
+    options: {protect: true},
+    cli: {
+      flags: ['--protect']
+    }
+  },
+  {
+    testName: 'example: envsub --syntax flag',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = '';
+    },
+    templateFile: Tmp.X_EXAMPLE_SYNTAX_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED,
+    options: {syntax: 'handlebars'},
+    cli: {
+      flags: '--syntax handlebars'.split(' ')
+    }
   }
 ];
 
 let envsubh = [
-  ...diffTests(TmpH.DIFF_TEMPLATE_FILE)
+  ...diffTests(TmpH.DIFF_TEMPLATE_FILE),
+  {
+    testName: 'example: envsubh basic usage',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = '';
+    },
+    templateFile: TmpH.Y_EXAMPLE_TEMPLATE_FILE,
+    outputContents: TmpH.Y_EXAMPLE_TEMPLATE_FILE_EXPECTED,
+    options: {},
+    cli: {
+      flags: []
+    }
+  }
 ];
 
 module.exports = {
