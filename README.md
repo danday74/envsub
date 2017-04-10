@@ -149,12 +149,18 @@ After copying a template file into a docker container, it can be useful to overw
 
 Logs the difference between the template file and the output file.
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsub > Quick Reference / Help
 ===============================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 envsub --help
@@ -184,12 +190,18 @@ envsub --help
 >    $ envsub templateFile
 >    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsub > Docker Integration (optional)
 ======================================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
 
@@ -218,12 +230,18 @@ docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-ru
 docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 ```
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsub > Local Promise-based Usage
 ==================================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install --save envsub
@@ -257,12 +275,18 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsubh > Global CLI Usage
 ==========================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install -g envsub # yes, this also globally installs envsubh
@@ -289,12 +313,18 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 **envsubh --diff flag** - see envsub for details TODO-LINK-HERE
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsubh > Quick Reference / Help
 ================================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 envsubh --help
@@ -321,12 +351,18 @@ envsubh --help
     $ envsubh templateFile
     $ envsubh -d templateFile
 
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
 
 
 
 
 envsubh > Local Promise-based Usage
 ===================================
+
+[Back to top](#envsub-is-envsubst-for-nodejs)
 
 ```bash
 npm install --save envsub # yes, this is correct
@@ -353,4 +389,10 @@ envsubh({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
-Hope this module proves useful out there. God bless :)
+[Back to top](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
+Hope this module proves useful out there.
+
+Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen. [Jude 24-25](https://www.biblegateway.com/passage/?search=Jude&version=ESV)
