@@ -270,6 +270,8 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
+Refer to [Global CLI Usage](#envsub--global-cli-usage) or [Quick Reference / Help](#envsub--quick-reference--help) for more details.
+
 <br>
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
