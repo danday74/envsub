@@ -113,11 +113,11 @@ examples
 
 The template substitution syntax, one of:
  
-* dollar-basic $MYVAR
-* dollar-curly ${MYVAR}
-* dollar-both $MYVAR and ${MYVAR}
-* handlebars {{MYVAR}}
-* default ${MYVAR}
+* dollar-basic ```$MYVAR```
+* dollar-curly ```${MYVAR}```
+* dollar-both ```$MYVAR and ${MYVAR}```
+* handlebars ```{{MYVAR}}```
+* default ```${MYVAR}```
 
 <br>
 
