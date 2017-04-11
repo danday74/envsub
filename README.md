@@ -7,7 +7,7 @@ envsub is envsubst for Node.js
 [![npm](https://img.shields.io/npm/v/envsub.svg)](https://www.npmjs.com/package/envsub)
 [![npm](https://img.shields.io/npm/dm/envsub.svg)](https://www.npmjs.com/package/envsub)
 
-envsub is envsubst for Node.js, providing file-level environment variable substitution, supporting both global CLI and local promise-based usage.
+**envsub is envsubst for Node.js**, providing file-level environment variable substitution, supporting both global CLI and local promise-based usage.
 
 envsub works with any file format - e.g. HTML, JSON, text, etc.
 
