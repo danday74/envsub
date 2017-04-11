@@ -83,7 +83,7 @@ examples
 
 **envsub basic usage** - envsub templateFile outputFile
 
-By default, all environment variables are substituted.
+> By default, all environment variables are substituted.
 
 <br>
 
