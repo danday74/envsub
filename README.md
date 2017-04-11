@@ -91,9 +91,9 @@ examples
 
 **envsub --env flag** .. ```envsub --env MYVAR1 --env MYVAR2=station templateFile outputFile```
 
-> --env is a repeatable flag to restrict which environment variables are substituted. In the example, only MYVAR1 and MYVAR2 are substituted.
+> Repeatable flag to restrict which environment variables are substituted. In the example, only MYVAR1 and MYVAR2 are substituted.
 >
-> --env can optionally provide an overriding substitution value. In the example, MYVAR2 is substituted in this manner.
+> Optionally --env can provide an overriding substitution value. In the example, MYVAR2 is substituted in this manner.
 
 <br>
 
