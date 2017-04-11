@@ -20,7 +20,7 @@ envsub is envsubst for Node.js
 Contents
 ========
 
-* [Intro](#intro)
+* **Intro**
   * [What is envsub?](#what-is-envsub)
   * [What is envsubh?](#what-is-envsubh)
 * **envsub**
