@@ -258,8 +258,9 @@ let options = {
   syntax: 'default' // see --syntax flag
 };
 
-// creates or overwrites the output file
+// create (or overwrite) the output file
 envsub({templateFile, outputFile, options}).then((envobj) => {
+  // output file created
   console.log(envobj.templateFile);
   console.log(envobj.templateContents);
   console.log(envobj.outputFile);
