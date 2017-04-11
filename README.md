@@ -109,7 +109,7 @@ examples
 
 ![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
 
-**envsub --syntax flag**
+**envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
 
 The template substitution syntax, one of:
  
@@ -118,6 +118,8 @@ The template substitution syntax, one of:
 * dollar-both $MYVAR and ${MYVAR}
 * handlebars {{MYVAR}}
 * default ${MYVAR}
+
+<br>
 
 ![envsub overwrite](./images/envsub-o.png "envsub overwrite")
 
