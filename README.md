@@ -252,7 +252,7 @@ let options = {
   diff: false, // see --diff flag
   envs: [
     {name: 'MYVAR1'}, // see --env flag
-    {name: 'MYVAR2', value: 'boo'} // see --env flag
+    {name: 'MYVAR2', value: 'station'} // see --env flag
   ],
   protect: false, // see --protect flag
   syntax: 'default' // see --syntax flag
