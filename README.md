@@ -270,7 +270,7 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
-Refer to [Global CLI Usage](#envsub--global-cli-usage) or [Quick Reference / Help](#envsub--quick-reference--help) for flag / option details.
+Refer to [Global CLI Usage](#envsub--global-cli-usage) or [Quick Reference / Help](#envsub--quick-reference--help) for details about flags / options.
 
 <br>
 
