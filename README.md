@@ -298,11 +298,11 @@ examples
 
 ![envsubh basic usage](./images/envsubh.png "envsubh basic usage")
 
-> This command simply takes your template file and throws it at handlebars, using your environment variables as the templating data.
-> 
-> All Handlebars templating is valid.
+> envsubh performs file-level Handlebars templating using environment variables as data.
 >
-> For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
+> All Handlebars syntax is valid, so feel free to use conditional IF statements, etc.
+>
+> Leverage the full power of Handlebars. For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
 <br><br>
 
