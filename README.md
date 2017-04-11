@@ -306,9 +306,11 @@ examples
 
 <br><br>
 
+**envsubh overwrite** - see [envsub overwrite](#) for details.
+
 ![envsubh overwrite](./images/envsubh-o.png "envsubh overwrite")
 
-**envsubh overwrite** - see envsub for details TODO-LINK-HERE
+
 
 ![envsubh --diff flag](./images/envsubh-d.png "envsubh --diff flag")
 
