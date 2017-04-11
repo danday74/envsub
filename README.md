@@ -25,6 +25,7 @@ Contents
   * [What is envsubh?](#what-is-envsubh)
 * **envsub**
   * [Global CLI Usage](#envsub--global-cli-usage)
+    * [envsub basic usage](#envsub-basic-usage--envsub-templatefile-outputfile)
   * [Quick Reference / Help](#envsub--quick-reference--help)
   * [Docker Integration (optional)](#envsub--docker-integration-optional)
   * [Local Promise-based Usage](#envsub--local-promise-based-usage)
