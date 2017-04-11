@@ -77,19 +77,13 @@ npm install -g envsub
 Examples
 --------
 
-In the following example diagrams:
-
-<span style="color:green">green</span> depicts the CLI command to execute.
-
-<span style="color:orange">orange</span> depicts environment variables in existence.
-
-<span style="color:blue">blue</span> depicts a file and its contents.
-
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
 
-**envsub basic usage**
+**envsub basic usage** - envsub templateFile outputFile
 
-By default, all environment variables, including non-existent environment variable placeholders, are substituted.
+By default, all environment variables are substituted.
+
+<br>
 
 ![envsub --env flag](./images/envsub-e.png "envsub --env flag")
 
