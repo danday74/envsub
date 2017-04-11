@@ -50,7 +50,7 @@ Given a template file, envsub performs **plain environment variable substitution
 envsub has **flags / options** to:
  
 * restrict which environment variables are substituted and
-* define template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or etc.
+* choose template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or etc.
 
 What is envsubh?
 ----------------
