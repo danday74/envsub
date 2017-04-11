@@ -45,7 +45,7 @@ Intro
 What is envsub?
 ---------------
 
-Given a template file, envsub performs **plain environment variable substitution** and spits out the result in an output file.
+Given a template file, envsub performs **plain environment variable substitution** and saves the result to an output file.
 
 envsub has **flags / options** to allow you to:
  
@@ -57,7 +57,7 @@ What is envsubh?
 
 envsubh is available automatically when you install envsub.
 
-Given a template file, envsubh performs **handlebars template parsing using environment variables as data** and spits out the result in an output file.
+Given a template file, envsubh performs **handlebars template parsing using environment variables as data** and saves the result to an output file.
 
 [Handlebars](https://www.npmjs.com/package/handlebars)
 
