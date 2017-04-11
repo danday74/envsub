@@ -125,11 +125,11 @@ examples
 
 **envsub overwrite** .. ```envsub templateFile```
 
-> ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile``` where the template file is overwritten.
+> ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```.
 > 
-> This seemingly destructive command is useful in the docker world.
+> Here, the template file is overwritten. This seemingly destructive command is useful in the docker world.
 >
-> After copying a template file into a docker container, it can be useful to overwrite the template file in the container with its substituted equivalent.
+> After copying a template file into a docker container, it can be useful inside the container to overwrite the template file with its substituted equivalent.
 
 <br>
 
