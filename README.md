@@ -11,7 +11,7 @@ envsub is envsubst for Node.js
 
 **envsub works with any file format - e.g. HTML, JSON, text, etc.**
 
-<br><br>
+<br>
 
 
 
@@ -33,7 +33,7 @@ Contents
   * [Quick Reference / Help](#envsubh--quick-reference--help)
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
 
-<br><br>
+<br>
 
 
 
