@@ -79,11 +79,11 @@ Examples
 
 In the following example diagrams:
 
-> <span style="color:green">green</span> depicts the CLI command to execute.
->
-> <span style="color:orange">orange</span> depicts environment variables in existence.
->
-> <span style="color:blue">blue</span> depicts a file and its contents.
+<span style="color:green">green</span> depicts the CLI command to execute.
+
+<span style="color:orange">orange</span> depicts environment variables in existence.
+
+<span style="color:blue">blue</span> depicts a file and its contents.
 
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
 
