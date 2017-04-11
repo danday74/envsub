@@ -135,9 +135,9 @@ examples
 
 ![envsub --diff flag](./images/envsub-d.png "envsub --diff flag")
 
-**envsub --diff flag**
+**envsub --diff flag** .. ```envsub --diff templateFile outputFile```
 
-Logs the difference between the template file and the output file.
+> Logs the difference between the template file and the output file.
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
