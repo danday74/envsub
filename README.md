@@ -90,9 +90,9 @@ examples
 
 <br><br>
 
-![envsub --env flag](./images/envsub-e.png "envsub --env flag")
+#### **envsub --env flag** .. ```envsub --env MYVAR1 --env MYVAR2=station templateFile outputFile```
 
-**envsub --env flag** .. ```envsub --env MYVAR1 --env MYVAR2=station templateFile outputFile```
+![envsub --env flag](./images/envsub-e.png "envsub --env flag")
 
 > Repeatable flag to restrict which environment variables are substituted. In the example, only MYVAR1 and MYVAR2 are substituted.
 >
@@ -100,9 +100,9 @@ examples
 
 <br><br>
 
-![envsub --protect flag](./images/envsub-p.png "envsub --protect flag")
+#### **envsub --protect flag** .. ```envsub --protect templateFile outputFile```
 
-**envsub --protect flag** .. ```envsub --protect templateFile outputFile```
+![envsub --protect flag](./images/envsub-p.png "envsub --protect flag")
 
 > Protect non-existent environment variable placeholders from being substituted with an empty string.
 >
@@ -110,9 +110,9 @@ examples
 
 <br><br>
 
-![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
+#### **envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
 
-**envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
+![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
 
 > Template substitution syntax, one of:
 > 
@@ -124,9 +124,9 @@ examples
 
 <br><br>
 
-![envsub overwrite](./images/envsub-o.png "envsub overwrite")
+#### **envsub overwrite** .. ```envsub templateFile```
 
-**envsub overwrite** .. ```envsub templateFile```
+![envsub overwrite](./images/envsub-o.png "envsub overwrite")
 
 > ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```
 > 
@@ -136,9 +136,9 @@ examples
 
 <br><br>
 
-![envsub --diff flag](./images/envsub-d.png "envsub --diff flag")
+#### **envsub --diff flag** .. ```envsub --diff templateFile outputFile```
 
-**envsub --diff flag** .. ```envsub --diff templateFile outputFile```
+![envsub --diff flag](./images/envsub-d.png "envsub --diff flag")
 
 > Log the difference between the template file and the output file.
 
