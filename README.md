@@ -111,19 +111,19 @@ examples
 
 **envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
 
-The template substitution syntax, one of:
- 
-* dollar-basic ```$MYVAR```
-* dollar-curly ```${MYVAR}```
-* dollar-both ```$MYVAR and ${MYVAR}```
-* handlebars ```{{MYVAR}}```
-* default ```${MYVAR}```
+> The template substitution syntax, one of:
+> 
+> * dollar-basic ```$MYVAR```
+> * dollar-curly ```${MYVAR}```
+> * dollar-both ```$MYVAR and ${MYVAR}```
+> * handlebars ```{{MYVAR}}```
+> * default ```${MYVAR}```
 
 <br>
 
 ![envsub overwrite](./images/envsub-o.png "envsub overwrite")
 
-**envsub overwrite**
+**envsub overwrite** .. ```envsub templateFile```
 
 ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```
 
