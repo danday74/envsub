@@ -47,7 +47,7 @@ What is envsub?
 
 Given a template file, envsub performs **plain environment variable substitution** and saves the result to an output file.
 
-envsub has **flags / options** to allow you to:
+envsub has **flags / options** to:
  
 * restrict which environment variables are substituted and
 * define template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or etc.
