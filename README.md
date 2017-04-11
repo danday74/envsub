@@ -45,29 +45,21 @@ Intro
 What is envsub?
 ---------------
 
-Given a template file, envsub looks for environment variable placeholders in that file - such as ${MYVAR} - and substitutes occurrences with the relevant environment variable value.
+Given a template file, envsub performs **plain environment variable substitution** and spits out the result in an output file.
 
-envsub then spits out an output file with the result.
-
-envsub provides various flags / options to allow you to:
+envsub has **flags / options** to allow you to:
  
 * restrict which environment variables are substituted and
-* define the preferred template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or ...
+* define template substitution syntax - e.g. ${MYVAR} or {{MYVAR}} or etc.
 
 What is envsubh?
 ----------------
 
 envsubh is available automatically when you install envsub.
 
-envsubh means 'envsub handlebars'.
+Given a template file, envsubh performs **handlebars template parsing using environment variables as data** and spits out the result in an output file.
 
-As with envsub, this command wants a template file and spits out an output file.
-
-envsubh, however, instead of providing straight forward environment variable substitution, simply throws the template file at the [Handlebars](https://www.npmjs.com/package/handlebars) templating library, using environment variables as the templating data.
-
-This approach gives you the full power of handlebars templating but removes a lot of the fine-grain control / options provided by envsub.
-
-envsubh is restricted to use of the {{MYVAR}} syntax only.
+[Handlebars](https://www.npmjs.com/package/handlebars)
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
