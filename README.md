@@ -125,7 +125,7 @@ examples
 
 **envsub overwrite** .. ```envsub templateFile```
 
-> ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```.
+> ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```
 > 
 > Here, the template file is overwritten. This seemingly destructive command is useful in the docker world.
 >
