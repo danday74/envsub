@@ -125,11 +125,13 @@ examples
 
 **envsub overwrite** .. ```envsub templateFile```
 
-```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```
+> ```envsub templateFile``` is shorthand for ```envsub templateFile templateFile```
+> 
+> This seemingly stupid command is useful in the docker world.
+>
+> After copying a template file into a docker container, it can be useful to overwrite the template file in the container with its substituted equivalent.
 
-This seemingly stupid command is useful in the docker world.
-
-After copying a template file into a docker container, it can be useful to overwrite the template file in the container with its substituted equivalent.
+<br>
 
 ![envsub --diff flag](./images/envsub-d.png "envsub --diff flag")
 
