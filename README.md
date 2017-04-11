@@ -26,6 +26,11 @@ Contents
 * **envsub**
   * [Global CLI Usage](#envsub--global-cli-usage)
     * [envsub basic usage](#envsub-basic-usage--envsub-templatefile-outputfile)
+    * [envsub --env flag](#envsub---env-flag--envsub---env-myvar1---env-myvar2station-templatefile-outputfile)
+    * [envsub --protect flag](#envsub---protect-flag--envsub---protect-templatefile-outputfile)
+    * [envsub --syntax flag](#envsub---syntax-flag--envsub---syntax-handlebars-templatefile-outputfile)
+    * [envsub overwrite](#envsub-overwrite--envsub-templatefile)
+    * [envsub --diff flag](#envsub---diff-flag--envsub---diff-templatefile-outputfile)    
   * [Quick Reference / Help](#envsub--quick-reference--help)
   * [Docker Integration (optional)](#envsub--docker-integration-optional)
   * [Local Promise-based Usage](#envsub--local-promise-based-usage)
