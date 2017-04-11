@@ -85,11 +85,7 @@ examples
 
 > By default, all environment variables are substituted.
 
-<br>
-
----
-
-<br>
+<br><br>
 
 ![envsub --env flag](./images/envsub-e.png "envsub --env flag")
 
@@ -99,8 +95,7 @@ examples
 >
 > Optionally --env can provide an overriding value. In the example, MYVAR2 is substituted in this manner.
 
----
-<br>
+<br><br>
 
 ![envsub --protect flag](./images/envsub-p.png "envsub --protect flag")
 
@@ -110,8 +105,7 @@ examples
 >
 > In the example, MYVAR3, because it does not exist, is protected from substitution.
 
----
-<br>
+<br><br>
 
 ![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
 
@@ -125,8 +119,7 @@ examples
 > * handlebars ```{{MYVAR}}```
 > * default ```${MYVAR}```
 
----
-<br>
+<br><br>
 
 ![envsub overwrite](./images/envsub-o.png "envsub overwrite")
 
@@ -138,8 +131,7 @@ examples
 >
 > After copying a template file into a docker image, it can be useful to overwrite the copied file with its substituted equivalent.
 
----
-<br>
+<br><br>
 
 ![envsub --diff flag](./images/envsub-d.png "envsub --diff flag")
 
