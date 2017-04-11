@@ -374,7 +374,7 @@ envsubh > Local Promise-based Usage
 ===================================
 
 ```bash
-npm install --save envsub # yes, this is correct
+npm install --save envsub # yes this is correct, see require statement below
 ```
 
 Local promise-based options are a perfect reflection of global CLI flags.
@@ -388,7 +388,9 @@ let options = {
   diff: false // see --diff flag
 };
 
+// create (or overwrite) the output file
 envsubh({templateFile, outputFile, options}).then((envobj) => {
+  // output file created
   console.log(envobj.templateFile);
   console.log(envobj.templateContents);
   console.log(envobj.outputFile);
@@ -397,6 +399,8 @@ envsubh({templateFile, outputFile, options}).then((envobj) => {
   console.error(err.message);
 });
 ```
+
+Refer to [Global CLI Usage](#envsubh--global-cli-usage) or [Quick Reference / Help](#envsubh--quick-reference--help) for details about flags / options.
 
 <br>
 
