@@ -7,11 +7,9 @@ envsub is envsubst for Node.js
 [![npm](https://img.shields.io/npm/v/envsub.svg)](https://www.npmjs.com/package/envsub)
 [![npm](https://img.shields.io/npm/dm/envsub.svg)](https://www.npmjs.com/package/envsub)
 
-**envsub is envsubst for Node.js, providing file-level environment variable substitution, supporting both global CLI and local promise-based usage.**
+envsub is envsubst for Node.js, providing file-level environment variable substitution, supporting both global CLI and local promise-based usage.
 
-**envsub works with any file format - e.g. HTML, JSON, text, etc.**
-
-<br>
+envsub works with any file format - e.g. HTML, JSON, text, etc.
 
 
 
@@ -20,20 +18,18 @@ envsub is envsubst for Node.js
 Contents
 ========
 
-* **Intro**
+* Intro
   * [What is envsub?](#what-is-envsub)
   * [What is envsubh?](#what-is-envsubh)
-* **envsub**
+* envsub
   * [Global CLI Usage](#envsub--global-cli-usage)
   * [Quick Reference / Help](#envsub--quick-reference--help)
   * [Docker Integration (optional)](#envsub--docker-integration-optional)
   * [Local Promise-based Usage](#envsub--local-promise-based-usage)
-* **envsubh**
+* envsubh
   * [Global CLI Usage](#envsubh--global-cli-usage)
   * [Quick Reference / Help](#envsubh--quick-reference--help)
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
-
-<br>
 
 
 
