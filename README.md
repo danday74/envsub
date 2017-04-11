@@ -79,11 +79,9 @@ Examples
 
 In the following example diagrams:
 
-**green depicts the CLI command to execute**
-
-orange depicts environment variables in existence
-
-blue depicts a file and its contents
+> green depicts the CLI command to execute
+> orange depicts environment variables in existence
+> blue depicts a file and its contents
 
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
 
