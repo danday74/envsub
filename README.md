@@ -310,7 +310,7 @@ examples
 
 ![envsubh overwrite](./images/envsubh-o.png "envsubh overwrite")
 
-> See [envsub overwrite](#) for details.
+> See [envsub overwrite](#envsub-overwrite--envsub-templatefile) for details.
 
 <br><br>
 
@@ -318,7 +318,7 @@ examples
 
 ![envsubh --diff flag](./images/envsubh-d.png "envsubh --diff flag")
 
-> See [envsub --diff flag](#) for details.
+> Log the difference between the template file and the output file.
 
 <br>
 
