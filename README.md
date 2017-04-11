@@ -300,7 +300,7 @@ examples
 
 > envsubh performs file-level handlebars templating using environment variables as data.
 >
-> All handlebars syntax is valid, so feel free to use conditional IF statements, etc.
+> All handlebars syntax is valid, so feel free to use [conditional IF statements](http://handlebarsjs.com/builtin_helpers.html) and more as per the example.
 >
 > To leverage the full power refer to the [handlebars](https://www.npmjs.com/package/handlebars) docs.
 
