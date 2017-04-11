@@ -83,7 +83,7 @@ examples
 
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
 
-##### **envsub basic usage** .. ```envsub templateFile outputFile```
+#### **envsub basic usage** .. ```envsub templateFile outputFile```
 
 > By default, all environment variables are substituted.
 
