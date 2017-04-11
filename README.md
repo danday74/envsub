@@ -306,15 +306,19 @@ examples
 
 <br><br>
 
-**envsubh overwrite** - see [envsub overwrite](#) for details.
+#### **envsubh overwrite** .. ```envsubh templateFile```
 
 ![envsubh overwrite](./images/envsubh-o.png "envsubh overwrite")
 
+> See [envsub overwrite](#) for details.
 
+<br><br>
+
+#### **envsubh --diff flag** .. ```envsubh --diff templateFile outputFile```
 
 ![envsubh --diff flag](./images/envsubh-d.png "envsubh --diff flag")
 
-**envsubh --diff flag** - see envsub for details TODO-LINK-HERE
+> See [envsub --diff flag](#) for details.
 
 <br>
 
