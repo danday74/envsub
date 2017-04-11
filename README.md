@@ -137,7 +137,7 @@ examples
 
 **envsub --diff flag** .. ```envsub --diff templateFile outputFile```
 
-> Logs the difference between the template file and the output file.
+> Log the difference between the template file and the output file.
 
 <br>
 
