@@ -129,7 +129,7 @@ examples
 > 
 > Here, the template file is overwritten. This seemingly destructive command is useful in the docker world.
 >
-> After copying a template file into a docker image, it can be useful to overwrite the copied file with its substituted equivalent.
+> After copying a template file into a docker image, it is useful to overwrite the copied file with its substituted equivalent.
 
 <br><br>
 
