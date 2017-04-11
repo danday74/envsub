@@ -93,7 +93,7 @@ examples
 
 > Repeatable flag to restrict which environment variables are substituted. In the example, only MYVAR1 and MYVAR2 are substituted.
 >
-> Optionally --env can provide an overriding substitution value. In the example, MYVAR2 is substituted in this manner.
+> Optionally --env can provide an overriding value. In the example, MYVAR2 is substituted in this manner.
 
 <br>
 
