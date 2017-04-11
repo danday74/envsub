@@ -99,9 +99,13 @@ examples
 
 ![envsub --protect flag](./images/envsub-p.png "envsub --protect flag")
 
-**envsub --protect flag**
+**envsub --protect flag** .. ```envsub --protect templateFile outputFile```
 
-Protects non-existent environment variable placeholders from being substituted. In the example, MYVAR3, because it does not exist, is protected from substitution.
+> Protect non-existent environment variable placeholders from being substituted with an empty string.
+>
+> In the example, MYVAR3, because it does not exist, is protected from substitution.
+
+<br>
 
 ![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
 
