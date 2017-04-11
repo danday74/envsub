@@ -139,6 +139,8 @@ examples
 
 > Logs the difference between the template file and the output file.
 
+<br>
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
