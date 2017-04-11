@@ -57,9 +57,7 @@ What is envsubh?
 
 envsubh is available automatically when you install envsub.
 
-Given a template file, envsubh performs **handlebars template parsing using environment variables as data** and saves the result to an output file.
-
-[Handlebars](https://www.npmjs.com/package/handlebars)
+Given a template file, envsubh performs **[Handlebars](https://www.npmjs.com/package/handlebars) template parsing using environment variables as data** and saves the result to an output file.
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
