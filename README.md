@@ -85,6 +85,10 @@ examples
 
 > By default, all environment variables are substituted.
 
+---
+---
+---
+
 <br>
 
 ![envsub --env flag](./images/envsub-e.png "envsub --env flag")
