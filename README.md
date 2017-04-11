@@ -57,7 +57,7 @@ What is envsubh?
 
 envsubh is available automatically when you install envsub.
 
-Given a template file, envsubh performs **[Handlebars](https://www.npmjs.com/package/handlebars) templating using environment variables as data** and saves the result to an output file.
+Given a template file, envsubh performs **[handlebars](https://www.npmjs.com/package/handlebars) templating using environment variables as data** and saves the result to an output file.
 
 <br>
 
@@ -298,11 +298,11 @@ examples
 
 ![envsubh basic usage](./images/envsubh.png "envsubh basic usage")
 
-> envsubh performs file-level Handlebars templating using environment variables as data.
+> envsubh performs file-level handlebars templating using environment variables as data.
 >
-> All Handlebars syntax is valid, so feel free to use conditional IF statements, etc.
+> All handlebars syntax is valid, so feel free to use conditional IF statements, etc.
 >
-> Leverage the full power of Handlebars. For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
+> To leverage the full power of handlebars, refer to the docs at [handlebars](https://www.npmjs.com/package/handlebars)
 
 <br><br>
 
