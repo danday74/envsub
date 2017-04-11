@@ -408,8 +408,8 @@ Refer to [Global CLI Usage](#envsubh--global-cli-usage) or [Quick Reference / He
 
 <br><br>
 
-Hope this module proves useful out there.
-
 ---
 
-Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen. [Jude 24-25](https://www.biblegateway.com/passage/?search=Jude&version=ESV)
+Hope this module proves useful out there.
+
+**Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen. [Jude 24-25](https://www.biblegateway.com/passage/?search=Jude&version=ESV)**
