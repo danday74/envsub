@@ -302,7 +302,7 @@ examples
 >
 > All handlebars syntax is valid, so feel free to use conditional IF statements, etc.
 >
-> To leverage the full power of handlebars, refer to the docs at [handlebars](https://www.npmjs.com/package/handlebars)
+> To leverage the full power of handlebars refer to the [handlebars](https://www.npmjs.com/package/handlebars) docs.
 
 <br><br>
 
