@@ -292,15 +292,19 @@ npm install -g envsub # yes, this also globally installs envsubh
 examples
 --------
 
+<br>
+
+#### **envsubh basic usage** .. ```envsubh templateFile outputFile```
+
 ![envsubh basic usage](./images/envsubh.png "envsubh basic usage")
 
-**envsubh basic usage**
+> This command simply takes your template file and throws it at handlebars, using your environment variables as the templating data.
+> 
+> All Handlebars templating is valid.
+>
+> For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 
-This command simply takes your template file and throws it at handlebars, using your environment variables as the templating data.
-
-All Handlebars templating is valid.
-
-For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
+<br><br>
 
 ![envsubh overwrite](./images/envsubh-o.png "envsubh overwrite")
 
