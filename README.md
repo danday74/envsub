@@ -89,7 +89,7 @@ examples
 
 ![envsub --env flag](./images/envsub-e.png "envsub --env flag")
 
-**envsub --env flag** - ```envsub --env MYVAR1 --env MYVAR2=station templateFile outputFile```
+**envsub --env flag** .. ```envsub --env MYVAR1 --env MYVAR2=station templateFile outputFile```
 
 This repeatable flag allows you to restrict which environment variables will be substituted. In the example, only MYVAR1 and MYVAR2 are being substituted.
 
