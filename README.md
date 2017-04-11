@@ -111,7 +111,7 @@ examples
 
 **envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
 
-> The template substitution syntax, one of:
+> Template substitution syntax, one of:
 > 
 > * dollar-basic ```$MYVAR```
 > * dollar-curly ```${MYVAR}```
