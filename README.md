@@ -74,7 +74,7 @@ envsub > Global CLI Usage
 npm install -g envsub
 ```
 
-Examples
+examples
 --------
 
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
@@ -264,7 +264,7 @@ envsubh > Global CLI Usage
 npm install -g envsub # yes, this also globally installs envsubh
 ```
 
-Examples
+examples
 --------
 
 ![envsubh basic usage](./images/envsubh.png "envsubh basic usage")
