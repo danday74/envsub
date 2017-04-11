@@ -59,6 +59,8 @@ envsubh is available automatically when you install envsub.
 
 Given a template file, envsubh performs **[Handlebars](https://www.npmjs.com/package/handlebars) templating using environment variables as data** and saves the result to an output file.
 
+<br>
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
@@ -182,6 +184,8 @@ envsub --help
     $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
 ```
 
+<br>
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
@@ -219,6 +223,8 @@ docker build -t danday74/envsub-run-example .
 docker run --name envrun1 -d -e MY_NAME=Daniel -p "8081:8080" danday74/envsub-run-example
 docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-run-example
 ```
+
+<br>
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
@@ -263,6 +269,8 @@ envsub({templateFile, outputFile, options}).then((envobj) => {
 });
 ```
 
+<br>
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
@@ -298,6 +306,8 @@ For the docs refer to [Handlebars](https://www.npmjs.com/package/handlebars)
 ![envsubh --diff flag](./images/envsubh-d.png "envsubh --diff flag")
 
 **envsubh --diff flag** - see envsub for details TODO-LINK-HERE
+
+<br>
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
@@ -337,6 +347,8 @@ envsubh --help
     $ envsubh -d templateFile
 ```
 
+<br>
+
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
@@ -372,6 +384,8 @@ envsubh({templateFile, outputFile, options}).then((envobj) => {
   console.error(err.message);
 });
 ```
+
+<br>
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
