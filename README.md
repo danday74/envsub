@@ -77,6 +77,8 @@ npm install -g envsub
 examples
 --------
 
+<br>
+
 ![envsub basic usage](./images/envsub.png "envsub basic usage")
 
 **envsub basic usage** - envsub templateFile outputFile
