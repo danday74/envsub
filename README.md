@@ -57,7 +57,7 @@ Given a template file, envsubh performs **[handlebars](https://www.npmjs.com/pac
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -139,7 +139,7 @@ examples
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -182,7 +182,7 @@ envsub --help
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -222,7 +222,7 @@ docker run --name envrun2 -d -e MY_NAME=Jimbob -p "8082:8080" danday74/envsub-ru
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -270,7 +270,7 @@ Refer to [Global CLI Usage](#envsub--global-cli-usage) or [Quick Reference / Hel
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -318,7 +318,7 @@ examples
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -358,7 +358,7 @@ envsubh --help
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br><br>
 
@@ -400,7 +400,7 @@ Refer to [Global CLI Usage](#envsubh--global-cli-usage) or [Quick Reference / He
 
 <br>
 
-[![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
 
 <br>
 
