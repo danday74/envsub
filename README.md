@@ -294,7 +294,7 @@ examples
 
 ![envsubh basic usage](./images/envsubh.png "envsubh basic usage")
 
-> envsubh performs file-level handlebars templating using environment variables as data.
+> envsubh performs file-level handlebars template rendering using environment variables as data.
 >
 > All handlebars syntax is valid, so feel free to use [conditional IF statements](http://handlebarsjs.com/builtin_helpers.html) and more as per the example.
 >
