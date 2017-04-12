@@ -26,7 +26,7 @@ let help = (program, examples) => {
     console.log('');
     console.log('    Overwrite your template file');
     console.log('    ----------------------------');
-    console.log('    Useful inside a docker container after you have copied your template file into the container');
+    console.log('    After copying a template file into a docker image, it is useful to overwrite the copied file with its substituted equivalent.');
     console.log(`    $ ${examples[2]}`);
     console.log(`    $ ${examples[3]}`);
     console.log('');
