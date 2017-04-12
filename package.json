@@ -1,6 +1,6 @@
 {
   "name": "envsub",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "envsub is envsubst for Node.js",
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",
