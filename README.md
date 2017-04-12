@@ -351,7 +351,7 @@ envsubh --help
 
     Overwrite your template file
     ----------------------------
-    Useful inside a docker container after you have copied your template file into the container
+    After copying a template file into a docker image, it is useful to overwrite the copied file with its substituted equivalent.
     $ envsubh templateFile
     $ envsubh -d templateFile
 ```
