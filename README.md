@@ -193,7 +193,7 @@ envsub --help
 envsub > Docker Integration (optional)
 ======================================
 
-envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a templating solution.
+envsubst is recognised by [NGINX](https://hub.docker.com/_/nginx) as a Docker templating solution.
 
 This module seeks to make envsubst freely available to the Node.js community for Docker templating.
 
