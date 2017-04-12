@@ -51,9 +51,9 @@ envsub has **flags / options** to:
 What is envsubh?
 ----------------
 
-envsubh is available automatically when you install envsub.
+envsubh is automatically installed when you install envsub.
 
-Given a template file, envsubh performs **[handlebars](https://www.npmjs.com/package/handlebars) templating using environment variables as data** and saves the result to an output file.
+Given a template file, envsubh performs **[handlebars](https://www.npmjs.com/package/handlebars) template rendering using environment variables as data** and saves the result to an output file.
 
 <br>
 
