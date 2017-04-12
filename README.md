@@ -402,7 +402,7 @@ Refer to [Global CLI Usage](#envsubh--global-cli-usage) or [Quick Reference / He
 
 [![Back to top](./images/top.png)](#envsub-is-envsubst-for-nodejs)
 
-<br><br>
+<br>
 
 ---
 ---
