@@ -16,4 +16,5 @@ COPY files /usr/src/app
 RUN npm install --production
 
 RUN chmod +x entrypoint.sh # LOOK HERE
-ENTRYPOINT ["./entrypoint.sh"] # LOOK HERE .. see entrypoint.sh in the files folder
+# LOOK HERE .. see entrypoint.sh in the files folder
+ENTRYPOINT ["./entrypoint.sh"]
