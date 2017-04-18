@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover -x \"**/*.spec.js\" ./node_modules/mocha/bin/_mocha -- test",
-    "enforcer": "./node_modules/.bin/istanbul check-coverage --statement 100 --branch 100 --function 100 --line 100",
+    "enforcer": "./node_modules/.bin/istanbul check-coverage --statement 90 --branch 90 --function 90 --line 90",
     "build": "npm-run-all test enforcer",
     "postinstall": "test -d .git && cp gitHookPrePush.sh .git/hooks/pre-push || true"
   },

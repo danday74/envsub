@@ -1,5 +1,7 @@
 * Write resolver
 
+* Coverage to 100
+
 * Write tests, ensuring choice where many as expected
 
 * Document --env-file
