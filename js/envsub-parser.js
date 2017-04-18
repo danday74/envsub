@@ -1,5 +1,6 @@
+const config = require('../main.config');
+const DotEnvParser = require('./DotEnvParser');
 const DEFAULT_SYNTAX = 'dollar-curly';
-const ENV_REGEX = '[a-zA-Z_]+[a-zA-Z0-9_]*';
 
 let dynamicRegexes = (opts) => {
 
@@ -46,12 +47,14 @@ let envsubParser = (contents, args) => {
   let dRegexes = dynamicRegexes(opts);
   opts.syntax = opts.syntax.toLowerCase();
 
+  opts.envs = DotEnvParser.resolveEnvs(opts.envs, opts.envFiles);
+
   dRegexes.forEach((dRegex) => {
 
-    if (!opts.envs) {
+    if (!opts.envs.length) {
 
       // Find all env var matches
-      let regexp = `${dRegex.lhs}${dRegex.sep}${ENV_REGEX}${dRegex.sep}${dRegex.rhs}`;
+      let regexp = `${dRegex.lhs}${dRegex.sep}${config.regex}${dRegex.sep}${dRegex.rhs}`;
       let matches = contents.match(new RegExp(regexp, 'g'));
 
       // Substitute
@@ -61,26 +64,16 @@ let envsubParser = (contents, args) => {
 
       opts.envs.forEach((env) => {
 
-        if (env.name && env.name.trim()) {
-
-          let valid = new RegExp(`^${ENV_REGEX}$`).test(env.name);
-
-          if (valid) {
-
-            if (env.value && env.value.trim()) {
-              process.env[env.name] = env.value;
-            }
-
-            let regexp = `${dRegex.lhs}${dRegex.sep}${env.name}${dRegex.sep}${dRegex.rhs}`;
-            let matches = contents.match(new RegExp(regexp, 'g'));
-
-            // Substitute
-            contents = substitute(matches, contents, opts, dRegex);
-
-          } else {
-            console.warn(`Skipping environment variable \'${env.name}\' because its name is invalid`);
-          }
+        if (env.value && env.value.trim()) {
+          process.env[env.name] = env.value;
         }
+
+        let regexp = `${dRegex.lhs}${dRegex.sep}${env.name}${dRegex.sep}${dRegex.rhs}`;
+        let matches = contents.match(new RegExp(regexp, 'g'));
+
+        // Substitute
+        contents = substitute(matches, contents, opts, dRegex);
+
       });
     }
   });

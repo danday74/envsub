@@ -3,3 +3,8 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+
+/templateFile
+/outputFile
+/envfile1.env
+/envfile2.env

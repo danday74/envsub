@@ -3,6 +3,7 @@
 const program = require('commander');
 
 const ArgV = require('./ArgV');
+const DotEnvParser = require('../js/DotEnvParser');
 const envsub = require('../envsub');
 const help = require('./help');
 const version = require('../package.json').version;
@@ -12,11 +13,17 @@ let addEnvironmentVariable = (envVar, envVarList) => {
   return [...new Set(envVarList)]; // unique
 };
 
+let addEnvironmentVariableFile = (envVarFile, envVarFileList) => {
+  envVarFileList.push(envVarFile);
+  return [...new Set(envVarFileList)]; // unique
+};
+
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
   .option('-d, --diff', 'show diff between template file and output file')
-  .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all .. this flag can be repeated', addEnvironmentVariable, [])
+  .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated', addEnvironmentVariable, [])
+  .option('-f, --env-file <envFile>', 'environment variable file (.env) .. this flag can be repeated', addEnvironmentVariableFile, [])
   .option('-p, --protect', 'protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string')
   .option('-s, --syntax <syntax>', 'template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
 
@@ -38,17 +45,13 @@ let options = {
   syntax: program.syntax.toLowerCase()
 };
 
-if (program.env && program.env.length > 0) {
-  let envs = [];
-  program.env.forEach((env) => {
-    let nvp = env.split(/=(.+)/);
-    if (nvp.length > 1) {
-      envs.push({name: nvp[0], value: nvp[1]});
-    } else {
-      envs.push({name: nvp[0]});
-    }
-  });
-  options.envs = envs;
+if (program.env && program.env.length) {
+  let envs = DotEnvParser.parseEnvs(program.env);
+  if (envs.length) options.envs = envs;
+}
+
+if (program.envFile && program.envFile.length) {
+  options.envFiles = program.envFile;
 }
 
 envsub({

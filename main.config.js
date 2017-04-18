@@ -10,7 +10,8 @@ const config = {
     DEFAULT_OPTIONS: {
       diff: false
     }
-  }
+  },
+  regex: '[a-zA-Z_]+[a-zA-Z0-9_]*'
 };
 
 module.exports = config;
