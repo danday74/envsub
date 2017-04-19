@@ -12,9 +12,9 @@ class DotEnvParser {
   }
 
   static parseEnvStr(str) {
-
     str = str.trim();
     str = str.replace(/^export /, '');
+    str = str.replace(/#.*/, '');
     let parts = str.split('=');
     let name = parts[0].trim();
     let valid = new RegExp(`^${config.regex}$`).test(name);

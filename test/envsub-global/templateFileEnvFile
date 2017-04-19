@@ -1,0 +1,2 @@
+aaa${ FILEVAR1 }aaa bbb${ FILEVAR2 }bbb ccc${ FILEVAR3 }ccc ddd${ FILEVAR4 }ddd
+eee${ FILEVAR5 }eee fff${ FILEVAR6 }fff ggg${ FILEVAR7 }ggg hhh${ FILEVAR8 }hhh

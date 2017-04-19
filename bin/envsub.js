@@ -47,6 +47,7 @@ let options = {
 
 if (program.env && program.env.length) {
   let envs = DotEnvParser.parseEnvs(program.env);
+  /* istanbul ignore else */
   if (envs.length) options.envs = envs;
 }
 

@@ -1,5 +1,9 @@
 xxx $MYVAR1 xxx xxx${MYVAR2}xxx xxx${MYVAR1}xxx xxx $MYVAR2 xxx xxx{{MYVAR1}}xxx xxx{{MYVAR2}}xxx
 xxx $MYVAR1 xxx xxx${MYVAR2}xxx xxx${MYVAR1}xxx xxx $MYVAR2 xxx xxx{{MYVAR1}}xxx xxx{{MYVAR2}}xxx
 
+xxx $MYVAR3 xxx xxx${MYVAR3}xxx
+
 xxx $EXIST_BUT_NO_SUB xxx xxx $SUB_BUT_NO_EXIST xxx
 xxx${EXIST_BUT_NO_SUB}xxx xxx${SUB_BUT_NO_EXIST}xxx
+
+xxx $MYVAR3 xxx xxx${MYVAR4}xxx

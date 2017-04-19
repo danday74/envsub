@@ -64,7 +64,7 @@ let envsubParser = (contents, args) => {
 
       opts.envs.forEach((env) => {
 
-        if (env.value && env.value.trim()) {
+        if (env.value != null) {
           process.env[env.name] = env.value;
         }
 

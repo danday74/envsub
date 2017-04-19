@@ -2,11 +2,19 @@ const readFileSync = require('fs').readFileSync;
 const envsubDir = appRoot + '/test/envsub-global';
 const envsubhDir = appRoot + '/test/envsubh-global';
 
+const ENVFILE1 = `${envsubDir}/envFile1.env`;
+const ENVFILE2 = `${envsubDir}/envFile2.env`;
+const ENVFILE3 = `${envsubDir}/envFile3.env`;
+const ENVFILE4 = `${envsubDir}/envFile4.env`;
+const ENVFILE5 = `${envsubDir}/envFile5.env`;
+
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
 
 const ENV_TEMPLATE_FILE = `${envsubDir}/templateFileEnv`;
 const ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnv_E`, 'utf8');
+const ENV_FILE_TEMPLATE_FILE = `${envsubDir}/templateFileEnvFile`;
+const ENV_FILE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvFile_E`, 'utf8');
 const ENV_INVALID_TEMPLATE_FILE = `${envsubDir}/templateFileEnvInvalid`;
 const ENV_INVALID_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvInvalid_E`, 'utf8');
 
@@ -44,10 +52,17 @@ const templateFiles = {
     NO_TEMPLATE_FILE: `${envsubDir}/noTemplateFile`,
     TEMP_TEMPLATE_FILE: `${envsubDir}/tempTemplateFile`,
     DIFF_TEMPLATE_FILE: `${envsubDir}/templateFileDiff`,
+    ENVFILE1,
+    ENVFILE2,
+    ENVFILE3,
+    ENVFILE4,
+    ENVFILE5,
     COMBINED_TEMPLATE_FILE,
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
     ENV_TEMPLATE_FILE_EXPECTED,
+    ENV_FILE_TEMPLATE_FILE,
+    ENV_FILE_TEMPLATE_FILE_EXPECTED,
     ENV_INVALID_TEMPLATE_FILE,
     ENV_INVALID_TEMPLATE_FILE_EXPECTED,
     ENV_PROTECT_TEMPLATE_FILE,

@@ -75,6 +75,61 @@ let envsub = [
     }
   },
   {
+    testName: '--env-file should only substitute given environment variables',
+    preFunc: () => {
+      process.env.FILEVAR1 = 'SUB';
+      process.env.FILEVAR2 = 'SUB';
+      process.env.FILEVAR3 = 'SUB';
+      process.env.FILEVAR4 = 'SUB';
+      process.env.FILEVAR5 = 'SUB';
+      process.env.FILEVAR6 = 'SUB';
+      process.env.FILEVAR7 = 'SUB';
+    },
+    templateFile: Tmp.ENV_FILE_TEMPLATE_FILE,
+    outputContents: Tmp.ENV_FILE_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.ENVFILE1,
+        Tmp.ENVFILE2,
+      ]
+    },
+    cli: {
+      flags: `--env-file ${Tmp.ENVFILE1} --env-file ${Tmp.ENVFILE2}`.split(' ')
+    }
+  },
+  {
+    testName: '--env-file should not substitute environment variables with invalid names',
+    templateFile: Tmp.ENV_INVALID_TEMPLATE_FILE,
+    outputContents: Tmp.ENV_INVALID_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.ENVFILE3
+      ]
+    },
+    postFunc: () => {
+      Imp.expect(console.warn).to.have.been.calledWithMatch(/Skipping environment variable '9INVALID'/);
+    },
+    cli: {
+      flags: `--env-file ${Tmp.ENVFILE3}`.split(' ')
+    }
+  },
+  {
+    testName: '--env-file should skip non-existent environment variable files',
+    templateFile: Tmp.MY_TEMPLATE_FILE,
+    outputContents: Tmp.MY_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.NO_TEMPLATE_FILE
+      ]
+    },
+    postFunc: () => {
+      Imp.expect(console.warn).to.have.been.calledWithMatch(/Skipping environment variable file '.*' due to ENOENT/);
+    },
+    cli: {
+      flags: `--env-file ${Tmp.NO_TEMPLATE_FILE}`.split(' ')
+    }
+  },
+  {
     testName: '--protect should substitute non-existent environment variables by default',
     templateFile: Tmp.PROTECT_TEMPLATE_FILE,
     outputContents: Tmp.PROTECT_TEMPLATE_FILE_OFF_EXPECTED,
@@ -153,6 +208,22 @@ let envsub = [
     }
   },
   {
+    testName: '--env should override --env-file',
+    templateFile: Tmp.MY_TEMPLATE_FILE,
+    outputContents: Tmp.MY_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'MY_NAME', value: 'Daniel'}
+      ],
+      envFiles: [
+        Tmp.ENVFILE4
+      ]
+    },
+    cli: {
+      flags: `--env MY_NAME=Daniel --env-file ${Tmp.ENVFILE4}`.split(' ')
+    }
+  },
+  {
     testName: 'should support a combination of options',
     preFunc: () => {
       process.env.MYVAR1 = 'MYVAL1';
@@ -167,6 +238,9 @@ let envsub = [
         {name: 'MYVAR2', value: 'MYVAL2'},
         {name: 'SUB_BUT_NO_EXIST'},
       ],
+      envFiles: [
+        Tmp.ENVFILE5
+      ],
       protect: true,
       syntax: 'dollar-both'
     },
@@ -175,7 +249,7 @@ let envsub = [
       Imp.expect(Imp.LogDiff.logDiff).to.have.been.called;
     },
     cli: {
-      flags: '-d -e MYVAR1 -e MYVAR2=MYVAL2 -e SUB_BUT_NO_EXIST -p -s dollar-both'.split(' ')
+      flags: `-d -e MYVAR1 -e MYVAR2=MYVAL2 -e SUB_BUT_NO_EXIST -f ${Tmp.ENVFILE5} -p -s dollar-both`.split(' ')
     }
   },
   {

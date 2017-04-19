@@ -1,10 +1,8 @@
 * Write resolver
 
-* Coverage to 100
+* Write test for --env-file README example
 
-* Write tests, ensuring choice where many as expected
-
-* Document --env-file
+* Document --env-file .. README and update local promise-based usage
 
 * --silent or --verbose
 
