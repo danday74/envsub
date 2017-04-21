@@ -108,14 +108,18 @@ examples
 
 > Repeatable flag to load environment variables from an .env file.
 >
+> Given the contents of **envFile.env** the example command is equivalent to:
+>
+> ```envsub --env MYVAR1=cheese --env MYVAR2 templateFile outputFile```
+>
 > Supported .env file syntax follows:
 
 ```
 # example comment
-MYVAR1 # same as --env MYVAR1
-export MYVAR2 # same as --env MYVAR2
-MYVAR3=hello # same as --env MYVAR3=hello
-export MYVAR4=hello # same as --env MYVAR4=hello
+MYVAR1               # same as --env MYVAR1
+export MYVAR2        # same as --env MYVAR2
+MYVAR3=hello         # same as --env MYVAR3=hello
+export MYVAR4=hello  # same as --env MYVAR4=hello
 ```
 
 <br><br>
