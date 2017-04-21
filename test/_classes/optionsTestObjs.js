@@ -286,6 +286,24 @@ let envsub = [
     }
   },
   {
+    testName: 'example: envsub --env-file flag',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = 'bob';
+    },
+    templateFile: Tmp.X_EXAMPLE_ENV_FILE_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_ENV_FILE_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.ENVFILE6
+      ]
+    },
+    cli: {
+      flags: `--env-file ${Tmp.ENVFILE6}`.split(' ')
+    }
+  },
+  {
     testName: 'example: envsub --protect flag',
     preFunc: () => {
       process.env.MYVAR1 = 'foo';

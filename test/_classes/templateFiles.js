@@ -7,6 +7,7 @@ const ENVFILE2 = `${envsubDir}/envFile2.env`;
 const ENVFILE3 = `${envsubDir}/envFile3.env`;
 const ENVFILE4 = `${envsubDir}/envFile4.env`;
 const ENVFILE5 = `${envsubDir}/envFile5.env`;
+const ENVFILE6 = `${envsubDir}/envFile6.env`;
 
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
@@ -36,6 +37,8 @@ const X_EXAMPLE_TEMPLATE_FILE = `${envsubDir}/templateFileXExample`;
 const X_EXAMPLE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExample_E`, 'utf8');
 const X_EXAMPLE_ENV_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleEnv`;
 const X_EXAMPLE_ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleEnv_E`, 'utf8');
+const X_EXAMPLE_ENV_FILE_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleEnvFile`;
+const X_EXAMPLE_ENV_FILE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleEnvFile_E`, 'utf8');
 const X_EXAMPLE_PROTECT_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleProtect`;
 const X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleProtect_E`, 'utf8');
 const X_EXAMPLE_SYNTAX_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleSyntax`;
@@ -57,6 +60,7 @@ const templateFiles = {
     ENVFILE3,
     ENVFILE4,
     ENVFILE5,
+    ENVFILE6,
     COMBINED_TEMPLATE_FILE,
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
@@ -80,6 +84,8 @@ const templateFiles = {
     X_EXAMPLE_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_ENV_TEMPLATE_FILE,
     X_EXAMPLE_ENV_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_ENV_FILE_TEMPLATE_FILE,
+    X_EXAMPLE_ENV_FILE_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_PROTECT_TEMPLATE_FILE,
     X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_SYNTAX_TEMPLATE_FILE,

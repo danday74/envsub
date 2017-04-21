@@ -1,7 +1,5 @@
 * Write resolver
 
-* Write test for --env-file README example
-
 * Document --env-file .. README and update local promise-based usage
 
 * --silent or --verbose
