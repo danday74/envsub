@@ -95,13 +95,6 @@ examples
 
 <br><br>
 
-
-
-
-
-
-
-
 #### **envsub --env-file flag** .. ```envsub --env-file envFile.env templateFile outputFile```
 
 ![envsub --env-file flag](./images/envsub-f.png "envsub --env-file flag")
@@ -123,14 +116,6 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 ```
 
 <br><br>
-
-
-
-
-
-
-
-
 
 #### **envsub --protect flag** .. ```envsub --protect templateFile outputFile```
 
