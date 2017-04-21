@@ -108,7 +108,7 @@ examples
 
 > Repeatable flag to load environment variables from an .env file.
 >
-> Supported .env file syntax is as follows:
+> Supported .env file syntax follows:
 
 ```
 # example comment
