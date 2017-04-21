@@ -109,16 +109,14 @@ examples
 > Repeatable flag to load environment variables from an .env file.
 >
 > Supported .env file syntax is as follows:
->
-> &#35; example comment
->
-> MYVAR1 # same as --env MYVAR1
->
-> export MYVAR2 # same as --env MYVAR2
->
-> MYVAR3=hello # same as --env MYVAR3=hello
->
-> export MYVAR4=hello # same as --env MYVAR4=hello
+
+```
+# example comment
+MYVAR1 # same as --env MYVAR1
+export MYVAR2 # same as --env MYVAR2
+MYVAR3=hello # same as --env MYVAR3=hello
+export MYVAR4=hello # same as --env MYVAR4=hello
+```
 
 <br><br>
 
