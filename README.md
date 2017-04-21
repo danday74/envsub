@@ -110,7 +110,7 @@ examples
 >
 > Supported .env file syntax is as follows:
 >
-> # comment
+> &#35; example comment
 >
 > MYVAR1 # same as --env MYVAR1
 >
