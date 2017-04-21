@@ -108,7 +108,7 @@ examples
 
 > Repeatable flag to load environment variables from an .env file.
 >
-> Given the contents of **envFile.env** the example command is equivalent to:
+> Given the contents of **envFile.env** the example command given is equivalent to:
 >
 > ```envsub --env MYVAR1=cheese --env MYVAR2 templateFile outputFile```
 >
