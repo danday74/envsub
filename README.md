@@ -7,9 +7,9 @@ envsub is envsubst for Node.js
 [![npm](https://img.shields.io/npm/v/envsub.svg)](https://www.npmjs.com/package/envsub)
 [![npm](https://img.shields.io/npm/dm/envsub.svg)](https://www.npmjs.com/package/envsub)
 
-**envsub is envsubst for Node.js**, providing file-level environment variable substitution, supporting both global CLI and local promise-based usage.
+**envsub is envsubst for Node.js**, providing file-level environment variable substitution, catering for both global CLI and local promise-based usage.
 
-envsub works with any file format - e.g. HTML, JSON, text, etc.
+envsub works with any file format - e.g. HTML, JSON, text, etc. - and has built-in .env file support.
 
 
 
@@ -94,6 +94,41 @@ examples
 > Optionally --env can provide an overriding value. In the example, MYVAR2 is substituted in this manner.
 
 <br><br>
+
+
+
+
+
+
+
+
+#### **envsub --env-file flag** .. ```envsub --env-file envFile.env templateFile outputFile```
+
+![envsub --env-file flag](./images/envsub-f.png "envsub --env-file flag")
+
+> Repeatable flag to load environment variables from an .env file.
+>
+> Supported .env file syntax is as follows:
+>
+> # comment
+>
+> MYVAR1 # same as --env MYVAR1
+>
+> export MYVAR2 # same as --env MYVAR2
+>
+> MYVAR3=hello # same as --env MYVAR3=hello
+>
+> export MYVAR4=hello # same as --env MYVAR4=hello
+
+<br><br>
+
+
+
+
+
+
+
+
 
 #### **envsub --protect flag** .. ```envsub --protect templateFile outputFile```
 
