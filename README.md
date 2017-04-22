@@ -451,7 +451,7 @@ envsub also permits lowercase letters.
 
 The regex employed for environment variable name matching is:
 
-[a-zA-Z_]+[a-zA-Z0-9_]*
+```[a-zA-Z_]+[a-zA-Z0-9_]*```
 
 <br>
 
