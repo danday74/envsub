@@ -29,9 +29,9 @@ program
 
 let examples = [
   'envsub templateFile outputFile',
-  'envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax dollar-both templateFile outputFile',
+  'envsub --diff --env MYVAR1 --env MYVAR2=foo --env-file envFile.env --protect --syntax dollar-both templateFile outputFile',
   'envsub templateFile',
-  'envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile'
+  'envsub -d -e MYVAR1 -e MYVAR2=foo -f envFile.env -p -s dollar-both templateFile'
 ];
 
 help(program, examples);
