@@ -30,6 +30,8 @@ Contents
   * [Global CLI Usage](#envsubh--global-cli-usage)
   * [Quick Reference / Help](#envsubh--quick-reference--help)
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
+* Finally
+  * Environment variable naming conventions
 
 
 
@@ -423,6 +425,32 @@ envsubh({templateFile, outputFile, options}).then((envobj) => {
 ```
 
 Refer to [Global CLI Usage](#envsubh--global-cli-usage) or [Quick Reference / Help](#envsubh--quick-reference--help) for details about flags / options.
+
+<br>
+
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
+
+<br><br>
+
+
+
+
+
+Finally
+=======
+
+Environment variable naming conventions
+---------------------------------------
+
+envsub adheres to the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/9699919799) which states:
+
+'Environment variable names ... consist solely of uppercase letters, digits, and the <underscore> ( '_' ) ... and do not begin with a digit'
+
+envsub also permits lowercase letters.
+
+The regex used for environment variable matching is:
+
+[a-zA-Z_]+[a-zA-Z0-9_]*
 
 <br>
 
