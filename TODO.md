@@ -1,5 +1,3 @@
-* Document --env-file .. README and update local promise-based usage
-
 * --silent or --verbose
 
 * --env-wins (or something similar)
