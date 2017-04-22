@@ -23,7 +23,7 @@ program
   .usage('[options] <templateFile> [outputFile]')
   .option('-d, --diff', 'show diff between template file and output file')
   .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated', addEnvironmentVariable, [])
-  .option('-f, --env-file <envFile>', 'environment variable file (.env) .. this flag can be repeated', addEnvironmentVariableFile, [])
+  .option('-f, --env-file <envFile>', 'load environment variables from an .env file .. this flag can be repeated', addEnvironmentVariableFile, [])
   .option('-p, --protect', 'protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string')
   .option('-s, --syntax <syntax>', 'template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default');
 
