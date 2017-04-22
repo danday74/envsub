@@ -445,7 +445,7 @@ Environment variable naming conventions
 
 envsub enforces the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/000095399/basedefs/xbd_chap08.html) which states:
 
-> Environment variable names ... consist solely of uppercase letters, digits, and the '_' ... and do not begin with a digit
+> Environment variable names ... consist solely of uppercase letters, digits, and the '_' ... and do not begin with a digit.
 
 envsub also permits lowercase letters.
 
