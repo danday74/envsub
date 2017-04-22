@@ -273,6 +273,9 @@ let options = {
     {name: 'MYVAR1'}, // see --env flag
     {name: 'MYVAR2', value: 'station'} // see --env flag
   ],
+  envFiles: [
+    `${__dirname}/envFile.env` // see --env-file flag
+  ],
   protect: false, // see --protect flag
   syntax: 'default' // see --syntax flag
 };
