@@ -31,7 +31,7 @@ Contents
   * [Quick Reference / Help](#envsubh--quick-reference--help)
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
 * Finally
-  * Environment variable naming conventions
+  * [Environment variable naming conventions](#environment-variable-naming-conventions)
 
 
 
