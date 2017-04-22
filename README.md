@@ -442,7 +442,7 @@ Finally
 Environment variable naming conventions
 ---------------------------------------
 
-envsub adheres to the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/9699919799) which states:
+envsub adheres to the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/000095399/basedefs/xbd_chap08.html) which states:
 
 'Environment variable names ... consist solely of uppercase letters, digits, and the <underscore> ( '_' ) ... and do not begin with a digit'
 
