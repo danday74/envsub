@@ -32,6 +32,7 @@ Contents
   * [Local Promise-based Usage](#envsubh--local-promise-based-usage)
 * Finally
   * [Environment variable naming conventions](#environment-variable-naming-conventions)
+  * [Author says](#author-says)
 
 
 
@@ -442,13 +443,13 @@ Finally
 Environment variable naming conventions
 ---------------------------------------
 
-envsub adheres to the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/000095399/basedefs/xbd_chap08.html) which states:
+envsub enforces the [Open Group Environment Variable Definition](http://pubs.opengroup.org/onlinepubs/000095399/basedefs/xbd_chap08.html) which states:
 
 'Environment variable names ... consist solely of uppercase letters, digits, and the <underscore> ( '_' ) ... and do not begin with a digit'
 
 envsub also permits lowercase letters.
 
-The regex used for environment variable matching is:
+The regex employed for environment variable name matching is:
 
 [a-zA-Z_]+[a-zA-Z0-9_]*
 
@@ -460,6 +461,9 @@ The regex used for environment variable matching is:
 
 ---
 ---
+
+Author says
+-----------
 
 Hope this module proves useful out there.
 
