@@ -184,7 +184,8 @@ envsub --help
     -h, --help                output usage information
     -V, --version             output the version number
     -d, --diff                show diff between template file and output file
-    -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all .. this flag can be repeated
+    -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated
+    -f, --env-file <envFile>  load environment variables from an .env file .. this flag can be repeated
     -p, --protect             protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string
     -s, --syntax <syntax>     template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}
 
@@ -193,13 +194,13 @@ envsub --help
     Typical usage
     -------------
     $ envsub templateFile outputFile
-    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --protect --syntax dollar-both templateFile outputFile
+    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --env-file envFile.env --protect --syntax dollar-both templateFile outputFile
 
     Overwrite your template file
     ----------------------------
     After copying a template file into a docker image, it is useful to overwrite the copied file with its substituted equivalent.
     $ envsub templateFile
-    $ envsub -d -e MYVAR1 -e MYVAR2=foo -p -s dollar-both templateFile
+    $ envsub -d -e MYVAR1 -e MYVAR2=foo -f envFile.env -p -s dollar-both templateFile
 ```
 
 <br>
