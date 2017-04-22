@@ -6,6 +6,7 @@ yarn-error.log
 
 /templateFile
 /outputFile
-/envfile1.env
-/envfile2.env
+/envFile.env
+/envFile1.env
+/envFile2.env
 /envy.js
