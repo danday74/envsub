@@ -1,5 +1,3 @@
 * --silent or --verbose
 
-* --env-wins (or something similar)
-
-* If syntax invalid use default
+* --system, write example test, update combined test, update README

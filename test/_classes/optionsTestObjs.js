@@ -132,7 +132,7 @@ let envsub = [
   {
     testName: '--protect should substitute non-existent environment variables by default',
     templateFile: Tmp.PROTECT_TEMPLATE_FILE,
-    outputContents: Tmp.PROTECT_TEMPLATE_FILE_OFF_EXPECTED,
+    outputContents: Tmp.PROTECT_OFF_TEMPLATE_FILE_EXPECTED,
     options: {},
     cli: {
       flags: []
@@ -141,7 +141,7 @@ let envsub = [
   {
     testName: '--protect should not substitute non-existent environment variables when flag set',
     templateFile: Tmp.PROTECT_TEMPLATE_FILE,
-    outputContents: Tmp.PROTECT_TEMPLATE_FILE_ON_EXPECTED,
+    outputContents: Tmp.PROTECT_ON_TEMPLATE_FILE_EXPECTED,
     options: {protect: true},
     cli: {
       flags: ['--protect']
@@ -150,7 +150,7 @@ let envsub = [
   {
     testName: '--syntax should support default syntax',
     templateFile: Tmp.SYNTAX_TEMPLATE_FILE,
-    outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DEFAULT_EXPECTED,
+    outputContents: Tmp.SYNTAX_DEFAULT_TEMPLATE_FILE_EXPECTED,
     options: {syntax: 'default'},
     cli: {
       flags: '--syntax default'.split(' ')
@@ -159,7 +159,7 @@ let envsub = [
   {
     testName: '--syntax should support dollar basic syntax',
     templateFile: Tmp.SYNTAX_TEMPLATE_FILE,
-    outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_BASIC_EXPECTED,
+    outputContents: Tmp.SYNTAX_DOLLAR_BASIC_TEMPLATE_FILE_EXPECTED,
     options: {syntax: 'dollar-basic'},
     cli: {
       flags: '--syntax dollar-basic'.split(' ')
@@ -168,7 +168,7 @@ let envsub = [
   {
     testName: '--syntax should support dollar both syntax',
     templateFile: Tmp.SYNTAX_TEMPLATE_FILE,
-    outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_BOTH_EXPECTED,
+    outputContents: Tmp.SYNTAX_DOLLAR_BOTH_TEMPLATE_FILE_EXPECTED,
     options: {syntax: 'dollar-both'},
     cli: {
       flags: '--syntax dollar-both'.split(' ')
@@ -177,7 +177,7 @@ let envsub = [
   {
     testName: '--syntax should support dollar curly syntax',
     templateFile: Tmp.SYNTAX_TEMPLATE_FILE,
-    outputContents: Tmp.SYNTAX_TEMPLATE_FILE_DOLLAR_CURLY_EXPECTED,
+    outputContents: Tmp.SYNTAX_DOLLAR_CURLY_TEMPLATE_FILE_EXPECTED,
     options: {syntax: 'dollar-curly'},
     cli: {
       flags: '--syntax dollar-curly'.split(' ')
@@ -186,10 +186,52 @@ let envsub = [
   {
     testName: '--syntax should support handlebars syntax',
     templateFile: Tmp.SYNTAX_TEMPLATE_FILE,
-    outputContents: Tmp.SYNTAX_TEMPLATE_FILE_HANDLEBARS_EXPECTED,
+    outputContents: Tmp.SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED,
     options: {syntax: 'handlebars'},
     cli: {
       flags: '--syntax handlebars'.split(' ')
+    }
+  },
+  {
+    testName: '--system should prefer --env and --env-file environment variables by default',
+    preFunc: () => {
+      process.env.ENVVAR = 'SYSTEMENV';
+      process.env.ENVFILEVAR = 'SYSTEMENVFILE';
+    },
+    templateFile: Tmp.SYSTEM_TEMPLATE_FILE,
+    outputContents: Tmp.SYSTEM_OFF_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'ENVVAR', value: 'ENV'}
+      ],
+      envFiles: [
+        Tmp.ENVFILE7
+      ],
+      system: false
+    },
+    cli: {
+      flags: `--env ENVVAR=ENV --env-file ${Tmp.ENVFILE7}`.split(' ')
+    }
+  },
+  {
+    testName: '--system should prefer system environment variables when flag set',
+    preFunc: () => {
+      process.env.ENVVAR = 'SYSTEMENV';
+      process.env.ENVFILEVAR = 'SYSTEMENVFILE';
+    },
+    templateFile: Tmp.SYSTEM_TEMPLATE_FILE,
+    outputContents: Tmp.SYSTEM_ON_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'ENVVAR', value: 'ENV'}
+      ],
+      envFiles: [
+        Tmp.ENVFILE7
+      ],
+      system: true
+    },
+    cli: {
+      flags: `--env ENVVAR=ENV --env-file ${Tmp.ENVFILE7} --system`.split(' ')
     }
   },
   {

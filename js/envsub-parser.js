@@ -64,8 +64,10 @@ let envsubParser = (contents, args) => {
 
       opts.envs.forEach((env) => {
 
-        if (env.value != null) {
-          process.env[env.name] = env.value;
+        if (opts.system && process.env[env.name] == null || !opts.system) {
+          if (env.value != null) {
+            process.env[env.name] = env.value;
+          }
         }
 
         let regexp = `${dRegex.lhs}${dRegex.sep}${env.name}${dRegex.sep}${dRegex.rhs}`;

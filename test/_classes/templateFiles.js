@@ -8,6 +8,7 @@ const ENVFILE3 = `${envsubDir}/envFile3.env`;
 const ENVFILE4 = `${envsubDir}/envFile4.env`;
 const ENVFILE5 = `${envsubDir}/envFile5.env`;
 const ENVFILE6 = `${envsubDir}/envFile6.env`;
+const ENVFILE7 = `${envsubDir}/envFile7.env`;
 
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
@@ -32,6 +33,10 @@ const SYNTAX_DOLLAR_BASIC_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/te
 const SYNTAX_DOLLAR_BOTH_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSyntaxDollarBoth_E`, 'utf8');
 const SYNTAX_DOLLAR_CURLY_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSyntaxDollarCurly_E`, 'utf8');
 const SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSyntaxHandlebars_E`, 'utf8');
+
+const SYSTEM_TEMPLATE_FILE = `${envsubDir}/templateFileSystem`;
+const SYSTEM_OFF_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSystemOff_E`, 'utf8');
+const SYSTEM_ON_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileSystemOn_E`, 'utf8');
 
 const X_EXAMPLE_TEMPLATE_FILE = `${envsubDir}/templateFileXExample`;
 const X_EXAMPLE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExample_E`, 'utf8');
@@ -61,6 +66,7 @@ const templateFiles = {
     ENVFILE4,
     ENVFILE5,
     ENVFILE6,
+    ENVFILE7,
     COMBINED_TEMPLATE_FILE,
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
@@ -80,6 +86,9 @@ const templateFiles = {
     SYNTAX_DOLLAR_BOTH_TEMPLATE_FILE_EXPECTED,
     SYNTAX_DOLLAR_CURLY_TEMPLATE_FILE_EXPECTED,
     SYNTAX_HANDLEBARS_TEMPLATE_FILE_EXPECTED,
+    SYSTEM_TEMPLATE_FILE,
+    SYSTEM_OFF_TEMPLATE_FILE_EXPECTED,
+    SYSTEM_ON_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_TEMPLATE_FILE,
     X_EXAMPLE_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_ENV_TEMPLATE_FILE,
