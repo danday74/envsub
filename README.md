@@ -11,6 +11,8 @@ envsub is envsubst for Node.js
 
 envsub works with any file format - e.g. HTML, JSON, text, etc. - and has built-in .env file support.
 
+**Requires Node.js v6 or higher.**
+
 
 
 
