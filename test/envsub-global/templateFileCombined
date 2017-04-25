@@ -6,4 +6,4 @@ xxx $MYVAR3 xxx xxx${MYVAR3}xxx
 xxx $EXIST_BUT_NO_SUB xxx xxx $SUB_BUT_NO_EXIST xxx
 xxx${EXIST_BUT_NO_SUB}xxx xxx${SUB_BUT_NO_EXIST}xxx
 
-xxx $MYVAR3 xxx xxx${MYVAR4}xxx
+xxx $MYVAR3 xxx xxx${MYVAR4}xxx xxx${MYVAR5}xxx

@@ -269,6 +269,9 @@ let envsub = [
     testName: 'should support a combination of options',
     preFunc: () => {
       process.env.MYVAR1 = 'MYVAL1';
+      delete process.env.MYVAR2;
+      delete process.env.MYVAR3;
+      process.env.MYVAR5 = 'Win';
       process.env.EXIST_BUT_NO_SUB = 'WOW';
     },
     templateFile: Tmp.COMBINED_TEMPLATE_FILE,
@@ -278,20 +281,22 @@ let envsub = [
       envs: [
         {name: 'MYVAR1'},
         {name: 'MYVAR2', value: 'MYVAL2'},
+        {name: 'MYVAR5', value: 'Lose'},
         {name: 'SUB_BUT_NO_EXIST'},
       ],
       envFiles: [
         Tmp.ENVFILE5
       ],
       protect: true,
-      syntax: 'dollar-both'
+      syntax: 'dollar-both',
+      system: true
     },
     postFunc: () => {
       // noinspection BadExpressionStatementJS
       Imp.expect(Imp.LogDiff.logDiff).to.have.been.called;
     },
     cli: {
-      flags: `-d -e MYVAR1 -e MYVAR2=MYVAL2 -e SUB_BUT_NO_EXIST -f ${Tmp.ENVFILE5} -p -s dollar-both`.split(' ')
+      flags: `-d -e MYVAR1 -e MYVAR2=MYVAL2 -e MYVAR5=Lose -e SUB_BUT_NO_EXIST -f ${Tmp.ENVFILE5} -p -s dollar-both -S`.split(' ')
     }
   },
   {
