@@ -203,19 +203,20 @@ envsub --help
     -f, --env-file <envFile>  load environment variables from an .env file .. this flag can be repeated
     -p, --protect             protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string
     -s, --syntax <syntax>     template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}
+    -S, --system              prefer system environment variables
 
   Examples:
 
     Typical usage
     -------------
     $ envsub templateFile outputFile
-    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --env-file envFile.env --protect --syntax dollar-both templateFile outputFile
+    $ envsub --diff --env MYVAR1 --env MYVAR2=foo --env-file envFile.env --protect --syntax dollar-both --system templateFile outputFile
 
     Overwrite your template file
     ----------------------------
     After copying a template file into a docker image, it is useful to overwrite the copied file with its substituted equivalent.
     $ envsub templateFile
-    $ envsub -d -e MYVAR1 -e MYVAR2=foo -f envFile.env -p -s dollar-both templateFile
+    $ envsub -d -e MYVAR1 -e MYVAR2=foo -f envFile.env -p -s dollar-both -S templateFile
 ```
 
 <br>
