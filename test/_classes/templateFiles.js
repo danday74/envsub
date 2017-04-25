@@ -48,6 +48,8 @@ const X_EXAMPLE_PROTECT_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleProtec
 const X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleProtect_E`, 'utf8');
 const X_EXAMPLE_SYNTAX_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleSyntax`;
 const X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleSyntax_E`, 'utf8');
+const X_EXAMPLE_SYSTEM_TEMPLATE_FILE = `${envsubDir}/templateFileXExampleSystem`;
+const X_EXAMPLE_SYSTEM_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileXExampleSystem_E`, 'utf8');
 
 const Y_EXAMPLE_TEMPLATE_FILE = `${envsubhDir}/templateFileYExample`;
 const Y_EXAMPLE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubhDir}/templateFileYExample_E`, 'utf8');
@@ -98,7 +100,9 @@ const templateFiles = {
     X_EXAMPLE_PROTECT_TEMPLATE_FILE,
     X_EXAMPLE_PROTECT_TEMPLATE_FILE_EXPECTED,
     X_EXAMPLE_SYNTAX_TEMPLATE_FILE,
-    X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED
+    X_EXAMPLE_SYNTAX_TEMPLATE_FILE_EXPECTED,
+    X_EXAMPLE_SYSTEM_TEMPLATE_FILE,
+    X_EXAMPLE_SYSTEM_TEMPLATE_FILE_EXPECTED
   },
   envsubh: {
     OUTPUT_FILE: `${envsubhDir}/outputFile`,

@@ -372,6 +372,26 @@ let envsub = [
     cli: {
       flags: '--syntax handlebars'.split(' ')
     }
+  },
+  {
+    testName: 'example: envsub --system flag',
+    preFunc: () => {
+      process.env.MYVAR1 = 'foo';
+      process.env.MYVAR2 = 'bar';
+      process.env.MYVAR3 = 'bob';
+    },
+    templateFile: Tmp.X_EXAMPLE_SYSTEM_TEMPLATE_FILE,
+    outputContents: Tmp.X_EXAMPLE_SYSTEM_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envs: [
+        {name: 'MYVAR1'},
+        {name: 'MYVAR2', value: 'station'}
+      ],
+      system: true
+    },
+    cli: {
+      flags: '--env MYVAR1 --env MYVAR2=station --system'.split(' ')
+    }
   }
 ];
 

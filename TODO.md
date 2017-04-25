@@ -1,3 +1,3 @@
 * --silent or --verbose
 
-* --system, write example test, update combined test, update README
+* --system, update combined test, update README (in 3 places)
