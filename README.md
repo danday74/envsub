@@ -293,7 +293,8 @@ let options = {
     `${__dirname}/envFile.env` // see --env-file flag
   ],
   protect: false, // see --protect flag
-  syntax: 'default' // see --syntax flag
+  syntax: 'default', // see --syntax flag
+  system: true // see --system flag
 };
 
 // create (or overwrite) the output file
