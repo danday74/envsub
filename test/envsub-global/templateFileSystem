@@ -1,1 +1,1 @@
-xxx${ENVVAR}xxx xxx${ENVFILEVAR}xxx
+xxx${ENVVAR}xxx xxx${ENVFILEVAR}xxx xxx${ENVONLYVAR}xxx

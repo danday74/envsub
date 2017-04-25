@@ -202,7 +202,8 @@ let envsub = [
     outputContents: Tmp.SYSTEM_OFF_TEMPLATE_FILE_EXPECTED,
     options: {
       envs: [
-        {name: 'ENVVAR', value: 'ENV'}
+        {name: 'ENVVAR', value: 'ENV'},
+        {name: 'ENVONLYVAR', value: 'ENVONLY'}
       ],
       envFiles: [
         Tmp.ENVFILE7
@@ -210,7 +211,7 @@ let envsub = [
       system: false
     },
     cli: {
-      flags: `--env ENVVAR=ENV --env-file ${Tmp.ENVFILE7}`.split(' ')
+      flags: `--env ENVVAR=ENV --env ENVONLYVAR=ENVONLY --env-file ${Tmp.ENVFILE7}`.split(' ')
     }
   },
   {
@@ -223,7 +224,8 @@ let envsub = [
     outputContents: Tmp.SYSTEM_ON_TEMPLATE_FILE_EXPECTED,
     options: {
       envs: [
-        {name: 'ENVVAR', value: 'ENV'}
+        {name: 'ENVVAR', value: 'ENV'},
+        {name: 'ENVONLYVAR', value: 'ENVONLY'}
       ],
       envFiles: [
         Tmp.ENVFILE7
@@ -231,7 +233,7 @@ let envsub = [
       system: true
     },
     cli: {
-      flags: `--env ENVVAR=ENV --env-file ${Tmp.ENVFILE7} --system`.split(' ')
+      flags: `--env ENVVAR=ENV --env ENVONLYVAR=ENVONLY --env-file ${Tmp.ENVFILE7} --system`.split(' ')
     }
   },
   {

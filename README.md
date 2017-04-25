@@ -144,10 +144,6 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 
 <br><br>
 
-
-
-
-
 #### **envsub --system flag** .. ```envsub --env MYVAR1 --env MYVAR2=station --system templateFile outputFile```
 
 ![envsub --system flag](./images/envsub-capital-s.png "envsub --system flag")
@@ -159,10 +155,6 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 > However, because the --system flag is set, the system environment variable value 'bar' is preferred.
 
 <br><br>
-
-
-
-
 
 #### **envsub overwrite** .. ```envsub templateFile```
 
