@@ -471,7 +471,7 @@ The regex employed for environment variable name matching is:
 
 <br>
 
-[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs)
+[![Back to top](./images/top-red.png)](#envsub-is-envsubst-for-nodejs) [![Greenkeeper badge](https://badges.greenkeeper.io/danday74/envsub.svg)](https://greenkeeper.io/)
 
 <br>
 
