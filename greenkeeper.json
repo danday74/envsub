@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "Dockerfiles/build/files/package.json",
+        "Dockerfiles/run/files/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
