@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This hook will PREVENT a GIT push where ..
 #   * The build is passing AND a commit message starts with WIP
