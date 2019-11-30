@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "./gitHookPrePush.sh"
+      "pre-push": "sh ./gitHookPrePush.sh"
     }
   },
   "repository": {
