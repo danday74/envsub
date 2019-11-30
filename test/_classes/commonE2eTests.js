@@ -12,7 +12,7 @@ let cacheClearAndGo = (command) => {
 let e2eSandbox;
 
 beforeEach(() => {
-  e2eSandbox = Imp.sinon.sandbox.create();
+  e2eSandbox = Imp.sinon.createSandbox();
 });
 
 afterEach(() => {

@@ -14,7 +14,7 @@ describe(`${command} global`, () => {
   });
 
   beforeEach(() => {
-    sandbox = Imp.sinon.sandbox.create();
+    sandbox = Imp.sinon.createSandbox();
     sandbox.stub(console, 'error').callsFake(() => {
     });
     sandbox.stub(console, 'warn').callsFake(() => {

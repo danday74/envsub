@@ -13,7 +13,7 @@ describe(`${command} local`, () => {
   });
 
   beforeEach(() => {
-    sandbox = Imp.sinon.sandbox.create();
+    sandbox = Imp.sinon.createSandbox();
 
 
     sandbox.spy(Imp.LogDiff, 'logDiff');
