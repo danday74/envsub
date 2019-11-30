@@ -1,6 +1,6 @@
 {
   "name": "envsub",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "envsub is envsubst for Node.js",
   "author": "Daniel Lewis BSc(Hons)",
   "license": "ISC",
@@ -60,7 +60,7 @@
     "chai": "^4.2.0",
     "coveralls": "^3.0.9",
     "data-driven": "^1.4.0",
-    "del": "3.0.0",
+    "del": "^5.1.0",
     "eslint": "^6.7.1",
     "husky": "^3.1.0",
     "istanbul": "^0.4.5",
@@ -69,5 +69,5 @@
     "sinon": "^7.5.0",
     "sinon-chai": "^3.3.0"
   },
-  "engine": "node >= 6.10.2"
+  "engine": "node >= 8"
 }
