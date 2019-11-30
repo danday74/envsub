@@ -489,6 +489,6 @@ Hope this module proves useful out there.
 
 **Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen. [Jude 24-25](https://www.biblegateway.com/passage/?search=Jude&version=ESV)**
 
-This module is dedicated to Jesus Christ my Saviour who came to a host **environment** &ndash; the earth &ndash; and who became my **substitute** &ndash; taking the death I deserve on the cross and exchanging it for His life.
+This module is dedicated to Jesus Christ my Saviour who came to a hostile **environment** &ndash; the earth &ndash; and who became my **substitute** &ndash; taking the death I deserve on the cross and exchanging it for His life.
 
 **Jesus said to him, "I am the way, and the truth, and the life. No one comes to the Father except through me. [John 14:6](https://www.biblegateway.com/passage/?search=John+14&version=ESV)**
