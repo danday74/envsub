@@ -15,11 +15,11 @@ let dynamicRegexes = (opts) => {
   }
 
   if (opts.syntax === 'dollar-basic' || opts.syntax === 'dollar-both') {
-    dynamicRegexes.push(regexObj('\\\$', '$', '', ''));
+    dynamicRegexes.push(regexObj('\\$', '$', '', ''));
   }
 
   if (opts.syntax === 'dollar-curly' || opts.syntax === 'dollar-both') {
-    dynamicRegexes.push(regexObj('\\\${', '${', '}', ' *'));
+    dynamicRegexes.push(regexObj('\\${', '${', '}', ' *'));
   }
 
   if (opts.syntax === 'handlebars') {

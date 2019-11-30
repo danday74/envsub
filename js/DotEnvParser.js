@@ -7,7 +7,7 @@ class DotEnvParser {
   static skip(name) {
 
     if (name !== '') {
-      console.warn(`Skipping environment variable \'${name}\' because its name is invalid`);
+      console.warn(`Skipping environment variable '${name}' because its name is invalid`);
     }
   }
 
@@ -69,7 +69,7 @@ class DotEnvParser {
     try {
       lines = readFileSync(envFile, 'utf8').split('\n');
     } catch (e) {
-      console.warn(`Skipping environment variable file \'${envFile}\' due to ${e.message}`);
+      console.warn(`Skipping environment variable file '${envFile}' due to ${e.message}`);
       return [];
     }
 
