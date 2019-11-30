@@ -55,6 +55,7 @@ class DotEnvParser {
     let parse = (typeof envs[0] === 'string') ? DotEnvParser.parseEnvStr : DotEnvParser.parseEnvObj;
     envs.forEach((env) => {
       env = parse(env);
+      // noinspection JSIncompatibleTypesComparison
       if (env != null) {
         results.push(env);
       }
