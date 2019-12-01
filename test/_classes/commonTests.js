@@ -35,6 +35,7 @@ let success = (command, Tmp, cli) => {
 
       command({templateFile, outputFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, outputFile, cli);
+        // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).not.to.have.been.called;
         done();
       }).catch((err) => {
@@ -49,6 +50,7 @@ let success = (command, Tmp, cli) => {
 
       command({templateFile, outputFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, outputFile, cli);
+        // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).to.have.been.called;
         done();
       }).catch((err) => {
@@ -65,6 +67,7 @@ let success = (command, Tmp, cli) => {
 
       command({templateFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, templateFile, cli);
+        // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).not.to.have.been.called;
         done();
       }).catch((err) => {
