@@ -58,6 +58,29 @@ let envsub = [
     }
   },
   {
+    testName: '--env should only substitute given environment variables unless --all flag is provided (issue #9 fix)',
+    preFunc: () => {
+      process.env.EXISTA = 'AAAENV';
+      process.env.EXISTB = 'BBBENV';
+      process.env.EXISTC = 'CCCENV';
+    },
+    templateFile: Tmp.ENV_TEMPLATE_FILE_ALL,
+    outputContents: Tmp.ENV_TEMPLATE_FILE_ALL_EXPECTED,
+    options: {
+      envs: [
+        {name: 'EXISTB'},
+        {name: 'EXISTC', value: 'CCCEQL'},
+        {name: 'NOEXISTY'},
+        {name: 'NOEXISTZ', value: 'ZZZEQL'},
+        {}
+      ],
+      all: true
+    },
+    cli: {
+      flags: '--env EXISTB --env EXISTC=CCCEQL --env NOEXISTY --env NOEXISTZ=ZZZEQL --all'.split(' '),
+    }
+  },
+  {
     testName: '--env should not substitute environment variables with invalid names',
     templateFile: Tmp.ENV_INVALID_TEMPLATE_FILE,
     outputContents: Tmp.ENV_INVALID_TEMPLATE_FILE_EXPECTED,

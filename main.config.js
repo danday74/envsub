@@ -1,6 +1,7 @@
 const config = {
   envsub: {
     DEFAULT_OPTIONS: {
+      all: false,
       diff: false,
       protect: false,
       syntax: 'default'

@@ -21,6 +21,9 @@ const ENV_FILE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileE
 const ENV_INVALID_TEMPLATE_FILE = `${envsubDir}/templateFileEnvInvalid`;
 const ENV_INVALID_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvInvalid_E`, 'utf8');
 
+const ENV_TEMPLATE_FILE_ALL = `${envsubDir}/templateFileAll`;
+const ENV_TEMPLATE_FILE_ALL_EXPECTED = readFileSync(`${envsubDir}/templateFileAll_E`, 'utf8');
+
 const ENV_PROTECT_TEMPLATE_FILE = `${envsubDir}/templateFileEnvProtect`;
 const ENV_PROTECT_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvProtect_E`, 'utf8');
 
@@ -79,6 +82,8 @@ const templateFiles = {
     ENV_FILE_TEMPLATE_FILE_EXPECTED,
     ENV_INVALID_TEMPLATE_FILE,
     ENV_INVALID_TEMPLATE_FILE_EXPECTED,
+    ENV_TEMPLATE_FILE_ALL,
+    ENV_TEMPLATE_FILE_ALL_EXPECTED,
     ENV_PROTECT_TEMPLATE_FILE,
     ENV_PROTECT_TEMPLATE_FILE_EXPECTED,
     PROTECT_TEMPLATE_FILE,

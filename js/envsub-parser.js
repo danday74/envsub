@@ -47,7 +47,7 @@ let envsubParser = (contents, args) => {
   let dRegexes = dynamicRegexes(opts);
   opts.syntax = opts.syntax.toLowerCase();
 
-  opts.envs = DotEnvParser.resolveEnvs(opts.envs, opts.envFiles);
+  opts.envs = DotEnvParser.resolveEnvs(opts.envs, opts.envFiles, opts.all);
 
   dRegexes.forEach((dRegex) => {
 

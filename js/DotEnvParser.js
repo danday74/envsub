@@ -90,11 +90,13 @@ class DotEnvParser {
     return _.flatten(results);
   }
 
-  static resolveEnvs(pEnvs, pEnvFiles) {
+  static resolveEnvs(pEnvs, pEnvFiles, pAll) {
 
     let envs = DotEnvParser.parseEnvs(pEnvs);
     let envsFromFiles = DotEnvParser.parseEnvFiles(pEnvFiles);
-    return _.uniqBy([...envs, ...envsFromFiles], 'name');
+    let envsFromSystem = pAll ? _.map(process.env, (v, k) => ({name: k, value: v})) : [];
+
+    return _.uniqBy([...envs, ...envsFromFiles, ...envsFromSystem], 'name');
   }
 }
 
