@@ -126,7 +126,7 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 
 #### **envsub --all flag** .. ```envsub --env MYVAR=herro --env-file envFile.env --all templateFile outputFile```
 
-> The --env and --env-file flags restrict which environment variables will be substituted.
+> The --env and --env-file flags restrict which environment variables are substituted.
 >
 > You can use the --all flag to override this behaviour, thereby substituting all environment variables even when using the --env or --env-file flags.
 
