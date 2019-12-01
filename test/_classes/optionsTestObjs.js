@@ -98,6 +98,21 @@ let envsub = [
     }
   },
   {
+    testName: '--env-file should remove quotes surrounding environment variables (issue #10 fix)',
+    preFunc: () => {
+    },
+    templateFile: Tmp.MY_TEMPLATE_FILE,
+    outputContents: Tmp.MY_TEMPLATE_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.ENVFILE8
+      ]
+    },
+    cli: {
+      flags: `--env-file ${Tmp.ENVFILE8}`.split(' ')
+    }
+  },
+  {
     testName: '--env-file should not substitute environment variables with invalid names',
     templateFile: Tmp.ENV_INVALID_TEMPLATE_FILE,
     outputContents: Tmp.ENV_INVALID_TEMPLATE_FILE_EXPECTED,

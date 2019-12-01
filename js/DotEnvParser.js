@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const replaceLast = require('replace-last');
 const readFileSync = require('fs').readFileSync;
 const config = require('../main.config');
 
@@ -22,6 +23,10 @@ class DotEnvParser {
       if (parts.length > 1) {
         parts.shift();
         let value = parts.join('=').trim();
+        if (value.startsWith('"') && value.endsWith('"')) {
+          value = value.replace('"', '');
+          value = replaceLast(value, '"', '');
+        }
         return {name, value};
       } else {
         return {name};

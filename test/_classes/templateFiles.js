@@ -9,6 +9,7 @@ const ENVFILE4 = `${envsubDir}/envFile4.env`;
 const ENVFILE5 = `${envsubDir}/envFile5.env`;
 const ENVFILE6 = `${envsubDir}/envFile6.env`;
 const ENVFILE7 = `${envsubDir}/envFile7.env`;
+const ENVFILE8 = `${envsubDir}/envFile8.env`;
 
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
@@ -69,6 +70,7 @@ const templateFiles = {
     ENVFILE5,
     ENVFILE6,
     ENVFILE7,
+    ENVFILE8,
     COMBINED_TEMPLATE_FILE,
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
