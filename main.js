@@ -2,6 +2,7 @@ const _ = require('lodash');
 const Promise = require('bluebird');
 const readFile = Promise.promisify(require('fs').readFile);
 const writeFile = Promise.promisify(require('fs').writeFile);
+const spyables = require('./js/spyables');
 
 const config = require('./main.config');
 const LogDiff = require('./js/LogDiff');
@@ -34,7 +35,15 @@ let envsub = (raw = {}) => {
     let parse = require(`./js/${args.command}-parser`);
     outputContents = parse(templateContents, args);
     if (args.options.diff) LogDiff.logDiff(templateContents, outputContents);
-    return writeFile(args.outputFile, outputContents);
+
+    if (args.outputFile === 'stdout') {
+      return new Promise((resolve) => {
+        spyables.writeToStdout(outputContents);
+        resolve();
+      });
+    } else {
+      return writeFile(args.outputFile, outputContents);
+    }
 
   }).then(() => {
 

@@ -1,8 +1,21 @@
 const Imp = require('./TestImports');
+const spyables = require('../../js/spyables');
 
 let success = (command, Tmp, cli) => {
 
   describe('Success', () => {
+
+    let sandbox;
+
+    beforeEach(() => {
+      sandbox = Imp.sinon.createSandbox();
+      sandbox.stub(spyables, 'writeToStdout').callsFake(() => {
+      });
+    });
+
+    afterEach(() => {
+      sandbox.restore();
+    });
 
     let verifyEnvObj = (envobj, templateFile, outputFile, cli) => {
       Imp.expect(envobj.templateFile).to.eql(templateFile);
@@ -22,6 +35,21 @@ let success = (command, Tmp, cli) => {
 
       command({templateFile, outputFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, outputFile, cli);
+        Imp.expect(spyables.writeToStdout).not.to.have.been.called;
+        done();
+      }).catch((err) => {
+        done(err);
+      });
+    });
+
+    it('should substitute env vars in template file and write to stdout', (done) => {
+
+      let templateFile = Tmp.MY_TEMPLATE_FILE;
+      let outputFile = 'stdout';
+
+      command({templateFile, outputFile, cli}).then((envobj) => {
+        verifyEnvObj(envobj, templateFile, outputFile, cli);
+        Imp.expect(spyables.writeToStdout).to.have.been.called;
         done();
       }).catch((err) => {
         done(err);
@@ -37,6 +65,7 @@ let success = (command, Tmp, cli) => {
 
       command({templateFile, cli}).then((envobj) => {
         verifyEnvObj(envobj, templateFile, templateFile, cli);
+        Imp.expect(spyables.writeToStdout).not.to.have.been.called;
         done();
       }).catch((err) => {
         done(err);
