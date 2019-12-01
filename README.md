@@ -210,6 +210,7 @@ envsub --help
 
     -h, --help                output usage information
     -V, --version             output the version number
+    -a, --all                 substitute all system environment variables - avoids substitution restrictions when using the --env or --env-file flags
     -d, --diff                show diff between template file and output file
     -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated
     -f, --env-file <envFile>  load environment variables from an .env file .. this flag can be repeated
