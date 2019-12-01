@@ -297,6 +297,7 @@ const envsub = require('envsub');
 let templateFile = `${__dirname}/templateFile`;
 let outputFile = `${__dirname}/outputFile`;
 let options = {
+  all: false, // see --all flag
   diff: false, // see --diff flag
   envs: [
     {name: 'MYVAR1'}, // see --env flag
