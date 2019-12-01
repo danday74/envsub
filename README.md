@@ -141,6 +141,8 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 > Protect non-existent environment variable placeholders from being substituted with an empty string.
 >
 > In the example, MYVAR3, because it does not exist, is protected from substitution.
+>
+> Protection is automatic if you use any of the following flags --all --env --env-file
 
 <br><br>
 
