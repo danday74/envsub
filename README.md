@@ -110,6 +110,8 @@ examples
 >
 > ```envsub --env MYVAR1=cheese --env MYVAR2 templateFile outputFile```
 >
+> This flag restricts which environment variables are substituted.
+>
 > Supported .env file syntax follows:
 
 ```
@@ -119,6 +121,14 @@ export MYVAR2        # same as --env MYVAR2
 MYVAR3=hello         # same as --env MYVAR3=hello
 export MYVAR4=hello  # same as --env MYVAR4=hello
 ```
+
+<br><br>
+
+#### **envsub --all flag** .. ```envsub --env MYVAR=herro --env-file envFile.env --all templateFile outputFile```
+
+> The --env and --env-file flags restrict which environment variables will be substituted.
+>
+> You can use the --all flag to override this behaviour, thereby substituting all environment variables even when using the --env or --env-file flags.
 
 <br><br>
 
