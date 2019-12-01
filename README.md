@@ -129,6 +129,8 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 > The --env and --env-file flags restrict which environment variables are substituted.
 >
 > You can use the --all flag to override this behaviour, thereby substituting all environment variables regardless of other flags.
+>
+> There is no need to set the --all flag where you are not using the --env or --env-file flags.
 
 <br><br>
 
