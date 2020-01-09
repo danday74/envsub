@@ -136,6 +136,21 @@ let envsub = [
     }
   },
   {
+    testName: '--env-file should remove quotes surrounding environment variables and let all character on it ',
+    preFunc: () => {
+    },
+    templateFile: Tmp.ENV_TEMPLATE_NOT_A_COMMENT_FILE,
+    outputContents: Tmp.ENV_TEMPLATE_NOT_A_COMMENT_FILE_EXPECTED,
+    options: {
+      envFiles: [
+        Tmp.ENVFILE9
+      ]
+    },
+    cli: {
+      flags: `--env-file ${Tmp.ENVFILE9}`.split(' ')
+    }
+  },
+  {
     testName: '--env-file should not substitute environment variables with invalid names',
     templateFile: Tmp.ENV_INVALID_TEMPLATE_FILE,
     outputContents: Tmp.ENV_INVALID_TEMPLATE_FILE_EXPECTED,
