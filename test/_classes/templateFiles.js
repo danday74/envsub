@@ -10,12 +10,16 @@ const ENVFILE5 = `${envsubDir}/envFile5.env`;
 const ENVFILE6 = `${envsubDir}/envFile6.env`;
 const ENVFILE7 = `${envsubDir}/envFile7.env`;
 const ENVFILE8 = `${envsubDir}/envFile8.env`;
+const ENVFILE9 = `${envsubDir}/envFile9.env`;
 
 const COMBINED_TEMPLATE_FILE = `${envsubDir}/templateFileCombined`;
 const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileCombined_E`, 'utf8');
 
 const ENV_TEMPLATE_FILE = `${envsubDir}/templateFileEnv`;
+
 const ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnv_E`, 'utf8');
+const ENV_TEMPLATE_NOT_A_COMMENT_FILE = `${envsubDir}/templateFileNotAComment`;
+const ENV_TEMPLATE_NOT_A_COMMENT_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileNotAComment_E`, 'utf8');
 const ENV_FILE_TEMPLATE_FILE = `${envsubDir}/templateFileEnvFile`;
 const ENV_FILE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvFile_E`, 'utf8');
 const ENV_INVALID_TEMPLATE_FILE = `${envsubDir}/templateFileEnvInvalid`;
@@ -74,6 +78,9 @@ const templateFiles = {
     ENVFILE6,
     ENVFILE7,
     ENVFILE8,
+    ENVFILE9,
+    ENV_TEMPLATE_NOT_A_COMMENT_FILE,
+    ENV_TEMPLATE_NOT_A_COMMENT_FILE_EXPECTED,
     COMBINED_TEMPLATE_FILE,
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,

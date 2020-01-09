@@ -12,10 +12,23 @@ class DotEnvParser {
     }
   }
 
+  static removeComments(str) {
+    if (str.includes('="')) {
+      if(str.endsWith('"')) {
+        return str;
+      } else {
+        const values = /(.*="(?:[^"\\]|\\.)*").*/.exec(str);
+        return values[1].replace('\\"','"');
+      }
+    } else  {
+      return str.replace(/#.*/, '');
+    }
+  }
+
   static parseEnvStr(str) {
     str = str.trim();
     str = str.replace(/^export /, '');
-    str = str.replace(/#.*/, '');
+    str = DotEnvParser.removeComments(str);
     let parts = str.split('=');
     let name = parts[0].trim();
     let valid = new RegExp(`^${config.regex}$`).test(name);
