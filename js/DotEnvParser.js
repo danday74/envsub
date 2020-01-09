@@ -13,8 +13,13 @@ class DotEnvParser {
   }
 
   static removeComments(str) {
-    if (str.includes('="') && str.endsWith('"')) {
-      return str;
+    if (str.includes('="')) {
+      if(str.endsWith('"')) {
+        return str;
+      } else {
+        const values = /(.*="(?:[^"\\]|\\.)*").*/.exec(str);
+        return values[1].replace('\\"','"');
+      }
     } else  {
       return str.replace(/#.*/, '');
     }
