@@ -2,7 +2,7 @@ const Imp = require('./TestImports');
 const spyables = require('../../js/spyables');
 
 let success = (command, Tmp, cli) => {
-
+  
   describe('Success', () => {
 
     let sandbox;
@@ -17,10 +17,10 @@ let success = (command, Tmp, cli) => {
       sandbox.restore();
     });
 
-    let verifyEnvObj = (envobj, templateFile, outputFile, cli) => {
+    let verifyEnvObj = (envobj, templateFile, outputFile, outputContents, cli) => {
       Imp.expect(envobj.templateFile).to.eql(templateFile);
       Imp.expect(envobj.outputFile).to.eql(outputFile);
-      Imp.expect(envobj.outputContents).to.eql(Tmp.MY_TEMPLATE_FILE_EXPECTED);
+      Imp.expect(envobj.outputContents).to.eql(outputContents);
       if (cli) {
         Imp.expect(process.exit).to.have.been.calledWith(0);
         // noinspection BadExpressionStatementJS
@@ -32,9 +32,10 @@ let success = (command, Tmp, cli) => {
 
       let templateFile = Tmp.MY_TEMPLATE_FILE;
       let outputFile = Tmp.OUTPUT_FILE;
+      let outputContents = Tmp.MY_TEMPLATE_FILE_EXPECTED;
 
       command({templateFile, outputFile, cli}).then((envobj) => {
-        verifyEnvObj(envobj, templateFile, outputFile, cli);
+        verifyEnvObj(envobj, templateFile, outputFile, outputContents, cli);
         // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).not.to.have.been.called;
         done();
@@ -47,9 +48,10 @@ let success = (command, Tmp, cli) => {
 
       let templateFile = Tmp.MY_TEMPLATE_FILE;
       let outputFile = 'stdout';
+      let outputContents = Tmp.MY_TEMPLATE_FILE_EXPECTED;
 
       command({templateFile, outputFile, cli}).then((envobj) => {
-        verifyEnvObj(envobj, templateFile, outputFile, cli);
+        verifyEnvObj(envobj, templateFile, outputFile, outputContents, cli);
         // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).to.have.been.called;
         done();
@@ -61,12 +63,90 @@ let success = (command, Tmp, cli) => {
     it('should substitute env vars in template file and overwrite template file where no output file is given', (done) => {
 
       let templateFile = Tmp.TEMP_TEMPLATE_FILE;
+      let outputContents = Tmp.MY_TEMPLATE_FILE_EXPECTED;
 
       // Create template file
       Imp.fs.writeFileSync(templateFile, Imp.fs.readFileSync(Tmp.MY_TEMPLATE_FILE));
 
       command({templateFile, cli}).then((envobj) => {
-        verifyEnvObj(envobj, templateFile, templateFile, cli);
+        verifyEnvObj(envobj, templateFile, templateFile, outputContents, cli);
+        // noinspection BadExpressionStatementJS
+        Imp.expect(spyables.writeToStdout).not.to.have.been.called;
+        done();
+      }).catch((err) => {
+        done(err);
+      });
+    });
+  });
+};
+
+let withDefaultValues = (command, Tmp, cli) => {
+  describe('Success with default values', () => {
+
+    let sandbox;
+
+    beforeEach(() => {
+      sandbox = Imp.sinon.createSandbox();
+      sandbox.stub(spyables, 'writeToStdout').callsFake(() => {
+      });
+    });
+
+    afterEach(() => {
+      sandbox.restore();
+    });
+
+    let verifyEnvObj = (envobj, templateFile, outputFile, outputContents, cli) => {
+      Imp.expect(envobj.templateFile).to.eql(templateFile);
+      Imp.expect(envobj.outputFile).to.eql(outputFile);
+      Imp.expect(envobj.outputContents).to.eql(outputContents);
+      if (cli) {
+        Imp.expect(process.exit).to.have.been.calledWith(0);
+        // noinspection BadExpressionStatementJS
+        Imp.expect(console.error).not.to.have.been.called;
+      }
+    };
+
+    it('should substitute env vars in template file with default values and write to output file', (done) => {
+      let templateFile = Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE;
+      let outputFile = Tmp.OUTPUT_FILE;
+      let outputContents = Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE_EXPECTED;
+
+      command({templateFile, outputFile, cli}).then((envobj) => {
+        verifyEnvObj(envobj, templateFile, outputFile, outputContents, cli);
+        // noinspection BadExpressionStatementJS
+        Imp.expect(spyables.writeToStdout).not.to.have.been.called;
+        done();
+      }).catch((err) => {
+        done(err);
+      });
+    });
+
+    it('should substitute env vars in template file with default values and write to stdout', (done) => {
+
+      let templateFile = Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE;
+      let outputFile = 'stdout';
+      let outputContents = Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE_EXPECTED;
+
+      command({templateFile, outputFile, cli}).then((envobj) => {
+        verifyEnvObj(envobj, templateFile, outputFile, outputContents, cli);
+        // noinspection BadExpressionStatementJS
+        Imp.expect(spyables.writeToStdout).to.have.been.called;
+        done();
+      }).catch((err) => {
+        done(err);
+      });
+    });
+
+    it('should substitute env vars in template file with default values and overwrite template file where no output file is given', (done) => {
+
+      let templateFile = Tmp.TEMP_TEMPLATE_FILE_WITH_DEFAULT_VALUE;
+      let outputContents = Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE_EXPECTED;
+
+      // Create template file
+      Imp.fs.writeFileSync(templateFile, Imp.fs.readFileSync(Tmp.MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE));
+
+      command({templateFile, cli}).then((envobj) => {
+        verifyEnvObj(envobj, templateFile, templateFile, outputContents, cli);
         // noinspection BadExpressionStatementJS
         Imp.expect(spyables.writeToStdout).not.to.have.been.called;
         done();
@@ -150,6 +230,7 @@ let failure = (command, Tmp, cli) => {
 
 module.exports = {
   success,
+  withDefaultValues,
   options,
   failure
 };

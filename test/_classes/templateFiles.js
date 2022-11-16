@@ -16,6 +16,8 @@ const COMBINED_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileC
 
 const ENV_TEMPLATE_FILE = `${envsubDir}/templateFileEnv`;
 const ENV_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnv_E`, 'utf8');
+const ENV_TEMPLATE_FILE_HANDLEBARS = `${envsubDir}/templateFileEnvHandlebars`;
+const ENV_TEMPLATE_FILE_HANDLEBARS_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvHandlebars_E`, 'utf8');
 const ENV_FILE_TEMPLATE_FILE = `${envsubDir}/templateFileEnvFile`;
 const ENV_FILE_TEMPLATE_FILE_EXPECTED = readFileSync(`${envsubDir}/templateFileEnvFile_E`, 'utf8');
 const ENV_INVALID_TEMPLATE_FILE = `${envsubDir}/templateFileEnvInvalid`;
@@ -63,8 +65,11 @@ const templateFiles = {
     OUTPUT_FILE: `${envsubDir}/outputFile`,
     MY_TEMPLATE_FILE: `${envsubDir}/templateFile`,
     MY_TEMPLATE_FILE_EXPECTED: readFileSync(`${envsubDir}/templateFile_E`, 'utf8'),
+    MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE: `${envsubDir}/templateFileWithDefaultValue`,
+    MY_TEMPLATE_FILE_WITH_DEFAULT_VALUE_EXPECTED: readFileSync(`${envsubDir}/templateFileWithDefaultValue_E`, 'utf8'),
     NO_TEMPLATE_FILE: `${envsubDir}/noTemplateFile`,
     TEMP_TEMPLATE_FILE: `${envsubDir}/tempTemplateFile`,
+    TEMP_TEMPLATE_FILE_WITH_DEFAULT_VALUE: `${envsubDir}/tempTemplateFileWithDefaultValue`,
     DIFF_TEMPLATE_FILE: `${envsubDir}/templateFileDiff`,
     ENVFILE1,
     ENVFILE2,
@@ -78,6 +83,8 @@ const templateFiles = {
     COMBINED_TEMPLATE_FILE_EXPECTED,
     ENV_TEMPLATE_FILE,
     ENV_TEMPLATE_FILE_EXPECTED,
+    ENV_TEMPLATE_FILE_HANDLEBARS,
+    ENV_TEMPLATE_FILE_HANDLEBARS_EXPECTED,
     ENV_FILE_TEMPLATE_FILE,
     ENV_FILE_TEMPLATE_FILE_EXPECTED,
     ENV_INVALID_TEMPLATE_FILE,

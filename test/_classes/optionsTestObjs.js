@@ -49,12 +49,34 @@ let envsub = [
         {name: 'EXISTB'},
         {name: 'EXISTC', value: 'CCCEQL'},
         {name: 'NOEXISTY'},
-        {name: 'NOEXISTZ', value: 'ZZZEQL'},
-        {}
-      ]
+        {name: 'NOEXISTZ', value: 'ZZZEQL'}
+      ],
+      syntax: 'dollar-both'
     },
     cli: {
-      flags: '--env EXISTB --env EXISTC=CCCEQL --env NOEXISTY --env NOEXISTZ=ZZZEQL'.split(' '),
+      flags: '--syntax dollar-both --env EXISTB --env EXISTC=CCCEQL --env NOEXISTY --env NOEXISTZ=ZZZEQL'.split(' '),
+    }
+  },
+  {
+    testName: '--env should only substitute given environment variables in handlebars syntax',
+    preFunc: () => {
+      process.env.EXISTA = 'AAAENV';
+      process.env.EXISTB = 'BBBENV';
+      process.env.EXISTC = 'CCCENV';
+    },
+    templateFile: Tmp.ENV_TEMPLATE_FILE_HANDLEBARS,
+    outputContents: Tmp.ENV_TEMPLATE_FILE_HANDLEBARS_EXPECTED,
+    options: {
+      envs: [
+        {name: 'EXISTB'},
+        {name: 'EXISTC', value: 'CCCEQL'},
+        {name: 'NOEXISTY'},
+        {name: 'NOEXISTZ', value: 'ZZZEQL'}
+      ],
+      syntax: 'handlebars'
+    },
+    cli: {
+      flags: '--syntax handlebars --env EXISTB --env EXISTC=CCCEQL --env NOEXISTY --env NOEXISTZ=ZZZEQL'.split(' '),
     }
   },
   {
@@ -71,8 +93,7 @@ let envsub = [
         {name: 'EXISTB'},
         {name: 'EXISTC', value: 'CCCEQL'},
         {name: 'NOEXISTY'},
-        {name: 'NOEXISTZ', value: 'ZZZEQL'},
-        {}
+        {name: 'NOEXISTZ', value: 'ZZZEQL'}
       ],
       all: true
     },

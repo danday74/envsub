@@ -1,4 +1,5 @@
 /.idea/
+.history
 /coverage/
 node_modules/
 *.log

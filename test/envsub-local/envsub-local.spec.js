@@ -24,7 +24,7 @@ describe(`${command} local`, () => {
   });
 
   after((done) => {
-    Imp.del([Tmp.OUTPUT_FILE, Tmp.TEMP_TEMPLATE_FILE]).then(() => {
+    Imp.del([Tmp.OUTPUT_FILE, Tmp.TEMP_TEMPLATE_FILE, Tmp.TEMP_TEMPLATE_FILE_WITH_DEFAULT_VALUE]).then(() => {
       done();
     }).catch((err) => {
       done(err);
@@ -32,7 +32,8 @@ describe(`${command} local`, () => {
   });
 
   commonTests.success(Imp[command], Tmp, false);
+  commonTests.withDefaultValues(Imp[command], Tmp, false);
   commonTests.options(Imp[command], Tmp, false, optionsTestObjs);
   commonTests.failure(Imp[command], Tmp, false);
-
+  
 });
