@@ -89,8 +89,8 @@ let envsubParser = (contents, args) => {
         }
 
         let regexp = dRegex.type === SYNTAX.HANDLEBARS ?
-          [ dRegex.lhs, dRegex.sep, `(${env.name})`,                                            dRegex.sep, dRegex.rhs ].join('') : 
-          [ dRegex.lhs, dRegex.sep, ...(env.name ? [config.curlyRegex(false, env.name)] : []),  dRegex.sep, dRegex.rhs ].join('');
+          [ dRegex.lhs, dRegex.sep, `(${env.name})`,                    dRegex.sep, dRegex.rhs ].join('') : 
+          [ dRegex.lhs, dRegex.sep, config.curlyRegex(false, env.name), dRegex.sep, dRegex.rhs ].join('');
         let matches = contents.matchAll(new RegExp(regexp, 'g'));
         matches = [...matches].map(([match, envVarName, defaultValue]) => [match, envVarName, defaultValue]);
   
