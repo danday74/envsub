@@ -21,7 +21,7 @@ let addEnvironmentVariableFile = (envVarFile, envVarFileList) => {
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
-  .option('-a, --all', 'substitute all system environment variables - avoids substitution restrictions when using the --env or --env-file flags')
+  .option('-a, --all', 'substitute all system environment variables and all variable placeholders with default value (only for dollar-curly syntax, like ${VAR_NAME:-default value}) - avoids substitution restrictions when using the --env or --env-file flags')
   .option('-d, --diff', 'show diff between template file and output file')
   .option('-e, --env <name>[=value]', 'environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated', addEnvironmentVariable, [])
   .option('-f, --env-file <envFile>', 'load environment variables from an .env file .. this flag can be repeated', addEnvironmentVariableFile, [])
