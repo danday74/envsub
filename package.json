@@ -54,7 +54,8 @@
     "diff": "^4.0.1",
     "handlebars": "^4.5.3",
     "lodash": "^4.17.15",
-    "replace-last": "^1.2.6"
+    "replace-last": "^1.2.6",
+    "string.prototype.matchall": "^4.0.8"
   },
   "devDependencies": {
     "app-root-path": "^3.0.0",

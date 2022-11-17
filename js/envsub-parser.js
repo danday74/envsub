@@ -1,5 +1,8 @@
 const config = require('../main.config');
+const matchAll = require('string.prototype.matchall');
 const DotEnvParser = require('./DotEnvParser');
+
+matchAll.shim(); // will be a no-op if not needed
 
 const SYNTAX = {
   DOLLAR_BASIC: 'dollar-basic',
