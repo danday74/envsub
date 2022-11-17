@@ -29,7 +29,7 @@ describe(`${command} global`, () => {
   });
 
   after((done) => {
-    Imp.del([Tmp.OUTPUT_FILE, Tmp.TEMP_TEMPLATE_FILE]).then(() => {
+    Imp.del([Tmp.OUTPUT_FILE, Tmp.TEMP_TEMPLATE_FILE, Tmp.TEMP_TEMPLATE_FILE_WITH_DEFAULT_VALUE]).then(() => {
       done();
     }).catch((err) => {
       done(err);
@@ -37,6 +37,7 @@ describe(`${command} global`, () => {
   });
 
   commonTests.success(Imp[command], Tmp, true);
+  commonTests.withDefaultValues(Imp[command], Tmp, false);
   commonTests.options(Imp[command], Tmp, true, optionsTestObjs);
   commonTests.failure(Imp[command], Tmp, true);
 

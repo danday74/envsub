@@ -2,3 +2,5 @@ aaa${  EXISTA  }aaa bbbBBBENVbbb cccCCCEQLccc
 xxx${ NOEXISTX }xxx yyyyyy zzzZZZEQLzzz
 aaa${  EXISTA  }aaa bbbBBBENVbbb cccCCCEQLccc
 xxx${ NOEXISTX }xxx yyyyyy zzzZZZEQLzzz
+unset variable with default value: ${NOEXISTX:-default}
+even with basic syntax: CCCEQL.

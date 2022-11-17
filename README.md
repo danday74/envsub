@@ -174,6 +174,45 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 
 <br><br>
 
+#### **envsub variable placeholder default values**
+
+**For the `dollar-curly` syntax only**, defining default values is possible.
+The syntax is the following:
+```yaml
+# Before substitution
+Variable with default value: ${VARIABLE_NAME:-default}.
+# After substitution
+Variable with default value: default.
+
+# Before substitution
+Variable with default value + whitespaces: ${VARIABLE_NAME:-        default value }.
+# After substitution
+Variable with default value + whitespaces:         default value .
+```
+
+##### Without modifier flags
+
+**By default**, every `variable placeholder with default value` is substituted even if not set by the environment or from the cli.
+
+![envsub templateFile outputFile](./images/envsub-default-normal.png "envsub templateFile outputFile")
+
+---
+##### With --env or --env-file
+When using the **--env** and **--env-file** flags, only the restricted `variable placeholders with default value` are substituted even if not set by the environment or from the cli.
+
+![envsub --env MYVAR1=llama --all templateFile outputFile](./images/envsub-default-env.png "envsub --env MYVAR1=llama --all templateFile outputFile")
+
+---
+
+##### With --env or --env-file and --all
+
+- When using the **--env** and **--env-file** flags with the **--all** flag, every `variable placeholder with default value` is substituted even if not set by the environment or from the cli.
+
+![envsub --env MYVAR1=llama --env MYVAR3 templateFile outputFile](./images/envsub-default-env-all.png "envsub --env MYVAR1=llama --env MYVAR3 templateFile outputFile")
+
+
+<br><br>
+
 #### **envsub overwrite** .. ```envsub templateFile```
 
 ![envsub overwrite](./images/envsub-o.png "envsub overwrite")
@@ -216,7 +255,7 @@ envsub --help
 
     -h, --help                output usage information
     -V, --version             output the version number
-    -a, --all                 substitute all system environment variables - avoids substitution restrictions when using the --env or --env-file flags
+    -a, --all                 substitute all system environment variables and all variable placeholders with default value (only for dollar-curly syntax, like ${VAR_NAME:-default value}) - avoids substitution restrictions when using the --env or --env-file flags
     -d, --diff                show diff between template file and output file
     -e, --env <name>[=value]  environment variable to substitute .. if none specified then substitute all (but see --env-file) .. this flag can be repeated
     -f, --env-file <envFile>  load environment variables from an .env file .. this flag can be repeated

@@ -1,0 +1,8 @@
+value with space after:Korben Dallas , value with space before:  Leeloo Dallas.
+value without spaces:Ruby Rhod, value with non alplha character:Jean-Baptiste Emanuel Zorg @£$   .
+Empty default value:.
+White spaces as default value:            .
+Invalid expression1:${A_NAME :-fds}
+Invalid expression2:${A_NAME@£rew:-fds}.
+Normal variable with spaces:.
+Normal variable:.

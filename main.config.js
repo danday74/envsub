@@ -1,3 +1,4 @@
+const VARIABLE_NAME_REGEX = '[a-zA-Z_]+[a-zA-Z0-9_]*';
 const config = {
   envsub: {
     DEFAULT_OPTIONS: {
@@ -12,7 +13,14 @@ const config = {
       diff: false
     }
   },
-  regex: '[a-zA-Z_]+[a-zA-Z0-9_]*'
+  regex: VARIABLE_NAME_REGEX,
+  curlyRegex: (mustHaveDefaultValue, variableNameRegex = VARIABLE_NAME_REGEX) => {
+    const separatorRegex = ':-';
+    const variableValueRegex = '[^}]*';
+    const optionalDefaultValueModifier = mustHaveDefaultValue ? '' : '?';
+
+    return `(${variableNameRegex})(?:${separatorRegex}(?<=${separatorRegex})(${variableValueRegex}))${optionalDefaultValueModifier}`;
+  }
 };
 
 module.exports = config;

@@ -1,5 +1,7 @@
 aaa Daniel aaa bbb Daniel bbb
 ccc ddd $ MY_NAME ddd
+Unset variable invalid default value: :-dafds
+Set variable invalid default value: Daniel:-dafds
 
 eee${ MY_NAME }eee fff${ MY_NAME }fff
 ggg${MY_NAME}ggg hhh${   MY_NAME   }hhh

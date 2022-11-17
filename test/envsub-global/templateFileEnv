@@ -1,4 +1,6 @@
-aaa${  EXISTA  }aaa bbb${  EXISTB  }bbb ccc${  EXISTC  }ccc
+aaa${  EXISTA  }aaa bbb${  EXISTB  }bbb ccc${  EXISTC:-default  }ccc
 xxx${ NOEXISTX }xxx yyy${ NOEXISTY }yyy zzz${ NOEXISTZ }zzz
 aaa${  EXISTA  }aaa bbb${  EXISTB  }bbb ccc${  EXISTC  }ccc
 xxx${ NOEXISTX }xxx yyy${ NOEXISTY }yyy zzz${ NOEXISTZ }zzz
+unset variable with default value: ${NOEXISTX:-default}
+even with basic syntax: $EXISTC.

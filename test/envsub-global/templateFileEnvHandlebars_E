@@ -1,0 +1,3 @@
+aaa{{  EXISTA  }}aaa bbbBBBENVbbb cccCCCEQLccc
+xxx${{ NOEXISTX }}xxx yyyyyy zzzZZZEQLzzz
+Invalid: {{ NOEXISTZ:-default }}

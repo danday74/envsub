@@ -1,5 +1,7 @@
 aaa $MY_NAME aaa bbb $MY_NAME bbb
 ccc$MY_NAMEccc ddd $ MY_NAME ddd
+Unset variable invalid default value: $A_NAME:-dafds
+Set variable invalid default value: $MY_NAME:-dafds
 
 eee${ MY_NAME }eee fff${ MY_NAME }fff
 ggg${MY_NAME}ggg hhh${   MY_NAME   }hhh
