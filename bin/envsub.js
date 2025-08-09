@@ -27,6 +27,7 @@ program
   .option('-f, --env-file <envFile>', 'load environment variables from an .env file .. this flag can be repeated', addEnvironmentVariableFile, [])
   .option('-p, --protect', 'protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string')
   .option('-s, --syntax <syntax>', 'template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}', /^(dollar-basic|dollar-curly|dollar-both|handlebars|default)$/i, 'default')
+  .option('--strict', 'fail with error if a variable is not defined (similar to --protect but fails instead of leaving placeholders)')
   .option('-S, --system', 'prefer system environment variables');
 
 let examples = [
@@ -45,6 +46,7 @@ let options = {
   all: !!program.all,
   diff: !!program.diff,
   protect: !!program.protect,
+  strict: !!program.strict,
   syntax: program.syntax.toLowerCase(),
   system: !!program.system
 };

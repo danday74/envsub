@@ -5,12 +5,14 @@ const config = {
       all: false,
       diff: false,
       protect: false,
+      strict: false,
       syntax: 'default'
     }
   },
   envsubh: {
     DEFAULT_OPTIONS: {
-      diff: false
+      diff: false,
+      strict: false
     }
   },
   regex: VARIABLE_NAME_REGEX,

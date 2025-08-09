@@ -148,6 +148,14 @@ export MYVAR4=hello  # same as --env MYVAR4=hello
 
 <br><br>
 
+#### **envsub --strict flag** .. ```envsub --strict templateFile outputFile```
+
+> Fail with error if a variable is not defined. Similar to --protect but throws an error instead of leaving placeholders.
+>
+> When --strict is used, envsub will terminate with an error if any environment variable referenced in the template is undefined, ensuring all variables are properly set before substitution.
+
+<br><br>
+
 #### **envsub --syntax flag** .. ```envsub --syntax handlebars templateFile outputFile```
 
 ![envsub --syntax flag](./images/envsub-s.png "envsub --syntax flag")
@@ -261,6 +269,7 @@ envsub --help
     -f, --env-file <envFile>  load environment variables from an .env file .. this flag can be repeated
     -p, --protect             protect non-existent environment variable placeholders (that would otherwise be substituted) .. do not substitute them with an empty string
     -s, --syntax <syntax>     template substitution syntax, one of .. dollar-basic $MYVAR .. dollar-curly ${MYVAR} .. dollar-both $MYVAR and ${MYVAR} .. handlebars {{MYVAR}} .. default ${MYVAR}
+        --strict              fail with error if a variable is not defined (similar to --protect but fails instead of leaving placeholders)
     -S, --system              prefer system environment variables
 
   Examples:
@@ -352,6 +361,7 @@ let options = {
     `${__dirname}/envFile.env` // see --env-file flag
   ],
   protect: false, // see --protect flag
+  strict: false, // see --strict flag
   syntax: 'default', // see --syntax flag
   system: true // see --system flag
 };

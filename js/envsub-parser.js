@@ -42,6 +42,12 @@ let substitute = (matches, contents, opts) => {
 
   matches && matches.forEach(([match, envVarName, defaultValue]) => {
     let envVarValue = process.env[envVarName];
+    
+    // Check for strict - fail if variable is undefined and no default value
+    if (opts.strict && envVarValue === undefined && defaultValue === undefined) {
+      throw new Error(`Environment variable '${envVarName}' is not defined`);
+    }
+    
     if (envVarValue || !opts.protect) {
       if (envVarValue !== undefined) {
         contents = contents.replace(match, envVarValue);

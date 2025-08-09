@@ -10,7 +10,8 @@ const version = require('../package.json').version;
 program
   .version(version)
   .usage('[options] <templateFile> [outputFile]')
-  .option('-d, --diff', 'show diff between template file and output file');
+  .option('-d, --diff', 'show diff between template file and output file')
+  .option('--strict', 'fail with error if a variable is not defined');
 
 let examples = [
   'envsubh templateFile outputFile',
@@ -25,7 +26,8 @@ program.parse(ArgV.get());
 let templateFile = (program.args && program.args.length > 0) ? program.args[0] : null;
 let outputFile = (program.args && program.args.length > 1) ? program.args[1] : null;
 let options = {
-  diff: !!program.diff
+  diff: !!program.diff,
+  strict: !!program.strict
 };
 
 envsubh({
